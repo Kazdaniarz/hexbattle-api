@@ -1,6 +1,7 @@
 {
 	"name": "hexbattle-api",
 	"private": true,
+	"license": "MIT",
 	"description": "HexBattle Online data API: Neuroshima Hex armies, tiles, mechanics and markers as versioned JSON.",
 	"packageManager": "pnpm@12.18.0",
 	"engines": {
