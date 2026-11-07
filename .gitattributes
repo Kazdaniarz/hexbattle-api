@@ -1,0 +1,12 @@
+# LF everywhere (overrides core.autocrlf on Windows - 14 §4)
+* text=auto eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.webp binary
+*.avif binary
+*.ktx2 binary
+*.woff2 binary
+*.pdf binary
+*.zip binary

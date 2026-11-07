@@ -1,0 +1,30 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.turbo/
+coverage/
+*.tsbuildinfo
+
+# Environment and secrets (never committed)
+.env
+.env.*
+!.env.example
+
+# Local logs and debug files (20 §5.5)
+logs/
+debug/
+*.log
+
+# Tools
+.claude/settings.local.json
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+playwright-report/
+test-results/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
