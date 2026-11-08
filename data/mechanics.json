@@ -184,9 +184,9 @@
 			"id": "explosion",
 			"kind": "ability",
 			"name": {
-				"pl": "Eksplozja"
+				"pl": "Odłamki"
 			},
-			"aliases": ["odłamki"],
+			"aliases": ["eksplozja"],
 			"placement": ["slot"],
 			"allowed_categories": ["unit"],
 			"official": true,
