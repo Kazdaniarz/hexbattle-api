@@ -67,7 +67,7 @@ export function mechanicsFile(): MechanicsFile {
 				placement: ['slot'],
 				params: { value: { type: 'integer', required: true, min: 0 } },
 			}),
-			mechanic({ id: 'wytrzymalosc', kind: 'ability', placement: ['slot'], allowed_categories: ['unit'] }),
+			mechanic({ id: 'toughness', kind: 'ability', placement: ['slot'], allowed_categories: ['unit'] }),
 			mechanic({
 				id: 'aura_pair',
 				kind: 'ability',
@@ -116,12 +116,12 @@ export function markersFile(): MarkersFile {
 	return {
 		markers: [
 			{
-				id: 'rana',
+				id: 'wound',
 				name: text('Rana'),
 				unlimited: true,
 				two_sided: false,
 				placement: 'unit',
-				images: { front: 'markers/rana.png' },
+				images: { front: 'markers/wound.png' },
 				size: 'standard',
 				official_component: true,
 			},
@@ -164,7 +164,7 @@ export function army(): Army {
 					{ mechanic: 'armor', at: { edge: 1 } },
 					{ mechanic: 'module_feature', at: { edge: 3 }, effects: [{ mechanic: 'push' }] },
 					{ mechanic: 'initiative', at: { slot: 'c4' }, params: { value: 2 } },
-					{ mechanic: 'wytrzymalosc', at: { slot: 'c2' }, category: 'unit' },
+					{ mechanic: 'toughness', at: { slot: 'c2' }, category: 'unit' },
 					{ mechanic: 'scoped', at: { slot: 'c0' }, category: 'unit' },
 				],
 			}),
@@ -182,7 +182,7 @@ export function army(): Army {
 					{
 						mechanic: 'grant_ability',
 						at: { center: true },
-						params: { ability: 'wytrzymalosc' },
+						params: { ability: 'toughness' },
 						side: 'allied',
 					},
 				],

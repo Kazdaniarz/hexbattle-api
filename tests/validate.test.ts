@@ -332,30 +332,30 @@ const CASES: Case[] = [
 	{
 		code: 'E_SLOT_UNREAD',
 		name: 'unread badge on a verified tile',
-		change: (s) => (featureOf(s, 'wojownik', 'wytrzymalosc').at = { slot: null }),
+		change: (s) => (featureOf(s, 'wojownik', 'toughness').at = { slot: null }),
 	},
 	{
 		code: 'W_SLOT_UNREAD',
 		name: 'unread badge on a draft tile',
 		change: (s) => {
 			tileOf(s, 'wojownik').status = 'draft';
-			featureOf(s, 'wojownik', 'wytrzymalosc').at = { slot: null };
+			featureOf(s, 'wojownik', 'toughness').at = { slot: null };
 		},
 	},
 	{
 		code: 'E_SLOT_DUP',
 		name: 'two badges on c4',
-		change: (s) => (featureOf(s, 'wojownik', 'wytrzymalosc').at = { slot: 'c4' }),
+		change: (s) => (featureOf(s, 'wojownik', 'toughness').at = { slot: 'c4' }),
 	},
 	{
 		code: 'E_SLOT_OVERLAP',
 		name: 'badges on c4 and e5',
-		change: (s) => (featureOf(s, 'wojownik', 'wytrzymalosc').at = { slot: 'e5' }),
+		change: (s) => (featureOf(s, 'wojownik', 'toughness').at = { slot: 'e5' }),
 	},
 	{
 		code: 'E_CATEGORY',
 		name: 'silver Wytrzymałość',
-		change: (s) => (featureOf(s, 'wojownik', 'wytrzymalosc').category = 'hq'),
+		change: (s) => (featureOf(s, 'wojownik', 'toughness').category = 'hq'),
 	},
 	{
 		code: 'E_CATEGORY',
@@ -365,7 +365,7 @@ const CASES: Case[] = [
 	{
 		code: 'E_CATEGORY_MISSING',
 		name: 'no category',
-		change: (s) => delete featureOf(s, 'wojownik', 'wytrzymalosc').category,
+		change: (s) => delete featureOf(s, 'wojownik', 'toughness').category,
 	},
 	{
 		code: 'E_BADGE_GROUP',

@@ -2,13 +2,23 @@
 
 Data API of HexBattle Online: the armies, tiles, mechanics and markers of the board game Neuroshima Hex (edition 3.0, Portal Games) as versioned, validated JSON.
 
-Work in progress – not published yet. Planned address: `https://api.hexbattle.online/v1/`. Locally: `http://localhost:8080/v1/` (see [Quick start](#quick-start)).
+> **Status: the public API is not live yet.** It will be served at `https://api.hexbattle.online/v1/`. Until then, [run your own copy](#running-your-own-copy) – every example in this README works with both.
 
-**Contents:** [Quick start](#quick-start) · [What the API serves](#what-the-api-serves) · [Files and folders](#files-and-folders) · [Data structure](#data-structure) · [Images](#images) · [Descriptions](#descriptions) · [Using the API with curl](#using-the-api-with-curl) · [Versioning](#versioning) · [Development](#development) · [Licence](#licence)
+**Contents:** [Using the public API](#using-the-public-api) · [Running your own copy](#running-your-own-copy) · [What the API serves](#what-the-api-serves) · [Files and folders](#files-and-folders) · [Data structure](#data-structure) · [Images](#images) · [Descriptions](#descriptions) · [Using the API with curl](#using-the-api-with-curl) · [Versioning](#versioning) · [Development](#development) · [Licence](#licence)
 
-## Quick start
+## Using the public API
 
-Requirements: Node 24 and pnpm. In the repository folder:
+The official instance runs at **`https://api.hexbattle.online/v1/`** – free, no login, no key, read-only, open to requests from any website (CORS `*`). Start with `/v1/index.json`, which links to everything else, or ask the [query service](#queries) directly:
+
+```bash
+curl -s "https://api.hexbattle.online/v1/query/tiles?id=moloch.klaun"
+```
+
+Please cache what you load (responses carry `Cache-Control` and `ETag`, see [Headers, caching and errors](#headers-caching-and-errors)) and use `index.json → meta.dataset_version` to notice new data.
+
+## Running your own copy
+
+This repository builds and serves the same API. Requirements: Node 24 and pnpm. In the repository folder:
 
 ```bash
 pnpm install
@@ -16,13 +26,18 @@ pnpm build:release
 pnpm serve
 ```
 
-The API now answers at `http://localhost:8080/v1/` (Ctrl+C stops it). Try `http://localhost:8080/v1/` in a browser, or:
+It answers at `http://localhost:8080/v1/` – only from this computer – until you stop it with Ctrl+C. Another address or port:
 
-```bash
-curl -s "http://localhost:8080/v1/query/tiles?id=moloch.klaun"
-```
+| Option             | Default                          | Example                                                                     |
+| ------------------ | -------------------------------- | --------------------------------------------------------------------------- |
+| `--port` or `PORT` | `8080`                           | `pnpm serve --port 9000`                                                    |
+| `--host` or `HOST` | `127.0.0.1` (this computer only) | `pnpm serve --host 0.0.0.0` – reachable from other computers and containers |
 
-Without the private image folder (`ASSETS_DIR`, see [Development](#development)) the data is complete but no images are written.
+Notes for your own copy:
+
+- **Images:** the build makes the WebP images from private image masters (`ASSETS_DIR`, see [Development](#development)), which are not in this repository. Without them you get all the data and the query service, but no images.
+- **Any address works:** every link inside the data is relative (`armies/moloch.json`, `assets/…`), so the files work from any host or folder without a rebuild.
+- **Static files only:** `dist/v1/` can also be served by any web server; only `/v1/query/` needs `pnpm serve`.
 
 ## What the API serves
 
@@ -204,7 +219,7 @@ Example (Moloch, its 23 tiles left out):
 			"extra_initiative",
 			"gauss",
 			"initiative",
-			"medyk",
+			"medic",
 			"melee",
 			"modify_stat",
 			"module_link",
@@ -212,9 +227,9 @@ Example (Moloch, its 23 tiles left out):
 			"net",
 			"push",
 			"ranged",
+			"ranged_plus1_aura",
 			"start_battle",
-			"strzal_plus1_aura",
-			"wytrzymalosc"
+			"toughness"
 		],
 		"required_pools": [],
 		"board_roles": [],
@@ -258,7 +273,7 @@ Example – a warrior (Moloch Szturmowiec: Strzał on the top edge, two Inicjaty
 				{ "mechanic": "ranged", "at": { "edge": 0 }, "params": { "strength": 1 } },
 				{ "mechanic": "initiative", "at": { "slot": "c5" }, "params": { "value": 2 } },
 				{ "mechanic": "initiative", "at": { "slot": "c4" }, "params": { "value": 1 } },
-				{ "mechanic": "wytrzymalosc", "at": { "slot": "c2" }, "category": "unit" }
+				{ "mechanic": "toughness", "at": { "slot": "c2" }, "category": "unit" }
 			]
 		}
 	],
@@ -349,12 +364,12 @@ Example (Modyfikator):
 
 ```json
 {
-	"id": "rana",
+	"id": "wound",
 	"name": { "pl": "Rana" },
 	"unlimited": true,
 	"two_sided": false,
 	"placement": "unit",
-	"images": { "front": "markers/rana.png" },
+	"images": { "front": "markers/wound.png" },
 	"size": "standard",
 	"official_component": true
 }
@@ -456,7 +471,7 @@ Every query answers `query` (the parameters as understood, defaults filled in), 
 					"playable": true,
 					"image": "moloch/bomba_front.png",
 					"features": [
-						{ "mechanic": "damage_area", "at": { "center": true }, "params": { "template": "bomba" } }
+						{ "mechanic": "damage_area", "at": { "center": true }, "params": { "template": "bomb" } }
 					]
 				}
 			],
@@ -504,15 +519,27 @@ Dywersant's Modyfikator (`amount: -1`, `stat: initiative`, `side: enemy`) render
 
 ## Using the API with curl
 
-The examples use the local server (`pnpm serve`); for the hosted API replace `http://localhost:8080` with `https://api.hexbattle.online`. On Windows PowerShell write `curl.exe` instead of `curl`; on Linux and macOS plain `curl`. `-s` hides the progress bar, `-i` shows the response headers, `-I` shows only the headers.
+Set the base address once – the public API or your own copy – and every example below works with it:
+
+```bash
+API=https://api.hexbattle.online      # bash (Linux, macOS, Git Bash)
+API=http://localhost:8080             # or your own copy
+```
+
+```powershell
+$API = "https://api.hexbattle.online"   # PowerShell
+$API = "http://localhost:8080"          # or your own copy
+```
+
+On Windows PowerShell write `curl.exe` instead of `curl`. `-s` hides the progress bar, `-i` shows the response headers, `-I` shows only the headers.
 
 ### Files
 
 ```bash
-curl -s "http://localhost:8080/v1/"
-curl -s "http://localhost:8080/v1/armies/moloch.json"
-curl -s "http://localhost:8080/v1/mechanics.json"
-curl -s -o klaun.webp "http://localhost:8080/v1/assets/moloch/klaun_front@512.webp"
+curl -s "$API/v1/"
+curl -s "$API/v1/armies/moloch.json"
+curl -s "$API/v1/mechanics.json"
+curl -s -o klaun.webp "$API/v1/assets/moloch/klaun_front@512.webp"
 ```
 
 ### Queries
@@ -531,42 +558,42 @@ Every query takes `id` (a comma-separated list of ids), `name` (part of the name
 By id or name:
 
 ```bash
-curl -s "http://localhost:8080/v1/query/tiles?id=moloch.klaun"
-curl -s "http://localhost:8080/v1/query/tiles?id=moloch.klaun,borgo.mutant&fields=id,name,army"
-curl -s "http://localhost:8080/v1/query/tiles?name=lowca&fields=id,name"
-curl -s "http://localhost:8080/v1/query/tiles?name=oficer&exact=true&fields=id,army"
-curl -s "http://localhost:8080/v1/query/armies?id=hegemonia&fields=id,name,display"
-curl -s "http://localhost:8080/v1/query/mechanics?id=net,armor"
-curl -s "http://localhost:8080/v1/query/markers?name=siec"
+curl -s "$API/v1/query/tiles?id=moloch.klaun"
+curl -s "$API/v1/query/tiles?id=moloch.klaun,borgo.mutant&fields=id,name,army"
+curl -s "$API/v1/query/tiles?name=lowca&fields=id,name"
+curl -s "$API/v1/query/tiles?name=oficer&exact=true&fields=id,army"
+curl -s "$API/v1/query/armies?id=hegemonia&fields=id,name,display"
+curl -s "$API/v1/query/mechanics?id=net,armor"
+curl -s "$API/v1/query/markers?name=siec"
 ```
 
 By army, category and features:
 
 ```bash
-curl -s "http://localhost:8080/v1/query/tiles?army=borgo&category=module&fields=id,name,copies"
-curl -s "http://localhost:8080/v1/query/tiles?mechanic=armor&fields=id,name,army"
-curl -s "http://localhost:8080/v1/query/tiles?mechanic=ranged&min_strength=2"
-curl -s "http://localhost:8080/v1/query/tiles?mechanic=modify_stat&side=enemy"
-curl -s "http://localhost:8080/v1/query/tiles?category=warrior,module&min_hp=2&fields=id,name"
-curl -s "http://localhost:8080/v1/query/tiles?min_initiative=3&fields=id,name,army"
-curl -s "http://localhost:8080/v1/query/mechanics?kind=effect&used_by=borgo"
-curl -s "http://localhost:8080/v1/query/board_skins?default=true"
+curl -s "$API/v1/query/tiles?army=borgo&category=module&fields=id,name,copies"
+curl -s "$API/v1/query/tiles?mechanic=armor&fields=id,name,army"
+curl -s "$API/v1/query/tiles?mechanic=ranged&min_strength=2"
+curl -s "$API/v1/query/tiles?mechanic=modify_stat&side=enemy"
+curl -s "$API/v1/query/tiles?category=warrior,module&min_hp=2&fields=id,name"
+curl -s "$API/v1/query/tiles?min_initiative=3&fields=id,name,army"
+curl -s "$API/v1/query/mechanics?kind=effect&used_by=borgo"
+curl -s "$API/v1/query/board_skins?default=true"
 ```
 
 Paging – the first 10 tiles, then the next 10 (`total` says how many match):
 
 ```bash
-curl -s "http://localhost:8080/v1/query/tiles?limit=10&fields=id"
-curl -s "http://localhost:8080/v1/query/tiles?limit=10&offset=10&fields=id"
+curl -s "$API/v1/query/tiles?limit=10&fields=id"
+curl -s "$API/v1/query/tiles?limit=10&offset=10&fields=id"
 ```
 
 ### Headers, caching and errors
 
 ```bash
-curl -I "http://localhost:8080/v1/armies/moloch.json"
-curl -I -H 'If-None-Match: "<etag from the line above>"' "http://localhost:8080/v1/armies/moloch.json"
-curl -i "http://localhost:8080/v1/query/tiles?colour=red"
-curl -i -X POST "http://localhost:8080/v1/index.json"
+curl -I "$API/v1/armies/moloch.json"
+curl -I -H 'If-None-Match: "<etag from the line above>"' "$API/v1/armies/moloch.json"
+curl -i "$API/v1/query/tiles?colour=red"
+curl -i -X POST "$API/v1/index.json"
 ```
 
 Every response has `Access-Control-Allow-Origin: *`, `Cache-Control` (`index.json` 60 s, other JSON and query answers 5 min, images 1 day) and an `ETag`; asking again with `If-None-Match` and the same ETag answers `304 Not Modified` without a body. The second-to-last example answers `400 bad_query`, the last `405 method_not_allowed`.
@@ -574,7 +601,7 @@ Every response has `Access-Control-Allow-Origin: *`, `Cache-Control` (`index.jso
 In PowerShell, `Invoke-RestMethod` turns an answer into objects:
 
 ```powershell
-(Invoke-RestMethod "http://localhost:8080/v1/query/tiles?army=borgo").results | ForEach-Object { "$($_.copies) × $($_.name.pl)" }
+(Invoke-RestMethod "$API/v1/query/tiles?army=borgo").results | ForEach-Object { "$($_.copies) × $($_.name.pl)" }
 ```
 
 ## Versioning
@@ -592,7 +619,7 @@ cp .env.example .env      # set ASSETS_DIR to the masters folder (optional)
 pnpm check                # typecheck, lint, format, tests under several time zones, release build
 pnpm build                # dev build into dist/v1/ (drafts and incomplete armies allowed, with warnings)
 pnpm build:release        # strict build: every army complete, every image in the manifest
-pnpm serve                # serve dist/v1/ and the query service at http://localhost:8080/v1/ (--port to change)
+pnpm serve                # serve dist/v1/ and the query service at http://localhost:8080/v1/ (--host, --port)
 pnpm assets:manifest      # update assets.manifest.json after adding or replacing an image
 pnpm schema:editor        # JSON Schemas for editor validation of data/ (VS Code picks them up)
 ```

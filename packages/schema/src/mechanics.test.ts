@@ -77,24 +77,24 @@ describe('MechanicsFile', () => {
 
 /* * Markers file */
 describe('MarkersFile', () => {
-	const rana = {
-		id: 'rana',
+	const wound = {
+		id: 'wound',
 		name: { pl: 'Rana' },
 		unlimited: true,
 		two_sided: false,
 		placement: 'unit',
-		images: { front: 'markers/rana.png' },
+		images: { front: 'markers/wound.png' },
 		size: 'standard',
 		official_component: true,
 	};
 	it('accepts a marker with images and one without', () => {
-		const hpMarker: Record<string, unknown> = { ...rana, id: 'hp_marker', placement: 'hp_track' };
+		const hpMarker: Record<string, unknown> = { ...wound, id: 'hp_marker', placement: 'hp_track' };
 		delete hpMarker.images;
-		expect(MarkersFile.safeParse({ markers: [rana, hpMarker] }).success).toBe(true);
+		expect(MarkersFile.safeParse({ markers: [wound, hpMarker] }).success).toBe(true);
 	});
 	it('rejects sources and unknown image kinds', () => {
-		expect(MarkersFile.safeParse({ markers: [{ ...rana, sources: [] }] }).success).toBe(false);
-		expect(MarkersFile.safeParse({ markers: [{ ...rana, images: { side: 'markers/rana.png' } }] }).success).toBe(
+		expect(MarkersFile.safeParse({ markers: [{ ...wound, sources: [] }] }).success).toBe(false);
+		expect(MarkersFile.safeParse({ markers: [{ ...wound, images: { side: 'markers/wound.png' } }] }).success).toBe(
 			false,
 		);
 	});

@@ -106,7 +106,7 @@
 							}
 						},
 						{
-							"mechanic": "cios_plus1_aura",
+							"mechanic": "melee_plus1_aura",
 							"at": {
 								"slot": "c2"
 							},
@@ -150,7 +150,7 @@
 							}
 						},
 						{
-							"mechanic": "mobilnosc",
+							"mechanic": "mobility",
 							"at": {
 								"slot": "c2"
 							},
@@ -304,7 +304,7 @@
 							}
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c2"
 							},
@@ -384,7 +384,7 @@
 							}
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c2"
 							},
@@ -852,7 +852,7 @@
 								"center": true
 							},
 							"params": {
-								"ability": "mobilnosc"
+								"ability": "mobility"
 							},
 							"side": "allied"
 						}

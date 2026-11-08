@@ -237,24 +237,24 @@
 			"width": 891,
 			"height": 771
 		},
-		"markers/inicjatywa_blank.png": {
+		"markers/initiative_blank.png": {
 			"source": "core/blank-init-badge.png",
 			"sha256": "49352c0e43ba724e799aa7e1361eb7cad3ac550236edaf1e0ebecfaa0bc76668",
 			"bytes": 69437,
 			"width": 206,
 			"height": 204
 		},
-		"markers/rana.png": {
-			"source": "core/rana.png",
-			"sha256": "28f0c3623a93f1666e41bc869cfb47a419cbbaf41b1b9b6c0df92b76f0f4b4e8",
-			"bytes": 327618,
-			"width": 430,
-			"height": 430
-		},
-		"markers/siec.png": {
+		"markers/net.png": {
 			"source": "core/siec.png",
 			"sha256": "0acf10dc98f8b58ec3b7324e27ee0752ef7905e503f31b0d3da8fe5c6e85edbd",
 			"bytes": 385340,
+			"width": 430,
+			"height": 430
+		},
+		"markers/wound.png": {
+			"source": "core/rana.png",
+			"sha256": "28f0c3623a93f1666e41bc869cfb47a419cbbaf41b1b9b6c0df92b76f0f4b4e8",
+			"bytes": 327618,
 			"width": 430,
 			"height": 430
 		},

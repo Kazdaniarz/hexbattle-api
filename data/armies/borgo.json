@@ -106,7 +106,7 @@
 							}
 						},
 						{
-							"mechanic": "inicjatywa_plus1_aura",
+							"mechanic": "initiative_plus1_aura",
 							"at": {
 								"slot": "c2"
 							},
@@ -241,7 +241,7 @@
 							}
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c2"
 							},
@@ -411,7 +411,7 @@
 							}
 						},
 						{
-							"mechanic": "mobilnosc",
+							"mechanic": "mobility",
 							"at": {
 								"slot": "c2"
 							},
@@ -464,7 +464,7 @@
 							}
 						},
 						{
-							"mechanic": "medyk",
+							"mechanic": "medic",
 							"at": {
 								"center": true
 							},
@@ -642,7 +642,7 @@
 							"side": "allied"
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c2"
 							},

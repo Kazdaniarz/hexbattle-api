@@ -100,7 +100,7 @@ describe('renderTemplate', () => {
 		expect(
 			renderTemplate(
 				'{stat} {ability} {amount}',
-				context({ stat: 'melee', ability: 'mobilnosc', amount: -1 }, extra),
+				context({ stat: 'melee', ability: 'mobility', amount: -1 }, extra),
 			),
 		).toBe('siłę ciosu Mobilność −1');
 	});

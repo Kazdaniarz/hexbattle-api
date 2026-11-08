@@ -166,8 +166,8 @@ describe('queryArmies', () => {
 
 describe('queryMarkers, querySkins, queryBoardSkins', () => {
 	it.each([
-		['id=rana', ['rana']],
-		['name=RANA', ['rana']],
+		['id=wound', ['wound']],
+		['name=RANA', ['wound']],
 		['placement=hp_track', []],
 	])('markers %s', (params, expected) => {
 		expect(ids(MarkerQuery, queryMarkers, params)).toEqual(expected);
@@ -270,7 +270,7 @@ describe('/v1/query/ routes', () => {
 	});
 	it.each([
 		['armies?id=testowa', 'testowa'],
-		['markers?id=rana', 'rana'],
+		['markers?id=wound', 'wound'],
 		['skins?army=testowa', 'testowa.wariant'],
 		['board_skins?default=true', 'plansza'],
 		['tiles?id=testowa.sztab', 'testowa.sztab'],

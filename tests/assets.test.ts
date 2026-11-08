@@ -30,7 +30,7 @@ describe('checkManifest', () => {
 				'testowa/back.png',
 				'testowa/hp_marker.png',
 				'testowa/sztab_front.png',
-				'markers/rana.png',
+				'markers/wound.png',
 				'skins/testowa/wariant/sztab_front.png',
 				'skins/testowa/wariant/back.png',
 				'board_skins/plansza.png',
@@ -42,7 +42,7 @@ describe('checkManifest', () => {
 	});
 	it('reports an unlisted image (error in a release, warning otherwise)', () => {
 		const manifest = manifestFor(source());
-		delete manifest.assets['markers/rana.png'];
+		delete manifest.assets['markers/wound.png'];
 		expect(checkManifest(refs, manifest, true).map((issue) => issue.code)).toEqual(['E_ASSET_MISSING']);
 		expect(checkManifest(refs, manifest, false).map((issue) => issue.code)).toEqual(['W_ASSET_MISSING']);
 	});
@@ -58,7 +58,7 @@ describe('checkManifest', () => {
 describe('webpSizes', () => {
 	it('never enlarges and uses the board sizes for board skins', () => {
 		expect(webpSizes('testowa/a_front.png', { width: 891, height: 771 })).toEqual([512, 256, 128]);
-		expect(webpSizes('markers/rana.png', { width: 430, height: 430 })).toEqual([256, 128]);
+		expect(webpSizes('markers/wound.png', { width: 430, height: 430 })).toEqual([256, 128]);
 		expect(webpSizes('board_skins/plansza.png', { width: 5032, height: 3328 })).toEqual([4096, 2048, 1024]);
 		expect(webpSizes('testowa/logo.svg', {})).toEqual([]);
 	});

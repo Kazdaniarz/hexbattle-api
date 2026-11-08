@@ -41,7 +41,7 @@ describe('Text', () => {
 
 /* * Assets */
 describe('AssetRef', () => {
-	it.each(['moloch/klaun_front.png', 'moloch/logo.svg', 'skins/borgo/x/sztab_front.png', 'markers/rana.png'])(
+	it.each(['moloch/klaun_front.png', 'moloch/logo.svg', 'skins/borgo/x/sztab_front.png', 'markers/wound.png'])(
 		'accepts %s',
 		(value) => {
 			expect(AssetRef.safeParse(value).success).toBe(true);

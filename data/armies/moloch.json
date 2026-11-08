@@ -106,7 +106,7 @@
 							}
 						},
 						{
-							"mechanic": "strzal_plus1_aura",
+							"mechanic": "ranged_plus1_aura",
 							"at": {
 								"slot": "c2"
 							},
@@ -498,7 +498,7 @@
 							}
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c0"
 							},
@@ -551,7 +551,7 @@
 							}
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c2"
 							},
@@ -622,7 +622,7 @@
 							}
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c3"
 							},
@@ -666,7 +666,7 @@
 							}
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c3"
 							},
@@ -726,7 +726,7 @@
 							"category": "unit"
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c3"
 							},
@@ -789,14 +789,14 @@
 							}
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c0"
 							},
 							"category": "unit"
 						},
 						{
-							"mechanic": "wytrzymalosc",
+							"mechanic": "toughness",
 							"at": {
 								"slot": "c1"
 							},
@@ -887,7 +887,7 @@
 							}
 						},
 						{
-							"mechanic": "medyk",
+							"mechanic": "medic",
 							"at": {
 								"center": true
 							},
@@ -1125,7 +1125,7 @@
 								"center": true
 							},
 							"params": {
-								"template": "bomba"
+								"template": "bomb"
 							}
 						}
 					]

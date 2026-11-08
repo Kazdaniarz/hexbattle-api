@@ -16,7 +16,7 @@ import type {
 
 /* * Constants */
 
-const TOUGHNESS = 'wytrzymalosc';
+const TOUGHNESS = 'toughness';
 const INITIATIVE = 'initiative';
 const MODULE_LINK = 'module_link';
 

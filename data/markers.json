@@ -1,7 +1,7 @@
 {
 	"markers": [
 		{
-			"id": "rana",
+			"id": "wound",
 			"name": {
 				"pl": "Rana"
 			},
@@ -9,13 +9,13 @@
 			"two_sided": false,
 			"placement": "unit",
 			"images": {
-				"front": "markers/rana.png"
+				"front": "markers/wound.png"
 			},
 			"size": "standard",
 			"official_component": true
 		},
 		{
-			"id": "siec",
+			"id": "net",
 			"name": {
 				"pl": "Sieć"
 			},
@@ -23,13 +23,13 @@
 			"two_sided": false,
 			"placement": "unit",
 			"images": {
-				"front": "markers/siec.png"
+				"front": "markers/net.png"
 			},
 			"size": "standard",
 			"official_component": true
 		},
 		{
-			"id": "inicjatywa",
+			"id": "initiative",
 			"name": {
 				"pl": "Inicjatywa"
 			},
@@ -37,7 +37,7 @@
 			"two_sided": false,
 			"placement": "unit",
 			"images": {
-				"blank": "markers/inicjatywa_blank.png"
+				"blank": "markers/initiative_blank.png"
 			},
 			"size": "small",
 			"official_component": true

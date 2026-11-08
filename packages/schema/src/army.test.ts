@@ -21,7 +21,7 @@ const warrior = {
 			features: [
 				{ mechanic: 'ranged', at: { edge: 0 }, params: { strength: 1 } },
 				{ mechanic: 'initiative', at: { slot: 'c4' }, params: { value: 2 } },
-				{ mechanic: 'wytrzymalosc', at: { slot: 'c2' }, category: 'unit' },
+				{ mechanic: 'toughness', at: { slot: 'c2' }, category: 'unit' },
 			],
 		},
 	],
@@ -83,7 +83,7 @@ describe('Feature', () => {
 		const feature = {
 			mechanic: 'module_feature',
 			at: { edge: 4 },
-			effects: [{ mechanic: 'medyk', at: { edge: 9 } }],
+			effects: [{ mechanic: 'medic', at: { edge: 9 } }],
 		};
 		expect(Feature.safeParse(feature).success).toBe(false);
 	});
@@ -119,7 +119,7 @@ describe('Army', () => {
 			...army,
 			display: { ...display, manual: [{ language: 'pl', pdf_url: 'https://example.com/moloch.pdf' }] },
 			rules: [{ rule: 'gamble', params: { start: 2, max: 7 } }],
-			pools: [{ marker: 'siec', count: 4, pool_type: 'limiting' }],
+			pools: [{ marker: 'net', count: 4, pool_type: 'limiting' }],
 			deck: { size: 36, swap: [{ tile: 'moloch.example', mode: 'optional_replace_any_one', reveal: true }] },
 		};
 		expect(Army.safeParse(full).success).toBe(true);

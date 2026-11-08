@@ -155,7 +155,7 @@
 			}
 		},
 		{
-			"id": "wytrzymalosc",
+			"id": "toughness",
 			"kind": "ability",
 			"name": {
 				"pl": "Wytrzymałość"
@@ -168,7 +168,7 @@
 			}
 		},
 		{
-			"id": "mobilnosc",
+			"id": "mobility",
 			"kind": "ability",
 			"name": {
 				"pl": "Mobilność"
@@ -195,7 +195,7 @@
 			}
 		},
 		{
-			"id": "strzal_plus1_aura",
+			"id": "ranged_plus1_aura",
 			"kind": "ability",
 			"name": {
 				"pl": "+1 do strzału"
@@ -208,7 +208,7 @@
 			}
 		},
 		{
-			"id": "cios_plus1_aura",
+			"id": "melee_plus1_aura",
 			"kind": "ability",
 			"name": {
 				"pl": "+1 do ciosu"
@@ -221,7 +221,7 @@
 			}
 		},
 		{
-			"id": "inicjatywa_plus1_aura",
+			"id": "initiative_plus1_aura",
 			"kind": "ability",
 			"name": {
 				"pl": "+1 do Inicjatywy"
@@ -273,7 +273,7 @@
 			}
 		},
 		{
-			"id": "medyk",
+			"id": "medic",
 			"kind": "effect",
 			"name": {
 				"pl": "Medyk"
@@ -422,9 +422,9 @@
 				"template": {
 					"type": "string",
 					"required": true,
-					"values": ["bomba"],
+					"values": ["bomb"],
 					"labels": {
-						"bomba": {
+						"bomb": {
 							"pl": "wybrane pole i 6 pól wokół niego (cały obszar musi mieścić się na planszy)"
 						}
 					}
