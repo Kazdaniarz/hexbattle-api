@@ -1,0 +1,858 @@
+{
+	"id": "posterunek",
+	"name": {
+		"pl": "Posterunek"
+	},
+	"official": true,
+	"origin": "base_game",
+	"display": {
+		"colors": {
+			"primary": "#7D9F43",
+			"secondary": "#546D2F",
+			"layout": "solid"
+		},
+		"logo": {
+			"image": "posterunek/logo.svg"
+		},
+		"back": "posterunek/back.png",
+		"hp_markers": [
+			{
+				"tile_id": "posterunek.sztab",
+				"image": "posterunek/hp_marker.png"
+			}
+		]
+	},
+	"deck": {
+		"size": 35
+	},
+	"tiles": [
+		{
+			"id": "posterunek.sztab",
+			"name": {
+				"pl": "Sztab Posterunku"
+			},
+			"category": "hq",
+			"copies": 1,
+			"setup_role": "starting_hq",
+			"status": "verified",
+			"hp": 20,
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/sztab_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 2
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 3
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 4
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c5"
+							},
+							"params": {
+								"value": 0
+							}
+						},
+						{
+							"mechanic": "extra_initiative_aura",
+							"at": {
+								"slot": "c3"
+							},
+							"category": "hq",
+							"params": {
+								"group": "a"
+							}
+						},
+						{
+							"mechanic": "extra_initiative_aura",
+							"at": {
+								"slot": "c2"
+							},
+							"category": "hq",
+							"params": {
+								"group": "a"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.biegacz",
+			"name": {
+				"pl": "Biegacz"
+			},
+			"category": "warrior",
+			"copies": 2,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/biegacz_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c0"
+							},
+							"params": {
+								"value": 2
+							}
+						},
+						{
+							"mechanic": "mobilnosc",
+							"at": {
+								"slot": "e2"
+							},
+							"category": "unit"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.silacz",
+			"name": {
+				"pl": "Siłacz"
+			},
+			"category": "warrior",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/silacz_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"strength": 2
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "e2"
+							},
+							"params": {
+								"value": 3
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.pancerz_wspomagany",
+			"name": {
+				"pl": "Pancerz Wspomagany"
+			},
+			"category": "warrior",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/pancerz_wspomagany_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"strength": 2
+							}
+						},
+						{
+							"mechanic": "ranged",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "mobilnosc",
+							"at": {
+								"slot": "c0"
+							},
+							"category": "unit"
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c4"
+							},
+							"params": {
+								"value": 2
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c3"
+							},
+							"params": {
+								"value": 3
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.ckm",
+			"name": {
+				"pl": "CKM"
+			},
+			"category": "warrior",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/ckm_front.png",
+					"features": [
+						{
+							"mechanic": "ranged",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c5"
+							},
+							"params": {
+								"value": 2
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c4"
+							},
+							"params": {
+								"value": 1
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.komandos",
+			"name": {
+				"pl": "Komandos"
+			},
+			"category": "warrior",
+			"copies": 5,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/komandos_front.png",
+					"features": [
+						{
+							"mechanic": "ranged",
+							"at": {
+								"edge": 4
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c3"
+							},
+							"params": {
+								"value": 3
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.likwidator",
+			"name": {
+				"pl": "Likwidator"
+			},
+			"category": "warrior",
+			"copies": 2,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/likwidator_front.png",
+					"features": [
+						{
+							"mechanic": "ranged",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"strength": 2
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "e2"
+							},
+							"params": {
+								"value": 2
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.medyk",
+			"name": {
+				"pl": "Medyk"
+			},
+			"category": "module",
+			"copies": 2,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/medyk_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "medyk",
+							"at": {
+								"center": true
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.zwiadowca",
+			"name": {
+				"pl": "Zwiadowca"
+			},
+			"category": "module",
+			"copies": 2,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/zwiadowca_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 2
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 4
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "modify_stat",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"stat": "initiative",
+								"amount": 1
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.oficer",
+			"name": {
+				"pl": "Oficer"
+			},
+			"category": "module",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/oficer_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 2
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 3
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 4
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "modify_stat",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"stat": "ranged",
+								"amount": 1
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.dywersant",
+			"name": {
+				"pl": "Dywersant"
+			},
+			"category": "module",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/dywersant_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 2
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 3
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 4
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "modify_stat",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"stat": "initiative",
+								"amount": -1
+							},
+							"side": "enemy"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.skoper",
+			"name": {
+				"pl": "Skoper"
+			},
+			"category": "module",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/skoper_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 2
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 3
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 4
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "redirect_module",
+							"at": {
+								"center": true
+							},
+							"side": "enemy"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.centrum_rozpoznania",
+			"name": {
+				"pl": "Centrum Rozpoznania"
+			},
+			"category": "module",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/centrum_rozpoznania_front.png",
+					"features": [
+						{
+							"mechanic": "movement_multiplier",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"factor": 2
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.bitwa",
+			"name": {
+				"pl": "Bitwa"
+			},
+			"category": "instant",
+			"copies": 6,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/bitwa_front.png",
+					"features": [
+						{
+							"mechanic": "start_battle",
+							"at": {
+								"center": true
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.ruch",
+			"name": {
+				"pl": "Ruch"
+			},
+			"category": "instant",
+			"copies": 7,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/ruch_front.png",
+					"features": [
+						{
+							"mechanic": "move",
+							"at": {
+								"center": true
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "posterunek.snajper",
+			"name": {
+				"pl": "Snajper"
+			},
+			"category": "instant",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "posterunek/snajper_front.png",
+					"features": [
+						{
+							"mechanic": "snipe",
+							"at": {
+								"center": true
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -6,5 +6,12 @@
 	"[yaml]": {
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
-	}
+	},
+	"json.schemas": [
+		{ "fileMatch": ["/data/mechanics.json"], "url": "./.generated/schema/mechanics.schema.json" },
+		{ "fileMatch": ["/data/markers.json"], "url": "./.generated/schema/markers.schema.json" },
+		{ "fileMatch": ["/data/armies/*.json"], "url": "./.generated/schema/army.schema.json" },
+		{ "fileMatch": ["/data/skins/*.json"], "url": "./.generated/schema/skin.schema.json" },
+		{ "fileMatch": ["/data/board_skins/*.json"], "url": "./.generated/schema/board_skin.schema.json" }
+	]
 }

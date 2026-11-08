@@ -1,0 +1,964 @@
+{
+	"id": "hegemonia",
+	"name": {
+		"pl": "Hegemonia"
+	},
+	"official": true,
+	"origin": "base_game",
+	"display": {
+		"colors": {
+			"primary": "#F1CD53",
+			"secondary": "#BB7E2F",
+			"layout": "solid"
+		},
+		"logo": {
+			"image": "hegemonia/logo.svg"
+		},
+		"back": "hegemonia/back.png",
+		"hp_markers": [
+			{
+				"tile_id": "hegemonia.sztab",
+				"image": "hegemonia/hp_marker.png"
+			}
+		]
+	},
+	"deck": {
+		"size": 35
+	},
+	"tiles": [
+		{
+			"id": "hegemonia.sztab",
+			"name": {
+				"pl": "Sztab Hegemonii"
+			},
+			"category": "hq",
+			"copies": 1,
+			"setup_role": "starting_hq",
+			"status": "verified",
+			"hp": 20,
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/sztab_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 2
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 3
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 4
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c5"
+							},
+							"params": {
+								"value": 0
+							}
+						},
+						{
+							"mechanic": "cios_plus1_aura",
+							"at": {
+								"slot": "c2"
+							},
+							"category": "hq"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.biegacz",
+			"name": {
+				"pl": "Biegacz"
+			},
+			"category": "warrior",
+			"copies": 3,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/biegacz_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c1"
+							},
+							"params": {
+								"value": 2
+							}
+						},
+						{
+							"mechanic": "mobilnosc",
+							"at": {
+								"slot": "c2"
+							},
+							"category": "unit"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.ganger",
+			"name": {
+				"pl": "Ganger"
+			},
+			"category": "warrior",
+			"copies": 4,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/ganger_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c5"
+							},
+							"params": {
+								"value": 3
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.bydlak",
+			"name": {
+				"pl": "Bydlak"
+			},
+			"category": "warrior",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/bydlak_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"strength": 2
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c2"
+							},
+							"params": {
+								"value": 2
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.straznik",
+			"name": {
+				"pl": "Strażnik"
+			},
+			"category": "warrior",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/straznik_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 4
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c3"
+							},
+							"params": {
+								"value": 2
+							}
+						},
+						{
+							"mechanic": "wytrzymalosc",
+							"at": {
+								"slot": "c2"
+							},
+							"category": "unit"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.gladiator",
+			"name": {
+				"pl": "Gladiator"
+			},
+			"category": "warrior",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/gladiator_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"strength": 2
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"strength": 2
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"strength": 2
+							}
+						},
+						{
+							"mechanic": "armor",
+							"at": {
+								"edge": 5
+							}
+						},
+						{
+							"mechanic": "armor",
+							"at": {
+								"edge": 0
+							}
+						},
+						{
+							"mechanic": "armor",
+							"at": {
+								"edge": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c3"
+							},
+							"params": {
+								"value": 1
+							}
+						},
+						{
+							"mechanic": "wytrzymalosc",
+							"at": {
+								"slot": "c2"
+							},
+							"category": "unit"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.uniwersalny_zolnierz",
+			"name": {
+				"pl": "Uniwersalny Żołnierz"
+			},
+			"category": "warrior",
+			"copies": 3,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/uniwersalny_zolnierz_front.png",
+					"features": [
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 5,
+								"i": 0
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "ranged",
+							"at": {
+								"edge": 5,
+								"i": 1
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "e0"
+							},
+							"params": {
+								"value": 3
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.sieciarz",
+			"name": {
+				"pl": "Sieciarz"
+			},
+			"category": "warrior",
+			"copies": 2,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/sieciarz_front.png",
+					"features": [
+						{
+							"mechanic": "net",
+							"at": {
+								"edge": 1
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.super_sieciarz",
+			"name": {
+				"pl": "Super-Sieciarz"
+			},
+			"category": "warrior",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/super_sieciarz_front.png",
+					"features": [
+						{
+							"mechanic": "net",
+							"at": {
+								"edge": 2
+							}
+						},
+						{
+							"mechanic": "net",
+							"at": {
+								"edge": 4
+							}
+						},
+						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 3
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
+							"mechanic": "initiative",
+							"at": {
+								"slot": "c3"
+							},
+							"params": {
+								"value": 2
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.oficer_i",
+			"name": {
+				"pl": "Oficer I"
+			},
+			"category": "module",
+			"copies": 2,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/oficer_i_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "modify_stat",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"stat": "melee",
+								"amount": 1
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.oficer_ii",
+			"name": {
+				"pl": "Oficer II"
+			},
+			"category": "module",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/oficer_ii_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "modify_stat",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"stat": "melee",
+								"amount": 1
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.boss",
+			"name": {
+				"pl": "Boss"
+			},
+			"category": "module",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/boss_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "modify_stat",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"stat": "melee",
+								"amount": 1
+							},
+							"side": "allied"
+						},
+						{
+							"mechanic": "modify_stat",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"stat": "initiative",
+								"amount": 1
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.zwiadowca",
+			"name": {
+				"pl": "Zwiadowca"
+			},
+			"category": "module",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/zwiadowca_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "modify_stat",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"stat": "initiative",
+								"amount": 1
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.kwatermistrz",
+			"name": {
+				"pl": "Kwatermistrz"
+			},
+			"category": "module",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/kwatermistrz_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "convert_attack",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"from": "melee",
+								"to": "ranged",
+								"both_ways": true
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.transport",
+			"name": {
+				"pl": "Transport"
+			},
+			"category": "module",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/transport_front.png",
+					"features": [
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 0
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 1
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 2
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 3
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 4
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "module_link",
+							"at": {
+								"edge": 5
+							},
+							"params": {
+								"range": 1
+							}
+						},
+						{
+							"mechanic": "grant_ability",
+							"at": {
+								"center": true
+							},
+							"params": {
+								"ability": "mobilnosc"
+							},
+							"side": "allied"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.bitwa",
+			"name": {
+				"pl": "Bitwa"
+			},
+			"category": "instant",
+			"copies": 5,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/bitwa_front.png",
+					"features": [
+						{
+							"mechanic": "start_battle",
+							"at": {
+								"center": true
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.ruch",
+			"name": {
+				"pl": "Ruch"
+			},
+			"category": "instant",
+			"copies": 3,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/ruch_front.png",
+					"features": [
+						{
+							"mechanic": "move",
+							"at": {
+								"center": true
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.odepchniecie",
+			"name": {
+				"pl": "Odepchnięcie"
+			},
+			"category": "instant",
+			"copies": 2,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/odepchniecie_front.png",
+					"features": [
+						{
+							"mechanic": "push",
+							"at": {
+								"center": true
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "hegemonia.snajper",
+			"name": {
+				"pl": "Snajper"
+			},
+			"category": "instant",
+			"copies": 1,
+			"setup_role": "draw_pile",
+			"status": "verified",
+			"faces": [
+				{
+					"side": "front",
+					"playable": true,
+					"image": "hegemonia/snajper_front.png",
+					"features": [
+						{
+							"mechanic": "snipe",
+							"at": {
+								"center": true
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

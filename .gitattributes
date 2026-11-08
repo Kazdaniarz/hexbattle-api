@@ -1,4 +1,4 @@
-# LF everywhere (overrides core.autocrlf on Windows - 14 §4)
+# LF everywhere (overrides core.autocrlf on Windows)
 * text=auto eol=lf
 
 # Binary files

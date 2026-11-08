@@ -1,0 +1,486 @@
+{
+	"terms": {
+		"side": {
+			"own": {
+				"pl": "własnych"
+			},
+			"allied": {
+				"pl": "sojuszniczych"
+			},
+			"enemy": {
+				"pl": "wrogich"
+			},
+			"all": {
+				"pl": "wszystkich"
+			}
+		}
+	},
+	"mechanics": [
+		{
+			"id": "melee",
+			"kind": "attack",
+			"name": {
+				"pl": "Cios"
+			},
+			"name_plural": {
+				"pl": "Ciosy"
+			},
+			"placement": ["edge"],
+			"params": {
+				"strength": {
+					"type": "integer",
+					"required": true,
+					"min": 1
+				}
+			},
+			"official": true,
+			"description": {
+				"pl": "Atak wręcz. W segmencie Inicjatywy jednostki zadaje jednostce wroga na sąsiednim polu, w kierunku ikony, tyle Ran, ile ikon ciosu jest na tej ściance żetonu. Pancerz nie chroni przed ciosem."
+			}
+		},
+		{
+			"id": "ranged",
+			"kind": "attack",
+			"name": {
+				"pl": "Strzał"
+			},
+			"name_plural": {
+				"pl": "Strzały"
+			},
+			"placement": ["edge"],
+			"params": {
+				"strength": {
+					"type": "integer",
+					"required": true,
+					"min": 1
+				}
+			},
+			"official": true,
+			"description": {
+				"pl": "Atak dystansowy. Trafia pierwszą jednostkę wroga na linii prostej w kierunku ikony, w dowolnej odległości. Przelatuje nad jednostkami sojuszniczymi. Zadaje tyle Ran, ile ikon strzału jest na ściance żetonu. Pancerz celu zmniejsza obrażenia o 1."
+			}
+		},
+		{
+			"id": "gauss",
+			"kind": "attack",
+			"name": {
+				"pl": "Gauss"
+			},
+			"name_plural": {
+				"pl": "Gaussy"
+			},
+			"placement": ["edge"],
+			"params": {
+				"strength": {
+					"type": "integer",
+					"required": true,
+					"min": 1
+				}
+			},
+			"official": true,
+			"description": {
+				"pl": "Atak dystansowy. Trafia każdą jednostkę wroga na linii prostej w kierunku ikony, zadając każdej tyle Ran, ile jest ikon. Pancerz zmniejsza obrażenia tylko jednostce, która go ma – pocisk leci dalej. Premie do strzału nie zwiększają Gaussa."
+			}
+		},
+		{
+			"id": "armor",
+			"kind": "defense",
+			"name": {
+				"pl": "Pancerz"
+			},
+			"name_plural": {
+				"pl": "Pancerze"
+			},
+			"placement": ["edge"],
+			"official": true,
+			"description": {
+				"pl": "Zmniejsza o 1 obrażenia od każdego ataku dystansowego, który trafia jednostkę przez tę ściankę żetonu lub przez narożniki na końcach ikony. Atak o sile 1 zostaje całkowicie zatrzymany. Nie chroni przed atakami wręcz, odłamkami ani żetonami natychmiastowymi. Działa także, gdy jednostka jest zasieciowana."
+			}
+		},
+		{
+			"id": "net",
+			"kind": "net",
+			"name": {
+				"pl": "Sieć"
+			},
+			"name_plural": {
+				"pl": "Sieci"
+			},
+			"placement": ["edge"],
+			"official": true,
+			"description": {
+				"pl": "Jednostka wroga na sąsiednim polu w kierunku ikony zostaje zasieciowana: nie atakuje, nie używa cech, nie daje premii innym jednostkom, nie może się ruszać ani być przesuwana czy obracana. Działa od razu po położeniu żetonu, także na Sztaby. Zasieciowana jednostka zachowuje Pancerz i Wytrzymałość."
+			}
+		},
+		{
+			"id": "module_link",
+			"kind": "connector",
+			"name": {
+				"pl": "Połączenie modułu"
+			},
+			"name_plural": {
+				"pl": "Połączenia modułu"
+			},
+			"placement": ["edge"],
+			"params": {
+				"range": {
+					"type": "integer",
+					"required": true,
+					"values": [1, 2],
+					"default": 1
+				}
+			},
+			"official": true,
+			"description": {
+				"pl": "Wskazuje kierunek działania Modułu: jego efekt obejmuje jednostkę na sąsiednim polu w tym kierunku. Połączenie dalekiego zasięgu obejmuje także pole za nim, niezależnie od tego, co stoi na pierwszym. Moduł bez połączeń działa na całą planszę."
+			}
+		},
+		{
+			"id": "initiative",
+			"kind": "initiative",
+			"name": {
+				"pl": "Inicjatywa"
+			},
+			"placement": ["slot"],
+			"params": {
+				"value": {
+					"type": "integer",
+					"required": true,
+					"min": 0
+				}
+			},
+			"official": true,
+			"description": {
+				"pl": "Segment Bitwy, w którym jednostka wykonuje swoje ataki. Segmenty rozgrywa się od najwyższego do 0. Kilka wartości oznacza działanie w każdym z tych segmentów. Inicjatywa nie spada poniżej 0 i nie ma górnej granicy."
+			}
+		},
+		{
+			"id": "wytrzymalosc",
+			"kind": "ability",
+			"name": {
+				"pl": "Wytrzymałość"
+			},
+			"placement": ["slot"],
+			"allowed_categories": ["unit"],
+			"official": true,
+			"description": {
+				"pl": "Każda ikona zwiększa o 1 liczbę Ran, które jednostka może przyjąć – jednostka bez Wytrzymałości ginie od 1 Rany. Działa także, gdy jednostka jest zasieciowana."
+			}
+		},
+		{
+			"id": "mobilnosc",
+			"kind": "ability",
+			"name": {
+				"pl": "Mobilność"
+			},
+			"placement": ["slot"],
+			"allowed_categories": ["unit"],
+			"official": true,
+			"description": {
+				"pl": "Raz w swojej turze jednostka może przesunąć się na sąsiednie wolne pole (i dowolnie się obrócić) albo tylko się obrócić. Nie działa, gdy jednostka jest zasieciowana."
+			}
+		},
+		{
+			"id": "explosion",
+			"kind": "ability",
+			"name": {
+				"pl": "Eksplozja"
+			},
+			"aliases": ["odłamki"],
+			"placement": ["slot"],
+			"allowed_categories": ["unit"],
+			"official": true,
+			"description": {
+				"pl": "Zamiast ataku, w segmencie swojej Inicjatywy, jednostka może eksplodować. Odłamki zadają 1 Ranę każdej jednostce na sąsiednich polach – wrogiej i sojuszniczej, także Sztabom. Pancerz nie chroni. Medyk może przejąć obrażenia. Eksplodującej jednostki nie można uratować. Sieć i Paraliż uniemożliwiają eksplozję."
+			}
+		},
+		{
+			"id": "strzal_plus1_aura",
+			"kind": "ability",
+			"name": {
+				"pl": "+1 do strzału"
+			},
+			"placement": ["slot"],
+			"allowed_categories": ["hq"],
+			"official": true,
+			"description": {
+				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem mają +1 do każdego strzału. Premia nie działa na Gaussa ani na sam Sztab. Nie działa, gdy Sztab jest zasieciowany."
+			}
+		},
+		{
+			"id": "cios_plus1_aura",
+			"kind": "ability",
+			"name": {
+				"pl": "+1 do ciosu"
+			},
+			"placement": ["slot"],
+			"allowed_categories": ["hq"],
+			"official": true,
+			"description": {
+				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem mają +1 do każdego ciosu. Premia nie działa na sam Sztab. Nie działa, gdy Sztab jest zasieciowany."
+			}
+		},
+		{
+			"id": "inicjatywa_plus1_aura",
+			"kind": "ability",
+			"name": {
+				"pl": "+1 do Inicjatywy"
+			},
+			"placement": ["slot"],
+			"allowed_categories": ["hq"],
+			"official": true,
+			"description": {
+				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem mają +1 do każdej swojej Inicjatywy. Premia nie działa na sam Sztab. Nie działa, gdy Sztab jest zasieciowany."
+			}
+		},
+		{
+			"id": "extra_initiative_aura",
+			"kind": "ability",
+			"name": {
+				"pl": "Dodatkowa Inicjatywa (aura)"
+			},
+			"placement": ["slot"],
+			"allowed_categories": ["hq"],
+			"badge_count": 2,
+			"params": {
+				"group": {
+					"type": "string",
+					"required": true
+				}
+			},
+			"official": true,
+			"description": {
+				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem wykonują dodatkowy atak w najbliższym niższym segmencie Inicjatywy, w którym jeszcze nie atakowały (nie niżej niż 0). Jedno źródło daje jeden dodatkowy atak w Bitwie. Nie działa na sam Sztab ani gdy Sztab jest zasieciowany."
+			}
+		},
+		{
+			"id": "extra_initiative",
+			"kind": "effect",
+			"name": {
+				"pl": "Dodatkowa Inicjatywa"
+			},
+			"placement": ["center"],
+			"params": {
+				"count": {
+					"type": "integer",
+					"min": 1,
+					"default": 1
+				}
+			},
+			"official": true,
+			"description": {
+				"pl": "Połączone jednostki wykonują dodatkowy atak w najbliższym niższym segmencie Inicjatywy, w którym jeszcze nie atakowały (nie niżej niż 0). Jedno źródło daje najwyżej jeden dodatkowy atak w Bitwie."
+			}
+		},
+		{
+			"id": "medyk",
+			"kind": "effect",
+			"name": {
+				"pl": "Medyk"
+			},
+			"placement": ["center"],
+			"official": true,
+			"description": {
+				"pl": "Gdy połączona sojusznicza jednostka miałaby otrzymać Rany lub zostać zniszczona przez jedno źródło, Medyk ginie zamiast niej, a wszystkie Rany z tego źródła przepadają. Działa obowiązkowo. Jeżeli Medyk sam ginie w tym samym momencie, nie może uratować innej jednostki."
+			}
+		},
+		{
+			"id": "modify_stat",
+			"kind": "effect",
+			"name": {
+				"pl": "Modyfikator"
+			},
+			"placement": ["center"],
+			"official": true,
+			"params": {
+				"stat": {
+					"type": "string",
+					"required": true,
+					"values": ["melee", "ranged", "initiative"],
+					"labels": {
+						"melee": {
+							"pl": "siłę ciosu"
+						},
+						"ranged": {
+							"pl": "siłę strzału"
+						},
+						"initiative": {
+							"pl": "Inicjatywę"
+						}
+					}
+				},
+				"amount": {
+					"type": "integer",
+					"required": true,
+					"exclude": [0],
+					"signed": true
+				}
+			},
+			"description": {
+				"pl": "{amount@sign:Zwiększa,Zmniejsza} {stat} połączonych {side} jednostek o {amount@abs}. Efekty z kilku źródeł sumują się."
+			}
+		},
+		{
+			"id": "convert_attack",
+			"kind": "effect",
+			"name": {
+				"pl": "Zamiana ataku"
+			},
+			"placement": ["center"],
+			"official": true,
+			"params": {
+				"from": {
+					"type": "string",
+					"required": true,
+					"values": ["melee", "ranged"]
+				},
+				"to": {
+					"type": "string",
+					"required": true,
+					"values": ["melee", "ranged"]
+				},
+				"both_ways": {
+					"type": "boolean",
+					"default": false
+				}
+			},
+			"description": {
+				"pl": "Raz w Bitwie każda połączona jednostka może zamienić jeden swój atak – z jednej ścianki żetonu, w jednym segmencie – na atak innego typu o tej samej sile. Decyzję podejmuje się w segmencie Inicjatywy tej jednostki. Dodatkowe premie do siły ataku (obu typów) działają."
+			}
+		},
+		{
+			"id": "grant_ability",
+			"kind": "effect",
+			"name": {
+				"pl": "Nadanie cechy"
+			},
+			"placement": ["center"],
+			"official": true,
+			"params": {
+				"ability": {
+					"type": "id",
+					"required": true,
+					"ref": "mechanic"
+				}
+			},
+			"description": {
+				"pl": "Połączone jednostki zyskują cechę {ability}. Z zyskanej tak cechy można skorzystać raz na turę. Można zyskać wiele tych samych cech z różnych źródeł, każda taka cecha może być użyta indywidualnie. Jednostka traci zyskaną cechę po utracie połączenia z Modułem."
+			}
+		},
+		{
+			"id": "movement_multiplier",
+			"kind": "effect",
+			"name": {
+				"pl": "Mnożnik ruchu"
+			},
+			"placement": ["center"],
+			"official": true,
+			"params": {
+				"factor": {
+					"type": "integer",
+					"required": true,
+					"min": 2
+				}
+			},
+			"description": {
+				"pl": "Każdy efekt wywołujący Ruch jest pomnożony, czyli liczy się jako użyte {factor:Ruch,Ruchy,Ruchów} jednocześnie, co powoduje zwiększenie zasięgu Ruchu o {factor-1:hex,hexy,hexów} na planszy."
+			}
+		},
+		{
+			"id": "redirect_module",
+			"kind": "effect",
+			"name": {
+				"pl": "Przekierowanie Modułu"
+			},
+			"placement": ["center"],
+			"official": true,
+			"description": {
+				"pl": "Połączony Moduł wroga działa na korzyść właściciela Skopera: efekty pozytywne obejmują jego sojusznicze jednostki, a negatywne – jednostki jego przeciwników. Zasięg i właściciel Modułu się nie zmieniają. Jeżeli przejęty Moduł wymaga podjęcia decyzji w ramach użycia jego efektu, decyzje podejmuje właściciel Skopera. Dwa Skopery skierowane na siebie znoszą się. Nie działa na Sztaby ani Wszczepy."
+			}
+		},
+		{
+			"id": "start_battle",
+			"kind": "effect",
+			"name": {
+				"pl": "Bitwa"
+			},
+			"placement": ["center"],
+			"official": true,
+			"description": {
+				"pl": "Rozpoczyna Bitwę. Zagranie żetonu kończy turę. Nie można go zagrać po tym, jak dowolny gracz dobrał swoje ostatnie żetony."
+			}
+		},
+		{
+			"id": "damage_area",
+			"kind": "effect",
+			"name": {
+				"pl": "Obrażenia obszarowe"
+			},
+			"placement": ["center"],
+			"official": true,
+			"params": {
+				"template": {
+					"type": "string",
+					"required": true,
+					"values": ["bomba"],
+					"labels": {
+						"bomba": {
+							"pl": "wybrane pole i 6 pól wokół niego (cały obszar musi mieścić się na planszy)"
+						}
+					}
+				}
+			},
+			"description": {
+				"pl": "Zadaje 1 Ranę każdej jednostce na planszy w obszarze obejmującym {template}, oprócz Sztabów. Zadaje rany także żetonom podłoża. Jeżeli na żetonie podłoża znajduje się jednostka, zagrywający wybiera, co na tym polu otrzymuje Ranę."
+			}
+		},
+		{
+			"id": "move",
+			"kind": "effect",
+			"name": {
+				"pl": "Ruch"
+			},
+			"placement": ["center"],
+			"official": true,
+			"description": {
+				"pl": "Dowolnie przesuń i obróć własną jednostkę na sąsiadujące wolne pole w zasięgu 1 hexa. Można także po prostu obrócić jednostkę bez przesunięcia lub przesunąć ją bez obrotu. Nie można użyć na zasieciowanej jednostce."
+			}
+		},
+		{
+			"id": "push",
+			"kind": "effect",
+			"name": {
+				"pl": "Odepchnięcie"
+			},
+			"placement": ["center"],
+			"official": true,
+			"description": {
+				"pl": "Własna jednostka odpycha sąsiadującą jednostkę wroga o 1 hex dalej od siebie na wolne pole bez możliwości jej obrócenia. Jeżeli jest kilka pól spełniających ten opis, wybiera właściciel odpychanej jednostki. Zasieciowaną jednostką nie można odpychać, ani zasieciowana jednostka nie może być odpychana."
+			}
+		},
+		{
+			"id": "snipe",
+			"kind": "effect",
+			"name": {
+				"pl": "Snajper"
+			},
+			"placement": ["center"],
+			"official": true,
+			"description": {
+				"pl": "Zadaj 1 Ranę wybranej jednostce wroga na planszy, oprócz Sztabu. Zadaje rany także żetonom podłoża. Jeżeli na żetonie podłoża znajduje się jednostka, zagrywający wybiera, co na tym polu otrzymuje Ranę."
+			}
+		},
+		{
+			"id": "grenade",
+			"kind": "effect",
+			"name": {
+				"pl": "Granat"
+			},
+			"placement": ["center"],
+			"official": true,
+			"description": {
+				"pl": "Zniszcz dowolną jednostkę wroga sąsiadującą z twoim Sztabem, oprócz Sztabu. Niszczy także żetony podłoża, również ten znajdujący się pod twoim Sztabem. Jeżeli na żetonie podłoża znajduje się jednostka, zagrywający wybiera, co na tym polu zostaje zniszczone. Nie można zagrać, jeżeli twój Sztab jest zasieciowany lub sparaliżowany."
+			}
+		}
+	]
+}

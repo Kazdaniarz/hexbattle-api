@@ -1,0 +1,528 @@
+{
+	"assets": {
+		"board_skins/zniszczone_miasto2013.png": {
+			"source": "core/boards/zniszczone-miasto2013.png",
+			"sha256": "de6e90f03e0facc015c2ead159532c4bac3d4eb7518a077ea7e4938af30e9fd8",
+			"bytes": 19348694,
+			"width": 5032,
+			"height": 3328
+		},
+		"borgo/back.png": {
+			"sha256": "be28bcfecae49a18302c0c1d6586197f7a16abe3198bca6622b5a371d4ba79e7",
+			"bytes": 629935,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/bitwa_front.png": {
+			"sha256": "d57965d2757eb59edefcac4afdd589ab7b5d17d3fd1039546c96b5256ffa7607",
+			"bytes": 807053,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/granat_front.png": {
+			"sha256": "cbfa5c71eb5ca96f99bb8b3be49b7220656eccb1c9d374ee51a6a7731ec194e8",
+			"bytes": 646283,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/hp_marker.png": {
+			"sha256": "a8582ff244dd57b7fb4db85de66404bca8467ac0d7f195d97700eec6f633464f",
+			"bytes": 198606,
+			"width": 430,
+			"height": 430
+		},
+		"borgo/logo.svg": {
+			"sha256": "71436de59d6baa393d4bddfca3970ea237631d3717365b0b7d6f4b573b1b0508",
+			"bytes": 1283
+		},
+		"borgo/medyk_front.png": {
+			"sha256": "a8216092ca4e1635d81d50639492f7956d231ff5a5aa6790571d369d1c0b9b62",
+			"bytes": 728134,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/mutant_front.png": {
+			"sha256": "60ba8addb899345f68888b8a7610847c9aa372be49f4b424eab5dd2d7289d76f",
+			"bytes": 852772,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/oficer_front.png": {
+			"sha256": "4c34b549442d984339767516581433ee3dcd6de275b5822f78a40038bb9092be",
+			"bytes": 740513,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/ruch_front.png": {
+			"sha256": "b811c63ffcf7eb9f5db593747b11b8260f3209f86a82c7acbc17f90fb121c87f",
+			"bytes": 666116,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/sieciarz_front.png": {
+			"sha256": "45f52448441d2170276237952f78986276729eed70072d9100a5b83f0195d1b1",
+			"bytes": 838797,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/silacz_front.png": {
+			"sha256": "45e3e21025b4c6604a0cec3c3b5372de99a8711cb1c8e51282c6490883577a9d",
+			"bytes": 845862,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/super_mutant_front.png": {
+			"sha256": "772ed6c19a1f72e72d2790e50d1d500f3f025d9197344efc536563157cbbc45f",
+			"bytes": 792991,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/super_oficer_front.png": {
+			"sha256": "580950e4f405aa7b6bc0f7cc22c2936349087afd8a5548faa4b9317499c7978e",
+			"bytes": 765701,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/szpon_front.png": {
+			"sha256": "5e67af766bb79ec8961c3313fe7fca1d19bee7aaeb937b971f8a197df7a86cb0",
+			"bytes": 859170,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/sztab_front.png": {
+			"sha256": "de787ca71c1275460e7f27c1d369c673da16cdac56312ece946f6da451981365",
+			"bytes": 874273,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/zabojca_front.png": {
+			"sha256": "baac65f57f6de7af0662ab72522cde0fdf4cd13e0ff4900a408d8265b9c82ef6",
+			"bytes": 845635,
+			"width": 891,
+			"height": 771
+		},
+		"borgo/zwiadowca_front.png": {
+			"sha256": "fea6f3f542338555817dda258bb620331f46bf2e4da401efc5f052eb5b9a8c52",
+			"bytes": 750107,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/back.png": {
+			"sha256": "7afd2e242ec6d4c30f76516089844711b5ec1bbdcdf613360a125b6127d7594f",
+			"bytes": 693702,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/biegacz_front.png": {
+			"sha256": "52518537f2e94ebaeddee0dd5581275cbd479aa9eb3e740e893d4b3cf3871b8e",
+			"bytes": 868928,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/bitwa_front.png": {
+			"sha256": "ea2a559fc8e35ad162a6f335ecb46ee89a1b4f934eff83e45b897891cefff769",
+			"bytes": 720810,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/boss_front.png": {
+			"sha256": "5159f11e8b6616b9e9135e8f548452d111ef370cd632c7d94a37b89914cd61d0",
+			"bytes": 811745,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/bydlak_front.png": {
+			"sha256": "6df9d129b7de6cb6e7f4fe6c8f2d1ea67bb606771fc020a474b74675d7f462d2",
+			"bytes": 866854,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/ganger_front.png": {
+			"sha256": "917cfda5e23d0eb208872172ab47affb139e3623848efc20ff49d2760044b535",
+			"bytes": 834968,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/gladiator_front.png": {
+			"sha256": "be9763f54a8b46e7b920c5c66c1dcb0c0ed8bbd69af5d26b78317e437829f65b",
+			"bytes": 760264,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/hp_marker.png": {
+			"sha256": "a5906af23cb095a01abe26fa3a1b8215621fb46387809b518cdbf9ec130464eb",
+			"bytes": 229221,
+			"width": 430,
+			"height": 430
+		},
+		"hegemonia/kwatermistrz_front.png": {
+			"sha256": "a83c927332ec9b68222faaea57a36f077ee42e0fb53683bc1311459ac8feb96d",
+			"bytes": 800572,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/logo.svg": {
+			"sha256": "ea38b5fed569b081ec256bbfe573e551ff8599ba1d887e43de189a8778c89eeb",
+			"bytes": 1054
+		},
+		"hegemonia/odepchniecie_front.png": {
+			"sha256": "b256647bd616ab9bfb2d0a0ed65ab125648d9c887decef9dda69cc992f084f35",
+			"bytes": 697515,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/oficer_i_front.png": {
+			"sha256": "a6fad2180fdab48c7c972ded34451b4c8184d8a3fcf29ec677610fbbbdc88fa5",
+			"bytes": 810722,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/oficer_ii_front.png": {
+			"sha256": "f577baad0f0f0b3585473c09d87e32c7f228265218a3049f6c1fdd301875e248",
+			"bytes": 832583,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/ruch_front.png": {
+			"sha256": "69935235792fd462dcada61ee4e71c7596d70576a9d994dd1ab91f8632ea3b54",
+			"bytes": 726644,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/sieciarz_front.png": {
+			"sha256": "4550d3fa07dfec41e9d1253808877be76bf1b895b8df962beb3f2d65861ffbcc",
+			"bytes": 930526,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/snajper_front.png": {
+			"sha256": "2b3a44301216ea2cce194189c7f6f63afc062af0fc27e339a36d801128c5d3da",
+			"bytes": 717651,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/straznik_front.png": {
+			"sha256": "a71e268adbdabe41aebd9a30bcc235911a076895cf0db424fc75debdb13b1066",
+			"bytes": 883245,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/super_sieciarz_front.png": {
+			"sha256": "31dcba0e09984c5c05b2aee00f0d5e40809fe25bb0e55aa54af5da54fbed700a",
+			"bytes": 888006,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/sztab_front.png": {
+			"sha256": "46982e98c7b08696a812617606b8f4a85bd4ed04af5bbe85ec4d0e73152e5f5c",
+			"bytes": 824971,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/transport_front.png": {
+			"sha256": "7c066c49bf43947771f813186b149ace4b1c76249c20f78bb5ea84c4573bf070",
+			"bytes": 858234,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/uniwersalny_zolnierz_front.png": {
+			"sha256": "33e03e15d86ae18f99657643bc43ca3f24da17df75627fd05fbf58256d895ff1",
+			"bytes": 862676,
+			"width": 891,
+			"height": 771
+		},
+		"hegemonia/zwiadowca_front.png": {
+			"sha256": "61edb3519c5dee2a254795471a9858e306a1c4f5fbaaf5caf38c02df41c962a0",
+			"bytes": 842339,
+			"width": 891,
+			"height": 771
+		},
+		"markers/inicjatywa_blank.png": {
+			"source": "core/blank-init-badge.png",
+			"sha256": "49352c0e43ba724e799aa7e1361eb7cad3ac550236edaf1e0ebecfaa0bc76668",
+			"bytes": 69437,
+			"width": 206,
+			"height": 204
+		},
+		"markers/rana.png": {
+			"source": "core/rana.png",
+			"sha256": "28f0c3623a93f1666e41bc869cfb47a419cbbaf41b1b9b6c0df92b76f0f4b4e8",
+			"bytes": 327618,
+			"width": 430,
+			"height": 430
+		},
+		"markers/siec.png": {
+			"source": "core/siec.png",
+			"sha256": "0acf10dc98f8b58ec3b7324e27ee0752ef7905e503f31b0d3da8fe5c6e85edbd",
+			"bytes": 385340,
+			"width": 430,
+			"height": 430
+		},
+		"moloch/back.png": {
+			"sha256": "82aa8b61006c4f49260a67d7056a3bd7067824640e1c3728becbaec12476d074",
+			"bytes": 562456,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/bitwa_front.png": {
+			"sha256": "5fe3af4993ac712f0e40c3448e16871ee32aeebca94e3331004775edcb388f50",
+			"bytes": 823554,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/bloker_front.png": {
+			"sha256": "c4c4ac8f27135518a924589b030d94adb9a4c24e35e0a7476c2463470a6827bc",
+			"bytes": 797983,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/bomba_front.png": {
+			"sha256": "a8463262c66186e5852ea72ceec71a214c641c8e1e0456dce1231d7a7144dc1b",
+			"bytes": 815433,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/dzialko_gaussa_front.png": {
+			"sha256": "f856dc78e64bf8e7f8ef755b5ffce959ce0ca266a58baeeb07f6681f026da4eb",
+			"bytes": 990019,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/hp_marker.png": {
+			"sha256": "18ef9d5c2d077ddef8edf16893d1000e5851689aac1e26fd668f8fc7cdc88b04",
+			"bytes": 291136,
+			"width": 430,
+			"height": 430
+		},
+		"moloch/hybryda_front.png": {
+			"sha256": "73a0e6b68e456942211811026076420df04003db4d0da04f7b63216033c93f13",
+			"bytes": 952589,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/juggernaut_front.png": {
+			"sha256": "1bdf25f9478618b2058ddc6700c2510b92e33876323d1e24d0c7378a813a837b",
+			"bytes": 847634,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/klaun_front.png": {
+			"sha256": "a0b1fda0a1f8d82703091a10e7fd20dd5f04d53b39d008dc4aa5ef828de849ba",
+			"bytes": 938834,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/logo.svg": {
+			"sha256": "d4b2602248859e589b66d63e7ed8a32c0ce0353f078642e3872f58e4f200fc92",
+			"bytes": 504
+		},
+		"moloch/lowca_front.png": {
+			"sha256": "5afb02e9f6eff247d4b05fa5851cd14d89b091b53d51bc73a77af6d62bc34528",
+			"bytes": 990778,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/matka_front.png": {
+			"sha256": "b3bef3ca0a86ba8a34b251001c2a6888033f737e2e8e180a8b5ac21150d92d29",
+			"bytes": 869638,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/medyk_front.png": {
+			"sha256": "a5f05ed181960ee3af2113d7d857aba76ec353470c0c9813c36f54a03212fd64",
+			"bytes": 919796,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/mozg_front.png": {
+			"sha256": "d5921564720c74932be977005d822da4825547628e6d3e8747f4709393491f8d",
+			"bytes": 810063,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/obronca_front.png": {
+			"sha256": "7992e8a8be900b2c151c73677ffc06fa93f8f3e583e98ea5c53fb296793d7764",
+			"bytes": 898187,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/odepchniecie_front.png": {
+			"sha256": "35d3256b3c6e7b81a8bbb4bbaf2d772239fa0020b47f78818498563bea2225e6",
+			"bytes": 810838,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/oficer_front.png": {
+			"sha256": "9d382659b0f4ff006e07dfc3586d3c7e2f7b5739d80409ac43161bd17053b9c4",
+			"bytes": 922455,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/opancerzony_lowca_front.png": {
+			"sha256": "c5ff8f6ecb606fe0a2620aa5aa05d5369a34f1ec1f230fd714cedae189b2fdb6",
+			"bytes": 938524,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/opancerzony_wartownik_front.png": {
+			"sha256": "e23c9feae8c0bbaeaa57c43ff1d76f5359cf47b10f2e00f7779e2c9fdb726e72",
+			"bytes": 942637,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/ruch_front.png": {
+			"sha256": "e5714bc96f98bf5738fa649cbb1d0e4a0f25bc64b934660203a38f960bbed05c",
+			"bytes": 810738,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/sieciarz_front.png": {
+			"sha256": "1de678edcfbbf48e6b490582f6786232026333b0fae83dc32a848398ea68eb83",
+			"bytes": 1066854,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/szerszen_front.png": {
+			"sha256": "5a5dbd1fa077adb07b06150251fcdeff70cb8c6ce1b2d5ade8199db99cb9001f",
+			"bytes": 952303,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/sztab_front.png": {
+			"sha256": "773660b0aa1d83392b462330e952c88d9a5a74122c5b1f9926d0a684ff3eb132",
+			"bytes": 863616,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/szturmowiec_front.png": {
+			"sha256": "d793132dd46f8dca9532a513d93bbb5b32ec522073bda4a5230e1595fbc8306d",
+			"bytes": 1026361,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/wartownik_front.png": {
+			"sha256": "2c449eef97e3ada06602e52d8833a33fb535f77fb0c540844ee83078fb74aaa3",
+			"bytes": 966932,
+			"width": 891,
+			"height": 771
+		},
+		"moloch/zwiadowca_front.png": {
+			"sha256": "7e3857f77dac44c64ed6a678852911b659e0b821e5f889bf2dc05d1a56114b47",
+			"bytes": 924354,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/back.png": {
+			"sha256": "477cc0498bcff35f4bae6c5b773d1f6b485227d888786fb71038e4809d79b125",
+			"bytes": 787888,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/biegacz_front.png": {
+			"sha256": "24f8004dbbca5b8ea5b14e1961cd43b54651e430a286219c99f0eaf7dc654bd0",
+			"bytes": 801967,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/bitwa_front.png": {
+			"sha256": "8606e4913977c8b8f0bfb24992a512ce142f9762070cb357c5eff4f4e9230f94",
+			"bytes": 687665,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/centrum_rozpoznania_front.png": {
+			"sha256": "0f67df41a437355f9ba2e15e43595ba6058ef12eb40df5adcb9aac1fd66c9a01",
+			"bytes": 702894,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/ckm_front.png": {
+			"sha256": "7ba37a6b998c9c9ffacd6b566752adb6ef35bf8171524180a55a424b25ccd47b",
+			"bytes": 799687,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/dywersant_front.png": {
+			"sha256": "68bccbc7c61f669be5e744bdaa3fa23015a05334a80d8435ef5be852ee0d7ac6",
+			"bytes": 785975,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/hp_marker.png": {
+			"sha256": "f191df97e22cb3d12b16a144fc1f5a5519a92a89662af1f2cb1f0dc98fd14761",
+			"bytes": 222618,
+			"width": 430,
+			"height": 430
+		},
+		"posterunek/komandos_front.png": {
+			"sha256": "265ec9669eaa9abb5c5a4fdfb15d11227df383a582f8a3ac3b54b1dbc69d2eff",
+			"bytes": 835170,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/likwidator_front.png": {
+			"sha256": "d5551ac16a62169d5627210e26676a0fa7ac38b17b600c79e7b4fbe6cfe9dc84",
+			"bytes": 837550,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/logo.svg": {
+			"sha256": "6369bef363fd4728f84d8eb158b171020ebbb28086bf8d7ba8c70efaea3f8dab",
+			"bytes": 896
+		},
+		"posterunek/medyk_front.png": {
+			"sha256": "58910375a38e0cb2689b4fdbfb7a66e7a8304c891e289109a6bc4119eb8b9211",
+			"bytes": 729411,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/oficer_front.png": {
+			"sha256": "72e91b44470651ff74d5f831a553aec6c68fd340e5a8db503c26e9a70cce0aef",
+			"bytes": 755922,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/pancerz_wspomagany_front.png": {
+			"sha256": "cd6183ff4ac89616f21b5d47c031f5874048b008813d9f0479356164fedf0dac",
+			"bytes": 777440,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/ruch_front.png": {
+			"sha256": "b3540027fc7247b8c0008a1318b9a1c02631be99abef847c0ca571040e635e20",
+			"bytes": 653281,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/silacz_front.png": {
+			"sha256": "6e8c9ba09d5ea81b7bd2bdabfa3c050c22b0ec1213e8f7a6c6b751316c352e1c",
+			"bytes": 857597,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/skoper_front.png": {
+			"sha256": "6637195264cf97a6a480b160a15fb25386b92d226faa9cf5db29bd7b8330575d",
+			"bytes": 929548,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/snajper_front.png": {
+			"sha256": "b6e5d2b42b8baa014eac1fc643c40d665ba3856e488ddb9cd57b303d715efc0e",
+			"bytes": 707913,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/sztab_front.png": {
+			"sha256": "536468879e5f5dbab14dc83cd830b82ae5713aa95eb62e9d5f7383c4c6cc175c",
+			"bytes": 891149,
+			"width": 891,
+			"height": 771
+		},
+		"posterunek/zwiadowca_front.png": {
+			"sha256": "53be13dc38541059eedcb187b68e3375e389f37581795fc01a027fe893fda04e",
+			"bytes": 737628,
+			"width": 891,
+			"height": 771
+		}
+	}
+}

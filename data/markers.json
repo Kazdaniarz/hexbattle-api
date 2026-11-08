@@ -1,0 +1,57 @@
+{
+	"markers": [
+		{
+			"id": "rana",
+			"name": {
+				"pl": "Rana"
+			},
+			"unlimited": true,
+			"two_sided": false,
+			"placement": "unit",
+			"images": {
+				"front": "markers/rana.png"
+			},
+			"size": "standard",
+			"official_component": true
+		},
+		{
+			"id": "siec",
+			"name": {
+				"pl": "Sieć"
+			},
+			"unlimited": true,
+			"two_sided": false,
+			"placement": "unit",
+			"images": {
+				"front": "markers/siec.png"
+			},
+			"size": "standard",
+			"official_component": true
+		},
+		{
+			"id": "inicjatywa",
+			"name": {
+				"pl": "Inicjatywa"
+			},
+			"unlimited": true,
+			"two_sided": false,
+			"placement": "unit",
+			"images": {
+				"blank": "markers/inicjatywa_blank.png"
+			},
+			"size": "small",
+			"official_component": true
+		},
+		{
+			"id": "hp_marker",
+			"name": {
+				"pl": "Znacznik Sztabu"
+			},
+			"unlimited": false,
+			"two_sided": false,
+			"placement": "hp_track",
+			"size": "standard",
+			"official_component": true
+		}
+	]
+}

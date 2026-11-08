@@ -1,0 +1,9 @@
+{
+	"id": "zniszczone_miasto2013",
+	"name": {
+		"pl": "Zniszczone miasto (2013)"
+	},
+	"official": true,
+	"image": "board_skins/zniszczone_miasto2013.png",
+	"default": true
+}

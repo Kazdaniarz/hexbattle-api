@@ -1,10 +1,37 @@
 {
 	"name": "hexbattle-api",
+	"version": "0.1.0",
 	"private": true,
 	"license": "MIT",
 	"description": "HexBattle Online data API: Neuroshima Hex armies, tiles, mechanics and markers as versioned JSON.",
+	"type": "module",
 	"packageManager": "pnpm@12.18.0",
+	"scripts": {
+		"typecheck": "tsc --noEmit -p tsconfig.json",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"test": "vitest run",
+		"test:tz": "node tools/test-time-zones.ts",
+		"schema:editor": "node tools/editor-schemas.ts",
+		"assets:manifest": "node --env-file-if-exists=.env tools/assets-manifest.ts",
+		"build": "node --env-file-if-exists=.env tools/build.ts",
+		"build:release": "node --env-file-if-exists=.env tools/build.ts --release",
+		"check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test:tz && pnpm build:release"
+	},
 	"engines": {
 		"node": ">=24 <25"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@hexbattle/schema": "workspace:*",
+		"@types/node": "^26.6.6",
+		"eslint": "^10.14.0",
+		"prettier": "^3.9.10",
+		"sharp": "^0.35.5",
+		"typescript": "~6.0.3",
+		"typescript-eslint": "^8.72.1",
+		"vitest": "^5.1.0",
+		"zod": "^4.6.7"
 	}
 }
