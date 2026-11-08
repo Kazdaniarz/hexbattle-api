@@ -5,7 +5,7 @@
 import { copyFile, mkdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
-import { type AssetManifest, readMaster, WEBP, webpPath, webpSizes } from './assets.ts';
+import { type AssetManifest, publishedImages, readMaster, WEBP, webpPath, webpSizes } from './assets.ts';
 
 /* * Types */
 
@@ -48,6 +48,41 @@ export async function writeImages(manifest: AssetManifest, dirs: ImageDirs): Pro
 		}
 	}
 	return converted;
+}
+
+/* * Fetched images */
+
+/** Where `pnpm images:fetch` stores downloaded images, relative to the repository (git-ignored). */
+export const FETCHED_FOLDER = '.cache/fetched';
+
+/**
+ * Copies downloaded images (instead of making them from masters) into the published folder;
+ * returns the published paths that were not there.
+ */
+export async function copyFetchedImages(
+	manifest: AssetManifest,
+	fetchedDir: string,
+	outDir: string,
+): Promise<string[]> {
+	const missing: string[] = [];
+	for (const [ref, entry] of Object.entries(manifest.assets)) {
+		for (const image of publishedImages(ref, entry)) {
+			const source = path.join(fetchedDir, image.path);
+			if (!(await exists(source))) {
+				missing.push(image.path);
+				continue;
+			}
+			const target = path.join(outDir, image.path);
+			await mkdir(path.dirname(target), { recursive: true });
+			await copyFile(source, target);
+		}
+	}
+	return missing;
+}
+
+/** True when the folder exists. */
+export async function folderExists(folder: string): Promise<boolean> {
+	return exists(folder);
 }
 
 /* * Helpers */

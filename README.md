@@ -35,9 +35,22 @@ It answers at `http://localhost:8080/v1/` – only from this computer – until 
 
 Notes for your own copy:
 
-- **Images:** the build makes the WebP images from private image masters (`ASSETS_DIR`, see [Development](#development)), which are not in this repository. Without them you get all the data and the query service, but no images.
+- **Images:** they are not in this repository – see [Images for your copy](#images-for-your-copy) below.
 - **Any address works:** every link inside the data is relative (`armies/moloch.json`, `assets/…`), so the files work from any host or folder without a rebuild.
 - **Static files only:** `dist/v1/` can also be served by any web server; only `/v1/query/` needs `pnpm serve`.
+
+### Images for your copy
+
+The images (WebP variants and SVG logos) are made from private image masters and are not part of this repository. Download them from a running API instead – by default the public one:
+
+```bash
+pnpm images:fetch                                   # from https://api.hexbattle.online
+pnpm images:fetch --from http://other-host:8080     # or from another copy
+pnpm build:release                                  # copies them into dist/v1/assets/
+pnpm serve
+```
+
+`images:fetch` reads the image list from `/v1/index.json`, downloads every file into `.cache/fetched/` and checks it (SVG by its SHA-256 in `index.json`, WebP by format and size). Files already there and correct are kept, so running it again only fetches what is new or changed; `--force` downloads everything again. Every `pnpm build` then copies the images from `.cache/fetched/`. The public API must be live for the default source (see the status line at the top).
 
 ## What the API serves
 
@@ -621,6 +634,7 @@ pnpm build                # dev build into dist/v1/ (drafts and incomplete armie
 pnpm build:release        # strict build: every army complete, every image in the manifest
 pnpm serve                # serve dist/v1/ and the query service at http://localhost:8080/v1/ (--host, --port)
 pnpm assets:manifest      # update assets.manifest.json after adding or replacing an image
+pnpm images:fetch         # download the published images instead of using masters (--from, --force)
 pnpm schema:editor        # JSON Schemas for editor validation of data/ (VS Code picks them up)
 ```
 

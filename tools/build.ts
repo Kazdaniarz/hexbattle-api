@@ -1,6 +1,7 @@
 /*
- * Builds the published API into dist/v1/: JSON files, and the images when the masters folder (ASSETS_DIR) is set.
- * Without ASSETS_DIR (e.g. in CI) the data and the manifest are still checked, but no images are written.
+ * Builds the published API into dist/v1/: JSON files and images. Images are made from the private masters when
+ * ASSETS_DIR is set, otherwise copied from images downloaded by pnpm images:fetch (.cache/fetched/); with neither
+ * (e.g. in CI) the data and the manifest are still checked, but no images are written.
  * Usage: node tools/build.ts [--release] [--require-lang en]
  */
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
@@ -11,13 +12,14 @@ import { Lang } from '@hexbattle/schema';
 import { AssetManifest, checkMasters, MANIFEST_FILE } from './lib/assets.ts';
 import { build } from './lib/build.ts';
 import { loadSourceData, parseFile } from './lib/data-files.ts';
-import { writeImages } from './lib/images.ts';
+import { copyFetchedImages, FETCHED_FOLDER, folderExists, writeImages } from './lib/images.ts';
 import { isError, type Issue } from './lib/issues.ts';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const DATA_DIR = path.join(ROOT, 'data');
 const OUT_DIR = path.join(ROOT, 'dist', 'v1');
 const CACHE_DIR = path.join(ROOT, '.cache', 'images');
+const FETCHED_DIR = path.join(ROOT, FETCHED_FOLDER);
 const ASSETS_DIR = process.env.ASSETS_DIR;
 
 /* * Options */
@@ -67,8 +69,16 @@ if (ASSETS_DIR) {
 	console.log(
 		`✔ images: ${String(Object.keys(manifest.assets).length)} masters, ${String(converted)} WebP variants converted`,
 	);
+} else if (await folderExists(FETCHED_DIR)) {
+	const missing = await copyFetchedImages(manifest, FETCHED_DIR, path.join(OUT_DIR, 'assets'));
+	console.log(`✔ images: copied from ${FETCHED_FOLDER}/ (downloaded by pnpm images:fetch)`);
+	if (missing.length > 0) {
+		console.log(
+			`⚠ ${String(missing.length)} image file(s) not downloaded yet, e.g. ${missing[0] ?? ''} – run pnpm images:fetch`,
+		);
+	}
 } else {
-	console.log('⚠ ASSETS_DIR not set: images checked against the manifest only, none written');
+	console.log('⚠ no images: set ASSETS_DIR (masters) or run pnpm images:fetch – data and manifest checked only');
 }
 console.log(`✔ ${values.release ? 'release' : 'dev'} build ${version}: ${String(files.size)} JSON files in dist/v1/`);
 

@@ -56,6 +56,22 @@ export function webpPath(assetPath: string, size: number): string {
 	return `${assetPath.replace(/\.png$/, '')}@${String(size)}.webp`;
 }
 
+/** One file published under /v1/assets/ and how to recognise a correct copy of it. */
+export type PublishedImage =
+	{ path: string; kind: 'svg'; sha256: string } | { path: string; kind: 'webp'; size: number };
+
+/** Every file an image name is published as: the SVG itself, or each WebP variant of a PNG. */
+export function publishedImages(
+	assetPath: string,
+	entry: { sha256: string; webp: readonly number[] } | Pick<ManifestEntry, 'sha256' | 'width' | 'height'>,
+): PublishedImage[] {
+	if (assetPath.endsWith('.svg')) {
+		return [{ path: assetPath, kind: 'svg', sha256: entry.sha256 }];
+	}
+	const sizes = 'webp' in entry ? entry.webp : webpSizes(assetPath, entry);
+	return sizes.map((size) => ({ path: webpPath(assetPath, size), kind: 'webp', size }));
+}
+
 /* * References */
 
 /** Every image path the data references, with the first file that references it. */
