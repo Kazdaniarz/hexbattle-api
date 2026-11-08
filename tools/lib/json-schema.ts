@@ -3,15 +3,21 @@
  */
 import {
 	Army,
+	ArmyQueryResult,
+	BoardSkinQueryResult,
+	MarkerQueryResult,
+	SkinQueryResult,
 	BoardSkin,
 	BoardSkinsIndex,
 	BoardsFile,
 	Index,
 	MarkersFile,
+	MechanicQueryResult,
 	MechanicsFile,
 	ReleaseArmy,
 	Skin,
 	SkinsIndex,
+	TileQueryResult,
 } from '@hexbattle/schema';
 import { z } from 'zod';
 
@@ -26,7 +32,7 @@ export const FILE_SCHEMAS = {
 	board_skin: BoardSkin,
 } as const;
 
-/** Published files under /v1/, keyed by the generated schema's file name (served in /v1/schema/). */
+/** Published files and query responses under /v1/, keyed by the generated schema's file name (served in /v1/schema/). */
 export const RELEASE_SCHEMAS = {
 	index: Index,
 	army: ReleaseArmy,
@@ -37,6 +43,12 @@ export const RELEASE_SCHEMAS = {
 	skins_index: SkinsIndex,
 	board_skin: BoardSkin,
 	board_skins_index: BoardSkinsIndex,
+	query_tiles: TileQueryResult,
+	query_armies: ArmyQueryResult,
+	query_mechanics: MechanicQueryResult,
+	query_markers: MarkerQueryResult,
+	query_skins: SkinQueryResult,
+	query_board_skins: BoardSkinQueryResult,
 } as const;
 
 export type FileKind = keyof typeof FILE_SCHEMAS;

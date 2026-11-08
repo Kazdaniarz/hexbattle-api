@@ -5,6 +5,7 @@ export * from './army.ts';
 export * from './common.ts';
 export * from './markers.ts';
 export * from './mechanics.ts';
+export * from './query.ts';
 export * from './release.ts';
 export * from './skins.ts';
 export * from './template.ts';
