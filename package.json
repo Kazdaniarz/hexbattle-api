@@ -14,12 +14,13 @@
 		"test": "vitest run",
 		"test:tz": "node tools/test-time-zones.ts",
 		"schema:editor": "node tools/editor-schemas.ts",
+		"schema:declarations": "node tools/schema-declarations.ts",
 		"assets:manifest": "node --env-file-if-exists=.env tools/assets-manifest.ts",
 		"images:fetch": "node tools/images-fetch.ts",
 		"build": "node --env-file-if-exists=.env tools/build.ts",
 		"build:release": "node --env-file-if-exists=.env tools/build.ts --release",
 		"serve": "node tools/serve.ts",
-		"check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test:tz && pnpm build:release"
+		"check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test:tz && pnpm schema:declarations && pnpm build:release"
 	},
 	"engines": {
 		"node": ">=24 <25"

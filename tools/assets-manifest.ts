@@ -1,14 +1,15 @@
 /*
  * Updates assets.manifest.json from the masters folder (ASSETS_DIR): one entry per image the data references,
  * with its SHA-256, size and dimensions. A master stored under another name keeps its `source` from the
- * current manifest; add `source` by hand for a new image whose master is named differently.
+ * current manifest; add `source` by hand for a new image whose master is named differently. A staged master
+ * (STAGED_ASSETS_DIR: not published yet, stored under its published path) wins and drops `source`.
  * Usage: pnpm assets:manifest
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
-import { collectAssetRefs, describeMaster, MANIFEST_FILE, ManifestEntry, readMaster } from './lib/assets.ts';
+import { collectAssetRefs, describeMaster, findMaster, isStaged, MANIFEST_FILE, ManifestEntry } from './lib/assets.ts';
 import { loadSourceData } from './lib/data-files.ts';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
@@ -26,6 +27,7 @@ if (!assetsDir) {
 	console.error('✖ ASSETS_DIR is not set (copy .env.example to .env)');
 	process.exit(1);
 }
+const masters = { assetsDir, stagedDir: process.env.STAGED_ASSETS_DIR || undefined };
 const current = await readCurrent();
 const source = await loadSourceData(path.join(ROOT, 'data'));
 const refs = collectAssetRefs(source);
@@ -35,8 +37,9 @@ const refs = collectAssetRefs(source);
 const next: CurrentManifest = { assets: {} };
 const missing: string[] = [];
 for (const ref of [...refs.keys()].sort()) {
-	const sourcePath = current.assets[ref]?.source;
-	const master = await readMaster(assetsDir, sourcePath ?? ref);
+	// ? a staged master is stored under its published path, so it needs no `source`
+	const sourcePath = (await isStaged(masters, ref)) ? undefined : current.assets[ref]?.source;
+	const master = await findMaster(masters, ref, sourcePath);
 	if (!master) {
 		missing.push(`${ref}${sourcePath ? ` (source "${sourcePath}")` : ''}`);
 		const kept = current.assets[ref];

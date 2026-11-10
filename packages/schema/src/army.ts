@@ -11,15 +11,33 @@ import { BadgeCategory, ParamValue } from './mechanics.ts';
 export const Rider = z.enum(['jad', 'paraliz']);
 export type Rider = z.infer<typeof Rider>;
 
-/** A placed game element: a mechanic id at an anchor with its values. Containers nest further features. */
-export const Feature = z
+/**
+ * A placed game element: a mechanic id at an anchor with its values. Containers nest further features.
+ * The type is written out because it is recursive: inferred, it would be lost in the published declarations.
+ */
+export interface Feature {
+	mechanic: Id;
+	// ? required on a face; nested effects and choice options take their place from the container
+	at?: Anchor | undefined;
+	params?: Record<Id, ParamValue> | undefined;
+	category?: BadgeCategory | undefined;
+	// ? absent = false
+	flags?: { friendly_fire?: true | undefined; zombie_only?: true | undefined } | undefined;
+	riders?: Rider[] | undefined;
+	cost?: { hq_hp?: number | undefined; gamble?: number | undefined } | undefined;
+	side?: Side | undefined;
+	// ? container features: Moduł feature and technology bonus
+	effects?: Feature[] | undefined;
+	// ? container feature `choice`: exactly one option is played
+	options?: Feature[][] | undefined;
+}
+
+export const Feature: z.ZodType<Feature> = z
 	.strictObject({
 		mechanic: Id,
-		// ? required on a face; nested effects and choice options take their place from the container
 		at: Anchor.optional(),
 		params: z.record(Id, ParamValue).optional(),
 		category: BadgeCategory.optional(),
-		// ? absent = false
 		flags: z
 			.strictObject({
 				friendly_fire: z.literal(true).optional(),
@@ -34,17 +52,14 @@ export const Feature = z
 			})
 			.optional(),
 		side: Side.optional(),
-		// ? container features: Moduł feature and technology bonus
 		get effects() {
 			return z.array(Feature).min(1).optional();
 		},
-		// ? container feature `choice`: exactly one option is played
 		get options() {
 			return z.array(z.array(Feature).min(1)).min(2).optional();
 		},
 	})
 	.meta({ id: 'Feature' });
-export type Feature = z.infer<typeof Feature>;
 
 /* * Tile */
 

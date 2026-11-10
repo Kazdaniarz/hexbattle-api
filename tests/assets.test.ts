@@ -1,7 +1,7 @@
 /*
  * Images: manifest checks, master checks, WebP sizes and the image step, on generated test images.
  */
-import { mkdtemp, readdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import sharp from 'sharp';
@@ -12,6 +12,8 @@ import {
 	checkMasters,
 	collectAssetRefs,
 	describeMaster,
+	findMaster,
+	isStaged,
 	webpPath,
 	webpSizes,
 } from '../tools/lib/assets.ts';
@@ -102,8 +104,34 @@ describe('masters', () => {
 		const broken: AssetManifest = {
 			assets: { ...manifest.assets, 'testowa/b_front.png': { sha256: '2'.repeat(64), bytes: 1 } },
 		};
-		const codes = (await checkMasters(broken, root, true)).map((issue) => `${issue.code} ${issue.path ?? ''}`);
+		const codes = (await checkMasters(broken, { assetsDir: root }, true)).map(
+			(issue) => `${issue.code} ${issue.path ?? ''}`,
+		);
 		expect(codes).toEqual(['E_ASSET_HASH testowa/logo.svg', 'E_ASSET_MISSING testowa/b_front.png']);
+	});
+	it('takes a staged master (stored under its published path) before the masters folder', async () => {
+		const staged = path.join(root, 'staged');
+		const replaced = await sharp({
+			create: { width: 300, height: 200, channels: 4, background: { r: 0, g: 0, b: 255, alpha: 1 } },
+		})
+			.png()
+			.toBuffer();
+		await mkdir(path.join(staged, 'testowa'), { recursive: true });
+		await writeFile(path.join(staged, 'testowa', 'a_front.png'), replaced);
+		const masters = { assetsDir: root, stagedDir: staged };
+		expect(await isStaged(masters, 'testowa/a_front.png')).toBe(true);
+		expect(await isStaged(masters, 'testowa/logo.svg')).toBe(false);
+		expect(await findMaster(masters, 'testowa/a_front.png', 'tile.png')).toEqual(replaced);
+		expect(await findMaster({ assetsDir: root }, 'testowa/a_front.png', 'tile.png')).not.toEqual(replaced);
+		// ? the manifest still records the old master, so the staged one counts as changed until it is recorded
+		const codes = (await checkMasters(manifest, masters, true)).map((issue) => `${issue.code} ${issue.path ?? ''}`);
+		expect(codes).toContain('E_ASSET_HASH testowa/a_front.png');
+		const recorded: AssetManifest = {
+			assets: { ...manifest.assets, 'testowa/a_front.png': await describeMaster(replaced, undefined, true) },
+		};
+		expect((await checkMasters(recorded, masters, true)).map((issue) => issue.path)).not.toContain(
+			'testowa/a_front.png',
+		);
 	});
 	it('writes WebP variants and SVGs but never the PNG master, converting each variant only once', async () => {
 		const images = manifest;

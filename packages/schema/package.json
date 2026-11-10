@@ -1,14 +1,47 @@
 {
 	"name": "@hexbattle/schema",
 	"version": "0.1.0",
-	"private": true,
 	"license": "MIT",
-	"description": "Zod 4 schemas and types of the HexBattle Online data API (Neuroshima Hex game objects).",
+	"description": "Zod 4 schemas, TypeScript types and the description renderer of the HexBattle Online data API (Neuroshima Hex game objects).",
+	"keywords": [
+		"hexbattle",
+		"neuroshima-hex",
+		"zod",
+		"schema",
+		"api"
+	],
+	"homepage": "https://github.com/Kazdaniarz/hexbattle-api#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Kazdaniarz/hexbattle-api.git",
+		"directory": "packages/schema"
+	},
 	"type": "module",
 	"exports": {
 		".": "./src/index.ts"
 	},
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
 	"sideEffects": false,
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"prepack": "pnpm build"
+	},
+	"publishConfig": {
+		"access": "public",
+		"exports": {
+			".": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"engines": {
+		"node": ">=20"
+	},
 	"dependencies": {
 		"zod": "^4.6.7"
 	}

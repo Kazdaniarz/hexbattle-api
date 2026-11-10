@@ -108,7 +108,7 @@ v1/
 
 ```
 packages/schema/         @hexbattle/schema – Zod 4 schemas and TypeScript types of every file and query (the single
-                         schema source), description templates (renderDescription)
+                         schema source), description templates (renderDescription); published to npm
 data/                    source data: mechanics.json, markers.json, armies/, skins/, board_skins/
 assets.manifest.json     every image the data uses: published name → private master file, SHA-256, size
 tools/                   build, validation, image step, query service and server, manifest and editor-schema tools
@@ -629,14 +629,21 @@ Requirements: Node 24, pnpm (version from `packageManager`).
 ```
 pnpm install
 cp .env.example .env      # set ASSETS_DIR to the masters folder (optional)
-pnpm check                # typecheck, lint, format, tests under several time zones, release build
+pnpm check                # typecheck, lint, format, tests under several time zones, schema package
+                          # declarations, release build
 pnpm build                # dev build into dist/v1/ (drafts and incomplete armies allowed, with warnings)
 pnpm build:release        # strict build: every army complete, every image in the manifest
+                          # (both take --report <file>: the issues as JSON, for tools such as the dashboard)
 pnpm serve                # serve dist/v1/ and the query service at http://localhost:8080/v1/ (--host, --port)
 pnpm assets:manifest      # update assets.manifest.json after adding or replacing an image
 pnpm images:fetch         # download the published images instead of using masters (--from, --force)
 pnpm schema:editor        # JSON Schemas for editor validation of data/ (VS Code picks them up)
+pnpm schema:declarations  # build @hexbattle/schema into a temp folder and fail if a type got lost on the way
 ```
+
+Publishing `@hexbattle/schema` (maintainers): raise `version` in `packages/schema/package.json`, run `pnpm check`, then `pnpm --dir packages/schema publish --access public`. The package is built on `prepack`; only `dist/`, `README.md` and `LICENSE` go out.
+
+`STAGED_ASSETS_DIR` (optional) adds image masters that are not published yet, stored under their published path; they win over `ASSETS_DIR` in the build and in `assets:manifest` (the dashboard uses it for images uploaded with unpublished changes).
 
 Build issues have stable codes (`E_…` errors stop the build, `W_…` warnings don't); the full list with meanings is in `tools/lib/issues.ts`. The JSON examples in this README are checked against the schemas by the tests.
 

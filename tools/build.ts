@@ -1,8 +1,9 @@
 /*
  * Builds the published API into dist/v1/: JSON files and images. Images are made from the private masters when
  * ASSETS_DIR is set, otherwise copied from images downloaded by pnpm images:fetch (.cache/fetched/); with neither
- * (e.g. in CI) the data and the manifest are still checked, but no images are written.
- * Usage: node tools/build.ts [--release] [--require-lang en]
+ * (e.g. in CI) the data and the manifest are still checked, but no images are written. STAGED_ASSETS_DIR adds
+ * masters not published yet (the dashboard's working copy). `--report <file>` also writes the issues as JSON.
+ * Usage: node tools/build.ts [--release] [--require-lang en] [--report <file>]
  */
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -21,6 +22,7 @@ const OUT_DIR = path.join(ROOT, 'dist', 'v1');
 const CACHE_DIR = path.join(ROOT, '.cache', 'images');
 const FETCHED_DIR = path.join(ROOT, FETCHED_FOLDER);
 const ASSETS_DIR = process.env.ASSETS_DIR;
+const STAGED_ASSETS_DIR = process.env.STAGED_ASSETS_DIR || undefined;
 
 /* * Options */
 
@@ -28,6 +30,7 @@ const { values } = parseArgs({
 	options: {
 		release: { type: 'boolean', default: false },
 		'require-lang': { type: 'string', multiple: true, default: [] },
+		report: { type: 'string' },
 	},
 });
 const requireLangs = values['require-lang'].map((lang) => Lang.parse(lang));
@@ -47,9 +50,12 @@ const { files, issues } = build(source, {
 });
 issues.unshift(...parsedManifest.issues);
 if (ASSETS_DIR) {
-	issues.push(...(await checkMasters(manifest, ASSETS_DIR, values.release)));
+	issues.push(
+		...(await checkMasters(manifest, { assetsDir: ASSETS_DIR, stagedDir: STAGED_ASSETS_DIR }, values.release)),
+	);
 }
 report(issues);
+await writeReport(issues, files.size);
 if (issues.some(isError)) {
 	process.exit(1);
 }
@@ -63,6 +69,7 @@ for (const [file, value] of files) {
 if (ASSETS_DIR) {
 	const converted = await writeImages(manifest, {
 		assetsDir: ASSETS_DIR,
+		stagedDir: STAGED_ASSETS_DIR,
 		outDir: path.join(OUT_DIR, 'assets'),
 		cacheDir: CACHE_DIR,
 	});
@@ -83,6 +90,25 @@ if (ASSETS_DIR) {
 console.log(`✔ ${values.release ? 'release' : 'dev'} build ${version}: ${String(files.size)} JSON files in dist/v1/`);
 
 /* * Report */
+
+/** `--report <file>`: the issues as JSON for tools (e.g. the dashboard's check), written before any exit. */
+async function writeReport(list: readonly Issue[], fileCount: number): Promise<void> {
+	if (values.report === undefined) {
+		return;
+	}
+	const errors = list.filter(isError).length;
+	const body = {
+		ok: errors === 0,
+		build: values.release ? 'release' : 'dev',
+		version,
+		errors,
+		warnings: list.length - errors,
+		files: errors === 0 ? fileCount : 0,
+		issues: list.map((issue) => ({ ...issue, severity: isError(issue) ? 'error' : 'warning' })),
+	};
+	await mkdir(path.dirname(path.resolve(values.report)), { recursive: true });
+	await writeFile(values.report, `${JSON.stringify(body, null, '\t')}\n`);
+}
 
 function report(list: readonly Issue[]): void {
 	for (const issue of list) {

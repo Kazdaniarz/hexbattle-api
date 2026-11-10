@@ -5,13 +5,15 @@
 import { copyFile, mkdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
-import { type AssetManifest, publishedImages, readMaster, WEBP, webpPath, webpSizes } from './assets.ts';
+import { type AssetManifest, findMaster, publishedImages, WEBP, webpPath, webpSizes } from './assets.ts';
 
 /* * Types */
 
 export interface ImageDirs {
 	/** Private masters folder (ASSETS_DIR). */
 	assetsDir: string;
+	/** Staged masters (STAGED_ASSETS_DIR), winning over the masters folder. */
+	stagedDir?: string | undefined;
 	/** Published assets folder, e.g. dist/v1/assets. */
 	outDir: string;
 	/** Variant cache, kept between builds. */
@@ -25,7 +27,7 @@ export async function writeImages(manifest: AssetManifest, dirs: ImageDirs): Pro
 	let converted = 0;
 	await mkdir(dirs.cacheDir, { recursive: true });
 	for (const [ref, entry] of Object.entries(manifest.assets)) {
-		const master = await readMaster(dirs.assetsDir, entry.source ?? ref);
+		const master = await findMaster(dirs, ref, entry.source);
 		if (!master) {
 			throw new Error(`master of ${ref} not found (checked before writing)`);
 		}
