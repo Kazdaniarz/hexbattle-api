@@ -353,6 +353,16 @@ const CASES: Case[] = [
 		change: (s) => (featureOf(s, 'wojownik', 'toughness').at = { slot: 'e5' }),
 	},
 	{
+		code: 'E_POS_PLACEMENT',
+		name: 'exact position on an edge feature',
+		change: (s) => (featureOf(s, 'wojownik', 'melee').pos = { x: 0, y: -0.7 }),
+	},
+	{
+		code: 'E_POS_OUTSIDE',
+		name: 'badge position in a corner of the bounding box',
+		change: (s) => (featureOf(s, 'wojownik', 'toughness').pos = { x: 0.95, y: 0.8 }),
+	},
+	{
 		code: 'E_CATEGORY',
 		name: 'silver Wytrzymałość',
 		change: (s) => (featureOf(s, 'wojownik', 'toughness').category = 'hq'),

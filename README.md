@@ -265,7 +265,7 @@ A **tile** is one tile type of an army: `id`, `name`, `category` (`hq` Sztab, `w
 
 A **face** is one printed side: `side`, `playable`, `image`, `features`.
 
-A **feature** is one printed element: `mechanic` (id from `mechanics.json`), `at` (anchor), and as needed `params` (values such as `strength`, `value`, `range`), `category` (badge colour: `unit` gold, `hq` silver, `hidden`, `ambush`, `forced`, `power`), `side` (effects only), `flags` (`friendly_fire`, `zombie_only`), `riders` (`jad`, `paraliz`), `cost`, and nested `effects` / `options` for container mechanics.
+A **feature** is one printed element: `mechanic` (id from `mechanics.json`), `at` (anchor), for badges optionally `pos` (the exact drawn position: `{ "x", "y" }` from the tile centre in units of the hex's outer radius, x right, y down, on the unturned face – the hex reaches x ±1 and y ±0.866; the game meaning stays the slot), and as needed `params` (values such as `strength`, `value`, `range`), `category` (badge colour: `unit` gold, `hq` silver, `hidden`, `ambush`, `forced`, `power`), `side` (effects only), `flags` (`friendly_fire`, `zombie_only`), `riders` (`jad`, `paraliz`), `cost`, and nested `effects` / `options` for container mechanics.
 
 Example – a warrior (Moloch Szturmowiec: Strzał on the top edge, two Inicjatywa badges, one Wytrzymałość):
 
@@ -641,7 +641,7 @@ pnpm schema:editor        # JSON Schemas for editor validation of data/ (VS Code
 pnpm schema:declarations  # build @hexbattle/schema into a temp folder and fail if a type got lost on the way
 ```
 
-Publishing `@hexbattle/schema` (maintainers): raise `version` in `packages/schema/package.json`, run `pnpm check`, then `pnpm --dir packages/schema publish --access public`. The package is built on `prepack`; only `dist/`, `README.md` and `LICENSE` go out.
+Publishing `@hexbattle/schema` (maintainers): raise `version` in `packages/schema/package.json`, run `pnpm check`, then `pnpm --dir packages/schema publish --access public`. The package is built on `prepack`; only `dist/`, `README.md` and `LICENSE` go out. If the browser approval of a security key fails with pnpm, pack with `pnpm --dir packages/schema pack` and publish the file with `npm publish <file>.tgz --access public` (pack applies the publish settings; npm alone would not).
 
 `STAGED_ASSETS_DIR` (optional) adds image masters that are not published yet, stored under their published path; they win over `ASSETS_DIR` in the build and in `assets:manifest` (the dashboard uses it for images uploaded with unpublished changes).
 

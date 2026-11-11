@@ -58,6 +58,17 @@ export const Anchor = z.union([
 ]);
 export type Anchor = z.infer<typeof Anchor>;
 
+/**
+ * Exact drawn position of a badge on the unturned tile face, from the centre in units of the hex's outer radius
+ * (x to the right, y down): the flat-topped hex reaches x = ±1 and y = ±√3/2. Only where the drawing matters
+ * (e.g. where the app puts markers); the badge's game meaning stays its slot.
+ */
+export const Point = z.strictObject({
+	x: z.number().min(-1).max(1),
+	y: z.number().min(-0.866).max(0.866),
+});
+export type Point = z.infer<typeof Point>;
+
 /* * Sides */
 
 /** Who an effect applies to: only own tiles, own + teammates, enemies, everyone. */

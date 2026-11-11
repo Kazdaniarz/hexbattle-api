@@ -2,7 +2,7 @@
  * Army file (`armies/<army_id>.json`): display data, army rules, marker pools, deck and tiles with their features.
  */
 import { z } from 'zod';
-import { Anchor, ArmyScopedId, AssetRef, Id, Lang, Side, Text } from './common.ts';
+import { Anchor, ArmyScopedId, AssetRef, Id, Lang, Point, Side, Text } from './common.ts';
 import { BadgeCategory, ParamValue } from './mechanics.ts';
 
 /* * Feature */
@@ -19,6 +19,8 @@ export interface Feature {
 	mechanic: Id;
 	// ? required on a face; nested effects and choice options take their place from the container
 	at?: Anchor | undefined;
+	// ? badges only: the exact drawn position when it matters (set in the dashboard by dragging)
+	pos?: Point | undefined;
 	params?: Record<Id, ParamValue> | undefined;
 	category?: BadgeCategory | undefined;
 	// ? absent = false
@@ -36,6 +38,7 @@ export const Feature: z.ZodType<Feature> = z
 	.strictObject({
 		mechanic: Id,
 		at: Anchor.optional(),
+		pos: Point.optional(),
 		params: z.record(Id, ParamValue).optional(),
 		category: BadgeCategory.optional(),
 		flags: z

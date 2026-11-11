@@ -181,6 +181,12 @@ function checkFaces(ctx: Context, file: string, path: string, army: Army, tile: 
 	});
 }
 
+/** Whether a point (units of the outer radius, from the centre) lies on a flat-topped hex. */
+function insideHex(x: number, y: number): boolean {
+	const halfHeight = Math.sqrt(3) / 2;
+	return Math.abs(y) <= halfHeight + 1e-9 && Math.abs(x) <= 1 - Math.abs(y) / Math.sqrt(3) + 1e-9;
+}
+
 /** Rules across the features of one face: badge positions, edges, badge groups. */
 function checkFaceLayout(ctx: Context, file: string, path: string, tile: Tile, face: Face): void {
 	const slots = new Map<Slot, number>();
@@ -188,6 +194,14 @@ function checkFaceLayout(ctx: Context, file: string, path: string, tile: Tile, f
 	const groups = new Map<string, Feature[]>();
 	face.features.forEach((feature, index) => {
 		const at: Anchor | undefined = feature.at;
+		if (feature.pos !== undefined) {
+			const where = `${path}.features[${String(index)}].pos`;
+			if (!at || !('slot' in at)) {
+				ctx.report('E_POS_PLACEMENT', file, where, `${tile.id}: only badges have an exact position`);
+			} else if (!insideHex(feature.pos.x, feature.pos.y)) {
+				ctx.report('E_POS_OUTSIDE', file, where, `${tile.id}: position outside the hex`);
+			}
+		}
 		if (at && 'slot' in at && at.slot !== null) {
 			if (slots.has(at.slot)) {
 				ctx.report(

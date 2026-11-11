@@ -54,6 +54,8 @@ export const ISSUE_CODES = {
 	W_SLOT_UNREAD: 'badge position not read yet on a draft tile',
 	E_SLOT_DUP: 'two badges on one position',
 	E_SLOT_OVERLAP: 'badges on neighbouring positions overlap',
+	E_POS_PLACEMENT: 'an exact position (pos) on a feature that is not a badge',
+	E_POS_OUTSIDE: 'an exact position (pos) outside the hex',
 	E_CATEGORY: 'badge category the mechanic does not allow',
 	E_CATEGORY_MISSING: 'badge category missing where the mechanic requires one',
 	E_BADGE_GROUP: 'one badge group shared by different mechanics',
