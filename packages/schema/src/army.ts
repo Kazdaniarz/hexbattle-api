@@ -181,6 +181,10 @@ export type Deck = z.infer<typeof Deck>;
 
 /* * Army */
 
+/** Where an army comes from: the base game, an expansion, or a mini-expansion (minidodatek). */
+export const ArmyOrigin = z.enum(['base_game', 'expansion', 'mini_expansion']);
+export type ArmyOrigin = z.infer<typeof ArmyOrigin>;
+
 /**
  * Source and published army file. `display`, `deck` and `tiles` may be missing while an army is being
  * recorded; a release build requires them. Absent `rules` / `pools` = standard game / no army markers.
@@ -190,7 +194,8 @@ export const Army = z
 		id: Id,
 		name: Text,
 		official: z.boolean(),
-		origin: z.enum(['base_game', 'expansion']),
+		// ? base game, expansion (a full army) or mini-expansion (minidodatek)
+		origin: ArmyOrigin,
 		display: Display.optional(),
 		rules: z.array(ArmyRule).min(1).optional(),
 		pools: z.array(Pool).min(1).optional(),

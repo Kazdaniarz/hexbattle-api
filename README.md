@@ -38,6 +38,7 @@ Notes for your own copy:
 - **Images:** they are not in this repository – see [Images for your copy](#images-for-your-copy) below.
 - **Any address works:** every link inside the data is relative (`armies/moloch.json`, `assets/…`), so the files work from any host or folder without a rebuild.
 - **Static files only:** `dist/v1/` can also be served by any web server; only `/v1/query/` needs `pnpm serve`.
+- **New builds go live by themselves:** `pnpm serve` watches `dist/v1/index.json` and serves a new build (also its queries) a moment after it is written – no restart.
 
 ### Images for your copy
 
@@ -136,12 +137,13 @@ Every object is strict: fields not listed here never appear. Field names are sna
 
 ### `index.json` – release
 
-`meta` (`dataset_version` semver, `languages` complete in this release, `generated_at` UTC, `build` `dev`/`release`), `armies` (id, name, official, origin, `href`, `completeness`), `files` (links to the other files) and `assets` (image naming, sizes and per-image `sha256`, `width`, `height`, available `webp` sizes). Shortened example (one army, two images):
+`meta` (`dataset_version` semver, `schema_version` – the `@hexbattle/schema` version it was built with, `languages` complete in this release, `generated_at` UTC, `build` `dev`/`release`), `armies` (id, name, official, origin, `href`, `completeness`), `files` (links to the other files) and `assets` (image naming, sizes and per-image `sha256`, `width`, `height`, available `webp` sizes). Shortened example (one army, two images):
 
 ```json
 {
 	"meta": {
 		"dataset_version": "0.1.0",
+		"schema_version": "0.3.0",
 		"languages": ["pl"],
 		"generated_at": "2026-11-08T10:51:59.606Z",
 		"build": "release"
@@ -201,7 +203,7 @@ Every object is strict: fields not listed here never appear. Field names are sna
 | Field                    | Meaning                                                                                                                                                                                 |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id`, `name`, `official` | army id, name, official Portal Games army or not                                                                                                                                        |
-| `origin`                 | `base_game` or `expansion`                                                                                                                                                              |
+| `origin`                 | `base_game`, `expansion` or `mini_expansion` (minidodatek)                                                                                                                              |
 | `display`                | `colors` (`primary`, `secondary`, `layout` `solid`/`diagonal_split`), `logo.image` (SVG), `back` (tile back), `hp_markers` (one per Sztab), `manual` (PDF links per language, optional) |
 | `rules`                  | army rules printed on no tile, as pointers to `army_rule` mechanics (absent = standard game)                                                                                            |
 | `pools`                  | army marker pools (absent = none)                                                                                                                                                       |

@@ -35,11 +35,15 @@ const QUERIES: Record<string, { schema: z.ZodType; run: (catalogue: Catalogue, q
 
 /* * Server */
 
-/** A server for `<distDir>/v1/`; without a catalogue the query routes answer 503. Call `listen` on it. */
-export function createApiServer(distDir: string, catalogue?: Catalogue): Server {
+/**
+ * A server for `<distDir>/v1/`; without a catalogue the query routes answer 503. Call `listen` on it. The
+ * catalogue may also be a function, so a new build's data can be swapped in without a restart.
+ */
+export function createApiServer(distDir: string, catalogue?: Catalogue | (() => Catalogue | undefined)): Server {
 	const root = path.resolve(distDir, 'v1');
+	const current = typeof catalogue === 'function' ? catalogue : () => catalogue;
 	return createServer((request, response) => {
-		handle(root, catalogue, request, response).catch((error: unknown) => {
+		handle(root, current(), request, response).catch((error: unknown) => {
 			if (!response.headersSent) {
 				send(response, 500, { error: 'internal_error' });
 			}

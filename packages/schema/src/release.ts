@@ -154,6 +154,11 @@ export const Index = z
 		meta: z.strictObject({
 			/** Semver of the data release; a new value means new data. */
 			dataset_version: z.string().regex(/^\d+\.\d+\.\d+$/),
+			/** Version of @hexbattle/schema the release was built and checked with. */
+			schema_version: z
+				.string()
+				.regex(/^\d+\.\d+\.\d+$/)
+				.optional(),
 			/** Languages complete in this release. */
 			languages: z.array(Lang).min(1),
 			/** UTC instant of the build. */

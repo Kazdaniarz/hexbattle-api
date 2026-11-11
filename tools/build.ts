@@ -35,6 +35,9 @@ const { values } = parseArgs({
 });
 const requireLangs = values['require-lang'].map((lang) => Lang.parse(lang));
 const { version } = JSON.parse(await readFile(path.join(ROOT, 'package.json'), 'utf8')) as { version: string };
+const schemaVersion = (
+	JSON.parse(await readFile(path.join(ROOT, 'packages', 'schema', 'package.json'), 'utf8')) as { version: string }
+).version;
 
 /* * Build */
 
@@ -45,6 +48,7 @@ const { files, issues } = build(source, {
 	release: values.release,
 	requireLangs,
 	datasetVersion: version,
+	schemaVersion,
 	generatedAt: new Date(),
 	manifest,
 });

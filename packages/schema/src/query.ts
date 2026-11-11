@@ -3,7 +3,7 @@
  * lists are comma-separated. Unknown parameters are rejected.
  */
 import { z } from 'zod';
-import { TileCategory } from './army.ts';
+import { ArmyOrigin, TileCategory } from './army.ts';
 import { ArmyScopedId, Id, Side } from './common.ts';
 import { MarkerPlacement, MarkerType } from './markers.ts';
 import { Mechanic, MechanicKind, Placement } from './mechanics.ts';
@@ -80,7 +80,7 @@ export type TileQuery = z.infer<typeof TileQuery>;
 /** `/v1/query/armies` parameters. */
 export const ArmyQuery = z.strictObject({
 	...lookup(Id),
-	origin: list(z.enum(['base_game', 'expansion'])).optional(),
+	origin: list(ArmyOrigin).optional(),
 	official: z.stringbool().optional(),
 	fields: list(z.enum(ARMY_FIELDS)).optional(),
 	...Paging,

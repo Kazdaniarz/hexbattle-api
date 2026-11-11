@@ -16,6 +16,8 @@ import { countMissing } from './validate/languages.ts';
 export interface BuildOptions extends ValidateOptions {
 	/** Semver of this data release. */
 	datasetVersion: string;
+	/** Version of @hexbattle/schema used for the build (written into the index). */
+	schemaVersion?: string;
 	/** Build instant (UTC); passed in so builds and tests stay deterministic. */
 	generatedAt: Date;
 	/** Image manifest; every image the data references must be listed. */
@@ -89,6 +91,7 @@ export function build(source: SourceData, options: BuildOptions): BuildResult {
 	const index: Index = {
 		meta: {
 			dataset_version: options.datasetVersion,
+			...(options.schemaVersion === undefined ? {} : { schema_version: options.schemaVersion }),
 			languages: completeLanguages(source),
 			generated_at: options.generatedAt.toISOString(),
 			build: options.release ? 'release' : 'dev',
