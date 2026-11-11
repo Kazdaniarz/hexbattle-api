@@ -363,6 +363,11 @@ const CASES: Case[] = [
 		change: (s) => (featureOf(s, 'wojownik', 'toughness').pos = { x: 0.95, y: 0.8 }),
 	},
 	{
+		code: 'E_MECH_TILE',
+		name: 'Pancerz limited to other tile types',
+		change: (s) => (mechanicOf(s, 'armor').tile_categories = ['module']),
+	},
+	{
 		code: 'E_CATEGORY',
 		name: 'silver Wytrzymałość',
 		change: (s) => (featureOf(s, 'wojownik', 'toughness').category = 'hq'),

@@ -7,7 +7,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import type { Server } from 'node:http';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
-import { MAX_AGE } from '../tools/lib/http-headers.ts';
+import { MAX_AGE, VERSIONED_CACHE } from '../tools/lib/http-headers.ts';
 import { createApiServer } from '../tools/lib/server.ts';
 
 /* * Setup */
@@ -72,6 +72,9 @@ describe('GET', () => {
 		const webp = await fetch(`${base}/v1/assets/testowa/a_front@128.webp`);
 		expect(webp.headers.get('content-type')).toBe('image/webp');
 		expect(new Uint8Array(await webp.arrayBuffer())).toEqual(new Uint8Array([1, 2, 3]));
+		// ? with its hash in the address an image is kept a year
+		const versioned = await fetch(`${base}/v1/assets/testowa/a_front@128.webp?v=abc123`);
+		expect(versioned.headers.get('cache-control')).toBe(VERSIONED_CACHE);
 	});
 	it('answers 304 when the ETag still matches', async () => {
 		const first = await fetch(`${base}/v1/armies/testowa.json`);

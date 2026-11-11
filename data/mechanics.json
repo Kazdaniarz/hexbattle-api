@@ -26,6 +26,7 @@
 				"pl": "Ciosy"
 			},
 			"placement": ["edge"],
+			"tile_categories": ["hq", "warrior", "object", "technology", "swap"],
 			"params": {
 				"strength": {
 					"type": "integer",
@@ -48,6 +49,7 @@
 				"pl": "Strzały"
 			},
 			"placement": ["edge"],
+			"tile_categories": ["hq", "warrior", "object", "technology", "swap"],
 			"params": {
 				"strength": {
 					"type": "integer",
@@ -70,6 +72,7 @@
 				"pl": "Gaussy"
 			},
 			"placement": ["edge"],
+			"tile_categories": ["hq", "warrior", "object", "technology", "swap"],
 			"params": {
 				"strength": {
 					"type": "integer",
@@ -92,6 +95,7 @@
 				"pl": "Pancerze"
 			},
 			"placement": ["edge"],
+			"tile_categories": ["hq", "warrior", "object", "module", "implant", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Zmniejsza o 1 obrażenia od każdego ataku dystansowego, który trafia jednostkę przez tę ściankę żetonu lub przez narożniki na końcach ikony. Atak o sile 1 zostaje całkowicie zatrzymany. Nie chroni przed atakami wręcz, odłamkami ani żetonami natychmiastowymi. Działa także, gdy jednostka jest zasieciowana."
@@ -107,6 +111,7 @@
 				"pl": "Sieci"
 			},
 			"placement": ["edge"],
+			"tile_categories": ["hq", "warrior", "object", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Jednostka wroga na sąsiednim polu w kierunku ikony zostaje zasieciowana: nie atakuje, nie używa cech, nie daje premii innym jednostkom, nie może się ruszać ani być przesuwana czy obracana. Działa od razu po położeniu żetonu, także na Sztaby. Zasieciowana jednostka zachowuje Pancerz i Wytrzymałość."
@@ -122,6 +127,7 @@
 				"pl": "Połączenia modułu"
 			},
 			"placement": ["edge"],
+			"tile_categories": ["module", "object", "technology", "swap"],
 			"params": {
 				"range": {
 					"type": "integer",
@@ -142,6 +148,7 @@
 				"pl": "Inicjatywa"
 			},
 			"placement": ["slot"],
+			"tile_categories": ["hq", "warrior", "object", "ground", "technology", "swap"],
 			"params": {
 				"value": {
 					"type": "integer",
@@ -162,6 +169,7 @@
 			},
 			"placement": ["slot"],
 			"allowed_categories": ["unit"],
+			"tile_categories": ["warrior", "module", "object", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Każda ikona zwiększa o 1 liczbę Ran, które jednostka może przyjąć – jednostka bez Wytrzymałości ginie od 1 Rany. Działa także, gdy jednostka jest zasieciowana."
@@ -175,6 +183,7 @@
 			},
 			"placement": ["slot"],
 			"allowed_categories": ["unit"],
+			"tile_categories": ["warrior", "module", "object", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Raz w swojej turze jednostka może przesunąć się na sąsiednie wolne pole (i dowolnie się obrócić) albo tylko się obrócić. Nie działa, gdy jednostka jest zasieciowana."
@@ -189,6 +198,7 @@
 			"aliases": ["eksplozja"],
 			"placement": ["slot"],
 			"allowed_categories": ["unit"],
+			"tile_categories": ["warrior", "module", "object", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Zamiast ataku, w segmencie swojej Inicjatywy, jednostka może eksplodować. Odłamki zadają 1 Ranę każdej jednostce na sąsiednich polach – wrogiej i sojuszniczej, także Sztabom. Pancerz nie chroni. Medyk może przejąć obrażenia. Eksplodującej jednostki nie można uratować. Sieć i Paraliż uniemożliwiają eksplozję."
@@ -202,6 +212,7 @@
 			},
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
+			"tile_categories": ["hq", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem mają +1 do każdego strzału. Premia nie działa na Gaussa ani na sam Sztab. Nie działa, gdy Sztab jest zasieciowany."
@@ -215,6 +226,7 @@
 			},
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
+			"tile_categories": ["hq", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem mają +1 do każdego ciosu. Premia nie działa na sam Sztab. Nie działa, gdy Sztab jest zasieciowany."
@@ -228,6 +240,7 @@
 			},
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
+			"tile_categories": ["hq", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem mają +1 do każdej swojej Inicjatywy. Premia nie działa na sam Sztab. Nie działa, gdy Sztab jest zasieciowany."
@@ -241,6 +254,7 @@
 			},
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
+			"tile_categories": ["hq", "swap"],
 			"badge_count": 2,
 			"params": {
 				"group": {
@@ -260,6 +274,7 @@
 				"pl": "Dodatkowa Inicjatywa"
 			},
 			"placement": ["center"],
+			"tile_categories": ["module", "object", "technology", "swap"],
 			"params": {
 				"count": {
 					"type": "integer",
@@ -279,6 +294,7 @@
 				"pl": "Medyk"
 			},
 			"placement": ["center"],
+			"tile_categories": ["module", "object", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Gdy połączona sojusznicza jednostka miałaby otrzymać Rany lub zostać zniszczona przez jedno źródło, Medyk ginie zamiast niej, a wszystkie Rany z tego źródła przepadają. Działa obowiązkowo. Jeżeli Medyk sam ginie w tym samym momencie, nie może uratować innej jednostki."
@@ -291,6 +307,7 @@
 				"pl": "Modyfikator"
 			},
 			"placement": ["center"],
+			"tile_categories": ["module", "object", "technology", "swap"],
 			"official": true,
 			"params": {
 				"stat": {
@@ -327,6 +344,7 @@
 				"pl": "Zamiana ataku"
 			},
 			"placement": ["center"],
+			"tile_categories": ["module", "object", "technology", "swap"],
 			"official": true,
 			"params": {
 				"from": {
@@ -355,6 +373,7 @@
 				"pl": "Nadanie cechy"
 			},
 			"placement": ["center"],
+			"tile_categories": ["module", "object", "technology", "swap"],
 			"official": true,
 			"params": {
 				"ability": {
@@ -374,6 +393,7 @@
 				"pl": "Mnożnik ruchu"
 			},
 			"placement": ["center"],
+			"tile_categories": ["module", "object", "technology", "swap"],
 			"official": true,
 			"params": {
 				"factor": {
@@ -393,6 +413,7 @@
 				"pl": "Przekierowanie Modułu"
 			},
 			"placement": ["center"],
+			"tile_categories": ["module", "object", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Połączony Moduł wroga działa na korzyść właściciela Skopera: efekty pozytywne obejmują jego sojusznicze jednostki, a negatywne – jednostki jego przeciwników. Zasięg i właściciel Modułu się nie zmieniają. Jeżeli przejęty Moduł wymaga podjęcia decyzji w ramach użycia jego efektu, decyzje podejmuje właściciel Skopera. Dwa Skopery skierowane na siebie znoszą się. Nie działa na Sztaby ani Wszczepy."
@@ -405,6 +426,7 @@
 				"pl": "Bitwa"
 			},
 			"placement": ["center"],
+			"tile_categories": ["instant", "implant", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Rozpoczyna Bitwę. Zagranie żetonu kończy turę. Nie można go zagrać po tym, jak dowolny gracz dobrał swoje ostatnie żetony."
@@ -417,6 +439,7 @@
 				"pl": "Obrażenia obszarowe"
 			},
 			"placement": ["center"],
+			"tile_categories": ["instant", "implant", "technology", "swap"],
 			"official": true,
 			"params": {
 				"template": {
@@ -441,6 +464,7 @@
 				"pl": "Ruch"
 			},
 			"placement": ["center"],
+			"tile_categories": ["instant", "implant", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Dowolnie przesuń i obróć własną jednostkę na sąsiadujące wolne pole w zasięgu 1 hexa. Można także po prostu obrócić jednostkę bez przesunięcia lub przesunąć ją bez obrotu. Nie można użyć na zasieciowanej jednostce."
@@ -453,6 +477,7 @@
 				"pl": "Odepchnięcie"
 			},
 			"placement": ["center"],
+			"tile_categories": ["instant", "implant", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Własna jednostka odpycha sąsiadującą jednostkę wroga o 1 hex dalej od siebie na wolne pole bez możliwości jej obrócenia. Jeżeli jest kilka pól spełniających ten opis, wybiera właściciel odpychanej jednostki. Zasieciowaną jednostką nie można odpychać, ani zasieciowana jednostka nie może być odpychana."
@@ -465,6 +490,7 @@
 				"pl": "Snajper"
 			},
 			"placement": ["center"],
+			"tile_categories": ["instant", "implant", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Zadaj 1 Ranę wybranej jednostce wroga na planszy, oprócz Sztabu. Zadaje rany także żetonom podłoża. Jeżeli na żetonie podłoża znajduje się jednostka, zagrywający wybiera, co na tym polu otrzymuje Ranę."
@@ -477,6 +503,7 @@
 				"pl": "Granat"
 			},
 			"placement": ["center"],
+			"tile_categories": ["instant", "implant", "technology", "swap"],
 			"official": true,
 			"description": {
 				"pl": "Zniszcz dowolną jednostkę wroga sąsiadującą z twoim Sztabem, oprócz Sztabu. Niszczy także żetony podłoża, również ten znajdujący się pod twoim Sztabem. Jeżeli na żetonie podłoża znajduje się jednostka, zagrywający wybiera, co na tym polu zostaje zniszczone. Nie można zagrać, jeżeli twój Sztab jest zasieciowany lub sparaliżowany."

@@ -2,7 +2,7 @@
  * Army file (`armies/<army_id>.json`): display data, army rules, marker pools, deck and tiles with their features.
  */
 import { z } from 'zod';
-import { Anchor, ArmyScopedId, AssetRef, Id, Lang, Point, Side, Text } from './common.ts';
+import { Anchor, ArmyScopedId, AssetRef, Id, Lang, Point, Side, Text, TileCategory } from './common.ts';
 import { BadgeCategory, ParamValue } from './mechanics.ts';
 
 /* * Feature */
@@ -74,19 +74,6 @@ export const Face = z.strictObject({
 	features: z.array(Feature),
 });
 export type Face = z.infer<typeof Face>;
-
-export const TileCategory = z.enum([
-	'hq',
-	'object',
-	'warrior',
-	'module',
-	'implant',
-	'instant',
-	'ground',
-	'technology',
-	'swap',
-]);
-export type TileCategory = z.infer<typeof TileCategory>;
 
 export const SetupRole = z.enum(['draw_pile', 'starting_hq', 'starting_object', 'companion', 'swap_in']);
 export type SetupRole = z.infer<typeof SetupRole>;

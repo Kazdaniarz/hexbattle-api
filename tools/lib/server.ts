@@ -8,7 +8,7 @@ import { createServer, type IncomingMessage, type Server, type ServerResponse } 
 import path from 'node:path';
 import { ArmyQuery, BoardSkinQuery, MarkerQuery, MechanicQuery, SkinQuery, TileQuery } from '@hexbattle/schema';
 import type { z } from 'zod';
-import { cacheControl, COMMON_HEADERS, contentType } from './http-headers.ts';
+import { cacheControl, COMMON_HEADERS, contentType, VERSIONED_CACHE } from './http-headers.ts';
 import {
 	type Catalogue,
 	parseQuery,
@@ -95,7 +95,9 @@ async function handle(
 		send(response, 404, { error: 'not_found' });
 		return;
 	}
-	respond(request, response, body, type, cacheControl(published));
+	// ? an image asked for with its hash (?v=…) is kept long: a replaced image has another hash, so another address
+	const versioned = published.startsWith('assets/') && (url?.searchParams.has('v') ?? false);
+	respond(request, response, body, type, versioned ? VERSIONED_CACHE : cacheControl(published));
 }
 
 /** 200 with an ETag, or 304 when the client already has this body. */

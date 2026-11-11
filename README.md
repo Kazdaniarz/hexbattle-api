@@ -341,7 +341,7 @@ A Moduł keeps its effect in the centre, with the side it applies to (Posterunek
 
 ### Mechanic – `mechanics.json`
 
-The file holds `terms` (shared word forms, e.g. `terms.side.enemy` = "wrogich") and `mechanics`. A mechanic: `id`, `kind` (`attack`, `defense`, `net`, `connector`, `trap`, `container`, `ability`, `initiative`, `effect`, `status`, `army_rule`), `name`, optional `name_plural`, `description` (player-facing, may be a [template](#descriptions)), `placement` (where it may appear: `edge`, `corner`, `slot`, `center`, `none`), `params` (each with `type`, `required`, `values`, `min`, `max`, `exclude`, `labels`, `signed`, `ref`), `allowed_categories`, `badge_count`, `scope` (army-specific), `official`.
+The file holds `terms` (shared word forms, e.g. `terms.side.enemy` = "wrogich") and `mechanics`. A mechanic: `id`, `kind` (`attack`, `defense`, `net`, `connector`, `trap`, `container`, `ability`, `initiative`, `effect`, `status`, `army_rule`), `name`, optional `name_plural`, `description` (player-facing, may be a [template](#descriptions)), `placement` (where it may appear: `edge`, `corner`, `slot`, `center`, `none`), `params` (each with `type`, `required`, `values`, `min`, `max`, `exclude`, `labels`, `signed`, `ref`), `allowed_categories`, `tile_categories` (the tile types that may carry it, e.g. Bitwa only on `instant` and `implant`; absent = any), `badge_count`, `scope` (army-specific), `official`.
 
 Example (Modyfikator):
 
@@ -611,7 +611,7 @@ curl -i "$API/v1/query/tiles?colour=red"
 curl -i -X POST "$API/v1/index.json"
 ```
 
-Every response has `Access-Control-Allow-Origin: *`, `Cache-Control` (`index.json` 60 s, other JSON and query answers 5 min, images 1 day) and an `ETag`; asking again with `If-None-Match` and the same ETag answers `304 Not Modified` without a body. The second-to-last example answers `400 bad_query`, the last `405 method_not_allowed`.
+Every response has `Access-Control-Allow-Origin: *`, `Cache-Control` (`index.json` 60 s, other JSON and query answers 5 min, images 1 day – or **a year when you add the image's hash**, `?v=<sha256 from index.json → assets.files>`, which is the recommended way: a replaced image gets a new hash and so a new address) and an `ETag`; asking again with `If-None-Match` and the same ETag answers `304 Not Modified` without a body. The second-to-last example answers `400 bad_query`, the last `405 method_not_allowed`.
 
 In PowerShell, `Invoke-RestMethod` turns an answer into objects:
 

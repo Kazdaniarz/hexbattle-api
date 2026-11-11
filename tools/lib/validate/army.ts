@@ -284,6 +284,14 @@ function checkFeature(
 		return;
 	}
 	checkMechanicScope(ctx, file, path, mechanic, army);
+	if (mechanic.tile_categories !== undefined && !mechanic.tile_categories.includes(tile.category)) {
+		ctx.report(
+			'E_MECH_TILE',
+			file,
+			path,
+			`${tile.id}: ${mechanic.id} may be only on ${mechanic.tile_categories.join(', ')} tiles, not ${tile.category}`,
+		);
+	}
 	checkAnchor(ctx, file, path, tile, feature, mechanic, isNested);
 	checkCategory(ctx, file, path, tile, feature, mechanic);
 	if (feature.side !== undefined && mechanic.kind !== 'effect') {

@@ -27,7 +27,12 @@ export const MAX_AGE = {
 	json: 300,
 	/** Images are replaced rarely; `index.json` lists each image's hash to detect a replacement. */
 	assets: 86_400,
+	/** An image asked for with its hash (`?v=<sha256>`): a new image gets a new address, so it may be kept a year. */
+	versioned: 31_536_000,
 } as const;
+
+/** An image address with its hash never changes its content, so caches may keep it without asking again. */
+export const VERSIONED_CACHE = `public, max-age=${String(MAX_AGE.versioned)}, immutable`;
 
 export function cacheControl(publishedPath: string): string {
 	const maxAge =

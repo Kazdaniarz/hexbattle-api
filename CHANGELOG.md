@@ -11,6 +11,7 @@ First version of the API built on the Zod 4 schema.
 - Polish texts complete; English not yet.
 - Images as WebP (tiles 512/256/128, board 4096/2048/1024), logos as SVG.
 - JSON Schemas of every file in `/v1/schema/`.
+- Mechanics may name the tile types that may carry them (`tile_categories`; e.g. attacks only on fighting tiles, Bitwa only on Natychmiastowe and Wszczepy); the build refuses a feature on another type (`E_MECH_TILE`); every mechanic has them (`@hexbattle/schema` 0.4.0).
 - `index.json` → `meta.schema_version`: the `@hexbattle/schema` version the release was built with; army `origin` may also be `mini_expansion` (minidodatek) (`@hexbattle/schema` 0.3.0).
 - Badges may carry an exact drawn position `pos` (x, y from the tile centre in units of the hex's outer radius, on the unturned face) where the drawing matters; the game meaning stays the badge's slot (`@hexbattle/schema` 0.2.0).
 - `pnpm images:fetch` downloads the published images for a copy built without the image masters.

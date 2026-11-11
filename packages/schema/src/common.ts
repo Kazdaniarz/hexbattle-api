@@ -74,3 +74,19 @@ export type Point = z.infer<typeof Point>;
 /** Who an effect applies to: only own tiles, own + teammates, enemies, everyone. */
 export const Side = z.enum(['own', 'allied', 'enemy', 'all']);
 export type Side = z.infer<typeof Side>;
+
+/* * Tile types */
+
+/** What a tile is: Sztab, Obiekt, Wojownik, Moduł, Wszczep, Natychmiastowy, Podłoże, technology, wymienny. */
+export const TileCategory = z.enum([
+	'hq',
+	'object',
+	'warrior',
+	'module',
+	'implant',
+	'instant',
+	'ground',
+	'technology',
+	'swap',
+]);
+export type TileCategory = z.infer<typeof TileCategory>;

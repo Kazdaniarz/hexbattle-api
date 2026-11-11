@@ -3,7 +3,8 @@
  * lists are comma-separated. Unknown parameters are rejected.
  */
 import { z } from 'zod';
-import { ArmyOrigin, TileCategory } from './army.ts';
+import { ArmyOrigin } from './army.ts';
+import { TileCategory } from './common.ts';
 import { ArmyScopedId, Id, Side } from './common.ts';
 import { MarkerPlacement, MarkerType } from './markers.ts';
 import { Mechanic, MechanicKind, Placement } from './mechanics.ts';

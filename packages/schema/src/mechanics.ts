@@ -2,7 +2,7 @@
  * Mechanics registry (`mechanics.json`): every game element defined once, referenced by id from tiles and armies.
  */
 import { z } from 'zod';
-import { Id, Text } from './common.ts';
+import { Id, Text, TileCategory } from './common.ts';
 
 /* * Vocabulary */
 
@@ -72,6 +72,8 @@ export const Mechanic = z
 		placement: z.array(Placement).min(1),
 		params: z.record(Id, ParamSpec).optional(),
 		allowed_categories: z.array(BadgeCategory).min(1).optional(),
+		// ? tile types that may carry it (e.g. Bitwa only on Natychmiastowe and Wszczepy); absent = any type
+		tile_categories: z.array(TileCategory).min(1).optional(),
 		// ? badges printed per effect, e.g. 2 for a two-badge ability
 		badge_count: z.int().min(1).optional(),
 		official: z.boolean(),
