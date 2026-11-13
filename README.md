@@ -2,9 +2,9 @@
 
 Data API of HexBattle Online: the armies, tiles, mechanics and markers of the board game Neuroshima Hex (edition 3.0, Portal Games) as versioned, validated JSON.
 
-> **Status: the public API is not live yet.** It will be served at `https://api.hexbattle.online/v1/`. Until then, [run your own copy](#running-your-own-copy) – every example in this README works with both.
+> **Status: live.** The public API runs at `https://api.hexbattle.online/v1/` (data release 0.1.0: the four base armies). You can also [run your own copy](#running-your-own-copy) – every example in this README works with both.
 
-**Contents:** [Using the public API](#using-the-public-api) · [Running your own copy](#running-your-own-copy) · [What the API serves](#what-the-api-serves) · [Files and folders](#files-and-folders) · [Data structure](#data-structure) · [Images](#images) · [Descriptions](#descriptions) · [Using the API with curl](#using-the-api-with-curl) · [Versioning](#versioning) · [Development](#development) · [Licence](#licence)
+**Contents:** [Using the public API](#using-the-public-api) · [Running your own copy](#running-your-own-copy) · [What the API serves](#what-the-api-serves) · [Files and folders](#files-and-folders) · [Data structure](#data-structure) · [Images](#images) · [Descriptions](#descriptions) · [Using the API with curl](#using-the-api-with-curl) · [Versioning](#versioning) · [Development](#development) · [Security](#security) · [Licence](#licence)
 
 ## Using the public API
 
@@ -51,7 +51,7 @@ pnpm build:release                                  # copies them into dist/v1/a
 pnpm serve
 ```
 
-`images:fetch` reads the image list from `/v1/index.json`, downloads every file into `.cache/fetched/` and checks it (SVG by its SHA-256 in `index.json`, WebP by format and size). Files already there and correct are kept, so running it again only fetches what is new or changed; `--force` downloads everything again. Every `pnpm build` then copies the images from `.cache/fetched/`. The public API must be live for the default source (see the status line at the top).
+`images:fetch` reads the image list from `/v1/index.json`, downloads every file into `.cache/fetched/` and checks it (SVG by its SHA-256 in `index.json`, WebP by format and size). Files already there and correct are kept, so running it again only fetches what is new or changed; `--force` downloads everything again. Every `pnpm build` then copies the images from `.cache/fetched/`. The default source is the public API; `--from <url>` takes another copy.
 
 ## What the API serves
 
@@ -648,6 +648,10 @@ Publishing `@hexbattle/schema` (maintainers): raise `version` in `packages/schem
 `STAGED_ASSETS_DIR` (optional) adds image masters that are not published yet, stored under their published path; they win over `ASSETS_DIR` in the build and in `assets:manifest` (the dashboard uses it for images uploaded with unpublished changes).
 
 Build issues have stable codes (`E_…` errors stop the build, `W_…` warnings don't); the full list with meanings is in `tools/lib/issues.ts`. The JSON examples in this README are checked against the schemas by the tests.
+
+## Security
+
+The API is read-only and holds no accounts or personal data. To report a vulnerability, use GitHub's private reporting (**Security → Report a vulnerability**), not a public issue – see [`SECURITY.md`](SECURITY.md).
 
 ## Licence
 
