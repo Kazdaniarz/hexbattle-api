@@ -159,9 +159,9 @@ The example below is the tile in the next section's first JSON example – the s
 {
 	"meta": {
 		"dataset_version": "0.1.0",
-		"schema_version": "0.3.0",
+		"schema_version": "0.4.0",
 		"languages": ["pl"],
-		"generated_at": "2026-11-08T10:51:59.606Z",
+		"generated_at": "2026-11-13T14:03:04.864Z",
 		"build": "release"
 	},
 	"armies": [
@@ -370,6 +370,7 @@ Example (Modyfikator):
 		"pl": "{amount@sign:Zwiększa,Zmniejsza} {stat} połączonych {side} jednostek o {amount@abs}. Efekty z kilku źródeł sumują się."
 	},
 	"placement": ["center"],
+	"tile_categories": ["module", "object", "technology", "swap"],
 	"params": {
 		"stat": {
 			"type": "string",

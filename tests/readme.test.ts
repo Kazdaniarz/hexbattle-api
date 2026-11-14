@@ -32,6 +32,59 @@ describe('README JSON examples', () => {
 	});
 });
 
+/* * Examples that show real records must match the data (shortened only by leaving whole fields out) */
+
+const DATA = new URL('../data/', import.meta.url);
+const readData = (path: string): unknown => JSON.parse(readFileSync(fileURLToPath(new URL(path, DATA)), 'utf8'));
+const listOf = (path: string, key: string): { id: string }[] =>
+	(readData(path) as Record<string, { id: string }[]>)[key] ?? [];
+const SCHEMA_VERSION = (
+	JSON.parse(readFileSync(fileURLToPath(new URL('../packages/schema/package.json', import.meta.url)), 'utf8')) as {
+		version: string;
+	}
+).version;
+
+/** Fields an example may leave out to stay short; any other field of the record must be shown, so new fields reach the README. */
+const SHORTENED: Record<string, string[]> = { ReleaseArmy: ['tiles'] };
+
+/** The data record an example shows, without its shortened fields; undefined = not a real record. */
+function realRecord(schema: string, example: Record<string, unknown>): unknown {
+	const id = String(example.id);
+	const army = id.split('.')[0] ?? '';
+	const records: Record<string, () => unknown> = {
+		ReleaseArmy: () => readData(`armies/${id}.json`),
+		ReleaseTile: () =>
+			(readData(`armies/${army}.json`) as { tiles: { id: string }[] }).tiles.find((t) => t.id === id),
+		Mechanic: () => listOf('mechanics.json', 'mechanics').find((m) => m.id === id),
+		MarkerType: () => listOf('markers.json', 'markers').find((m) => m.id === id),
+		BoardSkin: () => readData(`board_skins/${id}.json`),
+	};
+	const record = records[schema]?.() as Record<string, unknown> | undefined;
+	if (record === undefined) return undefined;
+	const left = SHORTENED[schema] ?? [];
+	return Object.fromEntries(Object.entries(record).filter(([key]) => !left.includes(key)));
+}
+
+const RECORD_EXAMPLES = EXAMPLES.filter(({ schema }) =>
+	['ReleaseArmy', 'ReleaseTile', 'Mechanic', 'MarkerType', 'BoardSkin'].includes(schema),
+);
+
+describe('README examples match the data', () => {
+	it('index example names the current schema version', () => {
+		const index = EXAMPLES.find(({ schema }) => schema === 'Index');
+		const meta = (JSON.parse(index?.json ?? '{}') as { meta?: { schema_version?: string } }).meta;
+		expect(meta?.schema_version).toBe(SCHEMA_VERSION);
+	});
+	it.each(RECORD_EXAMPLES)('$schema example equals its record in data/', ({ json, schema }) => {
+		const example = JSON.parse(json) as Record<string, unknown>;
+		// ? `derived` is computed by the build, so it is not in the source data
+		const shown = Object.fromEntries(Object.entries(example).filter(([key]) => key !== 'derived'));
+		const record = realRecord(schema, example);
+		expect(record, `${String(example.id)} is not in data/`).toBeDefined();
+		expect(shown).toEqual(record);
+	});
+});
+
 /* * Query URLs */
 
 const ROUTES: Record<string, z.ZodType> = {
