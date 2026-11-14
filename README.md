@@ -114,6 +114,7 @@ data/                    source data: mechanics.json, markers.json, armies/, ski
 assets.manifest.json     every image the data uses: published name → private master file, SHA-256, size
 tools/                   build, validation, image step, query service and server, manifest and editor-schema tools
 tests/                   tests and test-only fixtures (never API data)
+docs/images/             diagrams used in this README (tile geometry)
 ```
 
 Image masters are not in git. The build reads them from a private folder (`ASSETS_DIR`).
@@ -134,6 +135,21 @@ Every object is strict: fields not listed here never appear. Field names are sna
 | side           | who an effect applies to: `own` (only own tiles), `allied` (own + teammates), `enemy`, `all`                                                       | `"enemy"`                                   |
 
 **Tile geometry.** Tiles are flat-top hexes shown unrotated, edge 0 up. Edges are numbered clockwise from the top: `0` N, `1` NE, `2` SE, `3` S, `4` SW, `5` NW. Corners: `0` upper right (between N and NE), `1` E, `2` lower right, `3` lower left, `4` W, `5` upper left. Badges take one of 12 positions at 30° steps, clockwise from the top: `e0 c0 e1 c1 e2 c2 e3 c3 e4 c4 e5 c5` (`e`k points at edge k, `c`k at corner k). `i` orders several icons on one edge.
+
+<p align="center"><img src="docs/images/tile-geometry.svg" width="760" alt="A flat-top hex with edge 0 at the top. Edges 0 to 5 run clockwise: N, NE, SE, S, SW, NW. Corners 0 to 5 run clockwise from the upper right: upper right, E, lower right, lower left, W, upper left. Inside, twelve badge slots form a ring at 30° steps: e0 at the top, then c0, e1, c1, e2, c2, e3, c3, e4, c4, e5, c5; e-slots face an edge, c-slots a corner. The centre is marked center."></p>
+
+How to read an anchor:
+
+- **`{ "edge": k }`** – the icon sits on edge k and acts through it, towards the neighbouring hex on that side: attacks (Strzał, Cios), Sieć, Moduł links, Pancerz and other edge icons.
+- **`{ "corner": k }`** – the icon sits on corner k, where two edges meet.
+- **`{ "slot": "ek" }` / `{ "slot": "ck" }`** – a round badge (Inicjatywa, Wytrzymałość, abilities) inside the tile, on the ring of 12 slots, facing edge k or corner k. Most badges sit in the c-slots; e-slots are rare exceptions. The slot is only where the badge is printed; it has no effect in the game.
+- **`{ "center": true }`** – the middle of the tile, e.g. the effect of a Moduł.
+- **When the tile is turned** on the board, every number turns with it: a tile turned by r steps of 60° clockwise has its printed edge k (and corner k, and slots `ek` / `ck`) at board direction (k + r) mod 6.
+- **`pos`** (optional, badges only) gives the exact drawn point for renderers: x to the right, y down, from the centre, in units of the hex's outer radius (the corner at `corner 1` is x = 1; edge 0 is y = −0.866). Badges are printed at about 0.6 of the radius.
+
+The example below is the tile in the next section's first JSON example – the same four features as printed on the tile:
+
+<p align="center"><img src="docs/images/tile-example.svg" width="820" alt="The tile moloch.szturmowiec on the hex: 1 – a ranged attack spike on edge 0 at the top, at edge 0; 2 – the Inicjatywa 2 badge in slot c5, upper left; 3 – the Inicjatywa 1 badge in slot c4, at the left corner; 4 – the Wytrzymałość shield badge in slot c2, lower right."></p>
 
 ### `index.json` – release
 
