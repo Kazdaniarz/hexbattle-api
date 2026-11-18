@@ -112,7 +112,8 @@ packages/schema/         @hexbattle/schema – Zod 4 schemas and TypeScript type
                          schema source), description templates (renderDescription); published to npm
 data/                    source data: mechanics.json, markers.json, armies/, skins/, board_skins/
 assets.manifest.json     every image the data uses: published name → private master file, SHA-256, size
-tools/                   build, validation, image step, query service and server, manifest and editor-schema tools
+tools/                   build, validation, image step, query service and server, manifest and editor-schema tools,
+                         the data branch check
 tests/                   tests and test-only fixtures (never API data)
 docs/images/             diagrams used in this README (tile geometry)
 ```
@@ -663,6 +664,8 @@ pnpm schema:declarations  # build @hexbattle/schema into a temp folder and fail 
 Publishing `@hexbattle/schema` (maintainers): raise `version` in `packages/schema/package.json`, run `pnpm check`, then `pnpm --dir packages/schema publish --access public`. The package is built on `prepack`; only `dist/`, `README.md` and `LICENSE` go out. If the browser approval of a security key fails with pnpm, pack with `pnpm --dir packages/schema pack` and publish the file with `npm publish <file>.tgz --access public` (pack applies the publish settings; npm alone would not).
 
 `STAGED_ASSETS_DIR` (optional) adds image masters that are not published yet, stored under their published path; they win over `ASSETS_DIR` in the build and in `assets:manifest` (the dashboard uses it for images uploaded with unpublished changes).
+
+**Changes go through pull requests.** `main` is the live API: it is protected (no direct pushes, no force pushes) and a pull request merges only when CI passes (`pnpm check`). The maintainers' dashboard publishes data the same way, from branches named `data/…`; on those, CI also runs `node tools/check-data-branch.ts <base>`, which fails when anything besides `data/`, `assets.manifest.json`, `CHANGELOG.md` and the `version` in `package.json` changed. Each dashboard publication raises `dataset_version` by a patch and adds its `CHANGELOG.md` entry.
 
 Build issues have stable codes (`E_…` errors stop the build, `W_…` warnings don't); the full list with meanings is in `tools/lib/issues.ts`. The JSON examples in this README are checked against the schemas by the tests.
 

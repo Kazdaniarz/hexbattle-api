@@ -1,4 +1,5 @@
-# CI of hexbattle-api: typecheck, lint, format, tests under several time zones.
+# CI of hexbattle-api: typecheck, lint, format, tests under several time zones; a data branch (data/…, opened by
+# the dashboard) must change only the data.
 name: CI
 
 on:
@@ -15,10 +16,16 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v5
+        with:
+          # the data branch check compares the branch with its base
+          fetch-depth: 0
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v5
         with:
           node-version-file: package.json
           cache: pnpm
+      - name: Data branch check
+        if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'data/')
+        run: node tools/check-data-branch.ts ${{ github.event.pull_request.base.sha }}
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
