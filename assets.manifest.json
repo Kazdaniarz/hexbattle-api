@@ -258,6 +258,150 @@
 			"width": 430,
 			"height": 430
 		},
+		"mechanics/armor.png": {
+			"sha256": "42b3fbe203b6129adfa3c968148571af73d57cd7e63179c93f0fc0f46dc3a465",
+			"bytes": 70871,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/convert_attack.png": {
+			"sha256": "b857c63032c26215e1b8a7d201566b1b3227d9ca987b0587f267ea7481f08f41",
+			"bytes": 10578,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/damage_area_bomb.png": {
+			"sha256": "f90fe050d8f9225ba5ed631e5da65eef804bfab284e7caac94801a5f9c913413",
+			"bytes": 16390,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/explosion.png": {
+			"sha256": "287634b1abf4e8f11dc43b1b564896dc553a948eac8cc66c63a547e7dfc42377",
+			"bytes": 59990,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/extra_initiative.png": {
+			"sha256": "6745bb24c288333b4b9610c89e1abcbca227a890dcd63cad10ddcb78edf12017",
+			"bytes": 22576,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/extra_initiative_aura.png": {
+			"sha256": "bf57cca173b79905bad0e708ad7e273af75f197e7640d176a34d3f27e0cece0c",
+			"bytes": 99000,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/gauss.png": {
+			"sha256": "1827e2acc5a0aa8ce7d1bf7cbc49db3b7a7d6d4347ce91d9b3d52bf808b42644",
+			"bytes": 41408,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/grenade.png": {
+			"sha256": "6e869bc1650f7b8a59669df6098750cfd24da1f13cf5f6a36188b5e7618c572a",
+			"bytes": 20041,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/initiative.png": {
+			"sha256": "b9444e24e773609d85f0d13c0871ef45381e4ac038b62fc9df85eec93e4be09c",
+			"bytes": 53032,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/initiative_plus1_aura.png": {
+			"sha256": "276ed3bba54c41594b3a2b804d6244ddd65181ed61d9e0b8fa7eaae6081c011e",
+			"bytes": 55842,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/medic.png": {
+			"sha256": "b7d20b8f453988fcd064478dda4a28366d9dd39dfefd765200a5b468640b7af1",
+			"bytes": 19709,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/melee.png": {
+			"sha256": "7540d73c33aae67da9ec3dcb8220d27f246c30b578a38ade59db0fad3b91488d",
+			"bytes": 67083,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/melee_plus1_aura.png": {
+			"sha256": "b95162f2d9425fcd92776e8c4be274d4309f605a24a8652af623d095737b74d0",
+			"bytes": 54509,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/mobility.png": {
+			"sha256": "e270bd8c030c6be79aa001f2b9cc87b2d3e7f86643fd8045687d72c31de010ab",
+			"bytes": 59051,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/move.png": {
+			"sha256": "75a02c741f43642cf059a1ad8d18536949233cf75481f3dbcbfa63f2f110cac0",
+			"bytes": 15036,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/movement_multiplier.png": {
+			"sha256": "c091a3eb85307b03b127ba972d4a43da67eddb85c1b49ce878f8237bbc1d5522",
+			"bytes": 21629,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/net.png": {
+			"sha256": "6656560a590fed0f3f4c544712f6862e8b25eb4dc9298c4a1d45f0e09bb44466",
+			"bytes": 177472,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/push.png": {
+			"sha256": "711c7f810ae0f1c18cce4db7b0b0ac5d52ea2d01b526ca6ccab254c087e07a5e",
+			"bytes": 11042,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/ranged.png": {
+			"sha256": "df0ded8d2a41f628dcfd67717d1bdfa60a5a4d9c7165c90309c3d5c44a4f5152",
+			"bytes": 33440,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/ranged_plus1_aura.png": {
+			"sha256": "83c0d284072d7deb77726ddea3db24121d280f7b85a9d70fbf7be5e9131931a3",
+			"bytes": 56917,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/redirect_module.png": {
+			"sha256": "fe6363fcd1696f5b33963bdc16365a727fb1a999a3311f08628e87e450191843",
+			"bytes": 66610,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/snipe.png": {
+			"sha256": "6e15c2be7d98a1d1ac71bdb5a4578700aa0fc076d15009a5108bd50b00ed4e77",
+			"bytes": 23136,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/start_battle.png": {
+			"sha256": "9214544d22dea3f42994745d9eafe13ac17a9654fb7bb17c48a5f7698cffc0cd",
+			"bytes": 47278,
+			"width": 891,
+			"height": 771
+		},
+		"mechanics/toughness.png": {
+			"sha256": "dc9c2d232687987559c9f0f74268c423a218719a634f49cc8dfc740226b7a26f",
+			"bytes": 54452,
+			"width": 891,
+			"height": 771
+		},
 		"moloch/back.png": {
 			"sha256": "82aa8b61006c4f49260a67d7056a3bd7067824640e1c3728becbaec12476d074",
 			"bytes": 562456,
