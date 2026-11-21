@@ -160,7 +160,7 @@ The example below is the tile in the next section's first JSON example – the s
 {
 	"meta": {
 		"dataset_version": "0.1.0",
-		"schema_version": "0.4.0",
+		"schema_version": "0.5.0",
 		"languages": ["pl"],
 		"generated_at": "2026-11-13T14:03:04.864Z",
 		"build": "release"
@@ -358,7 +358,7 @@ A Moduł keeps its effect in the centre, with the side it applies to (Posterunek
 
 ### Mechanic – `mechanics.json`
 
-The file holds `terms` (shared word forms, e.g. `terms.side.enemy` = "wrogich") and `mechanics`. A mechanic: `id`, `kind` (`attack`, `defense`, `net`, `connector`, `trap`, `container`, `ability`, `initiative`, `effect`, `status`, `army_rule`), `name`, optional `name_plural`, `description` (player-facing, may be a [template](#descriptions)), `placement` (where it may appear: `edge`, `corner`, `slot`, `center`, `none`), `params` (each with `type`, `required`, `values`, `min`, `max`, `exclude`, `labels`, `signed`, `ref`), `allowed_categories`, `tile_categories` (the tile types that may carry it, e.g. Bitwa only on `instant` and `implant`; absent = any), `badge_count`, `scope` (army-specific), `official`.
+The file holds `terms` (shared word forms, e.g. `terms.side.enemy` = "wrogich") and `mechanics`. A mechanic: `id`, `kind` (`attack`, `defense`, `net`, `connector`, `trap`, `container`, `ability`, `initiative`, `effect`, `status`, `army_rule`), `name`, optional `name_plural`, `description` (player-facing, may be a [template](#descriptions)), `placement` (where it may appear: `edge`, `corner`, `slot`, `center`, `none`), `params` (each with `type`, `required`, `values`, `min`, `max`, `exclude`, `labels`, `signed`, `ref`), `allowed_categories`, `tile_categories` (the tile types that may carry it, e.g. Bitwa only on `instant` and `implant`; absent = any), `badge_count`, `scope` (army-specific), `images` (how it looks on a tile: `image` in the tile frame – the hex filling a 891×771 canvas, transparent outside, the icon where it sits on a tile; optional `params` for a variant, e.g. `{ "template": "bomb" }`; `mono: true` for a plain black glyph an app may draw in another colour; a picture without `params` is the general one), `official`.
 
 Example (Modyfikator):
 

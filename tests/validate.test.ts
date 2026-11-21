@@ -90,6 +90,31 @@ const CASES: Case[] = [
 		change: (s) => s.armies.push({ file: 'armies/druga.json', data: { ...freshArmy(), id: 'druga' } }),
 	},
 	{
+		code: 'E_MECH_IMAGE',
+		name: 'a picture outside mechanics/',
+		change: (s) => (mechanicOf(s, 'modify_stat').images = [{ image: 'moloch/modyfikator.png' }]),
+	},
+	{
+		code: 'E_MECH_IMAGE',
+		name: 'a picture for a parameter the mechanic lacks',
+		change: (s) => (mechanicOf(s, 'modify_stat').images = [{ image: 'mechanics/a.png', params: { size: 2 } }]),
+	},
+	{
+		code: 'E_PARAM_VALUE',
+		name: 'a picture for a value the parameter refuses',
+		change: (s) =>
+			(mechanicOf(s, 'modify_stat').images = [{ image: 'mechanics/a.png', params: { stat: 'speed' } }]),
+	},
+	{
+		code: 'E_MECH_IMAGE',
+		name: 'two general pictures',
+		change: (s) =>
+			(mechanicOf(s, 'modify_stat').images = [
+				{ image: 'mechanics/a.png' },
+				{ image: 'mechanics/b.png', mono: true },
+			]),
+	},
+	{
 		code: 'E_PARAM_LABELS',
 		name: 'labels without a value',
 		change: (s) => {

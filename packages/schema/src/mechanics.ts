@@ -2,7 +2,7 @@
  * Mechanics registry (`mechanics.json`): every game element defined once, referenced by id from tiles and armies.
  */
 import { z } from 'zod';
-import { Id, Text, TileCategory } from './common.ts';
+import { AssetRef, Id, Text, TileCategory } from './common.ts';
 
 /* * Vocabulary */
 
@@ -55,6 +55,22 @@ export const ParamSpec = z.strictObject({
 });
 export type ParamSpec = z.infer<typeof ParamSpec>;
 
+/* * Pictures */
+
+/**
+ * How the mechanic looks on a tile: an image in the tile frame (the flat-top hex filling the canvas, transparent
+ * outside, the icon where it sits on a tile). `params` picks a variant (e.g. Obrażenia obszarowe with `template:
+ * bomb`); a picture without params is the general one. `mono`: a plain black glyph an app may draw in another colour.
+ */
+export const MechanicImage = z
+	.strictObject({
+		image: AssetRef,
+		params: z.record(Id, ParamValue).optional(),
+		mono: z.literal(true).optional(),
+	})
+	.meta({ id: 'MechanicImage' });
+export type MechanicImage = z.infer<typeof MechanicImage>;
+
 /* * Mechanic */
 
 /** One registry entry. `description` is player-facing and may be a template filled from the feature's values. */
@@ -76,6 +92,8 @@ export const Mechanic = z
 		tile_categories: z.array(TileCategory).min(1).optional(),
 		// ? badges printed per effect, e.g. 2 for a two-badge ability
 		badge_count: z.int().min(1).optional(),
+		// ? how it looks on a tile: the general picture and variants picked by the feature's params
+		images: z.array(MechanicImage).min(1).optional(),
 		official: z.boolean(),
 	})
 	.meta({ id: 'Mechanic' });

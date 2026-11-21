@@ -56,6 +56,19 @@ describe('Mechanic', () => {
 		expect(Mechanic.safeParse({ ...melee, placement: [] }).success).toBe(false);
 		expect(Mechanic.safeParse({ ...melee, params: { strength: { type: 'float' } } }).success).toBe(false);
 	});
+	it('accepts pictures: a general one and variants picked by params, a mono glyph', () => {
+		const pictures = [
+			{ image: 'mechanics/melee.png' },
+			{ image: 'mechanics/melee_strong.png', params: { strength: 2 }, mono: true },
+		];
+		expect(Mechanic.safeParse({ ...melee, images: pictures }).success).toBe(true);
+		expect(Mechanic.safeParse({ ...melee, images: [] }).success).toBe(false);
+		expect(Mechanic.safeParse({ ...melee, images: [{ image: 'mechanics/melee.png', mono: false }] }).success).toBe(
+			false,
+		);
+		expect(Mechanic.safeParse({ ...melee, images: [{ image: 'mechanics/Melee.PNG' }] }).success).toBe(false);
+	});
+
 	it('requires a description', () => {
 		const withoutDescription: Record<string, unknown> = { ...melee };
 		delete withoutDescription.description;

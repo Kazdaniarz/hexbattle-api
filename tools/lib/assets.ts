@@ -85,6 +85,9 @@ export function collectAssetRefs(source: SourceData): Map<string, string> {
 			add(file, ref);
 		});
 	}
+	for (const mechanic of source.mechanics?.data.mechanics ?? []) {
+		for (const picture of mechanic.images ?? []) add('mechanics.json', picture.image);
+	}
 	for (const marker of source.markers?.data.markers ?? []) {
 		Object.values(marker.images ?? {}).forEach((ref) => {
 			add('markers.json', ref);
