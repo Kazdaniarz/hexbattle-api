@@ -34,6 +34,11 @@
 					"min": 1
 				}
 			},
+			"images": [
+				{
+					"image": "mechanics/melee.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Atak wręcz. W segmencie Inicjatywy jednostki zadaje jednostce wroga na sąsiednim polu, w kierunku ikony, tyle Ran, ile ikon ciosu jest na tej ściance żetonu. Pancerz nie chroni przed ciosem."
@@ -57,6 +62,11 @@
 					"min": 1
 				}
 			},
+			"images": [
+				{
+					"image": "mechanics/ranged.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Atak dystansowy. Trafia pierwszą jednostkę wroga na linii prostej w kierunku ikony, w dowolnej odległości. Przelatuje nad jednostkami sojuszniczymi. Zadaje tyle Ran, ile ikon strzału jest na ściance żetonu. Pancerz celu zmniejsza obrażenia o 1."
@@ -80,6 +90,11 @@
 					"min": 1
 				}
 			},
+			"images": [
+				{
+					"image": "mechanics/gauss.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Atak dystansowy. Trafia każdą jednostkę wroga na linii prostej w kierunku ikony, zadając każdej tyle Ran, ile jest ikon. Pancerz zmniejsza obrażenia tylko jednostce, która go ma – pocisk leci dalej. Premie do strzału nie zwiększają Gaussa."
@@ -96,6 +111,11 @@
 			},
 			"placement": ["edge"],
 			"tile_categories": ["hq", "warrior", "object", "module", "implant", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/armor.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Zmniejsza o 1 obrażenia od każdego ataku dystansowego, który trafia jednostkę przez tę ściankę żetonu lub przez narożniki na końcach ikony. Atak o sile 1 zostaje całkowicie zatrzymany. Nie chroni przed atakami wręcz, odłamkami ani żetonami natychmiastowymi. Działa także, gdy jednostka jest zasieciowana."
@@ -112,6 +132,11 @@
 			},
 			"placement": ["edge"],
 			"tile_categories": ["hq", "warrior", "object", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/net.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Jednostka wroga na sąsiednim polu w kierunku ikony zostaje zasieciowana: nie atakuje, nie używa cech, nie daje premii innym jednostkom, nie może się ruszać ani być przesuwana czy obracana. Działa od razu po położeniu żetonu, także na Sztaby. Zasieciowana jednostka zachowuje Pancerz i Wytrzymałość."
@@ -156,6 +181,11 @@
 					"min": 0
 				}
 			},
+			"images": [
+				{
+					"image": "mechanics/initiative.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Segment Bitwy, w którym jednostka wykonuje swoje ataki. Segmenty rozgrywa się od najwyższego do 0. Kilka wartości oznacza działanie w każdym z tych segmentów. Inicjatywa nie spada poniżej 0 i nie ma górnej granicy."
@@ -170,6 +200,11 @@
 			"placement": ["slot"],
 			"allowed_categories": ["unit"],
 			"tile_categories": ["warrior", "module", "object", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/toughness.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Każda ikona zwiększa o 1 liczbę Ran, które jednostka może przyjąć – jednostka bez Wytrzymałości ginie od 1 Rany. Działa także, gdy jednostka jest zasieciowana."
@@ -184,6 +219,11 @@
 			"placement": ["slot"],
 			"allowed_categories": ["unit"],
 			"tile_categories": ["warrior", "module", "object", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/mobility.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Raz w swojej turze jednostka może przesunąć się na sąsiednie wolne pole (i dowolnie się obrócić) albo tylko się obrócić. Nie działa, gdy jednostka jest zasieciowana."
@@ -199,6 +239,11 @@
 			"placement": ["slot"],
 			"allowed_categories": ["unit"],
 			"tile_categories": ["warrior", "module", "object", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/explosion.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Zamiast ataku, w segmencie swojej Inicjatywy, jednostka może eksplodować. Odłamki zadają 1 Ranę każdej jednostce na sąsiednich polach – wrogiej i sojuszniczej, także Sztabom. Pancerz nie chroni. Medyk może przejąć obrażenia. Eksplodującej jednostki nie można uratować. Sieć i Paraliż uniemożliwiają eksplozję."
@@ -213,6 +258,11 @@
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
 			"tile_categories": ["hq", "swap"],
+			"images": [
+				{
+					"image": "mechanics/ranged_plus1_aura.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem mają +1 do każdego strzału. Premia nie działa na Gaussa ani na sam Sztab. Nie działa, gdy Sztab jest zasieciowany."
@@ -227,6 +277,11 @@
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
 			"tile_categories": ["hq", "swap"],
+			"images": [
+				{
+					"image": "mechanics/melee_plus1_aura.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem mają +1 do każdego ciosu. Premia nie działa na sam Sztab. Nie działa, gdy Sztab jest zasieciowany."
@@ -241,6 +296,11 @@
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
 			"tile_categories": ["hq", "swap"],
+			"images": [
+				{
+					"image": "mechanics/initiative_plus1_aura.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem mają +1 do każdej swojej Inicjatywy. Premia nie działa na sam Sztab. Nie działa, gdy Sztab jest zasieciowany."
@@ -262,6 +322,11 @@
 					"required": true
 				}
 			},
+			"images": [
+				{
+					"image": "mechanics/extra_initiative_aura.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Wszystkie własne jednostki sąsiadujące ze Sztabem wykonują dodatkowy atak w najbliższym niższym segmencie Inicjatywy, w którym jeszcze nie atakowały (nie niżej niż 0). Jedno źródło daje jeden dodatkowy atak w Bitwie. Nie działa na sam Sztab ani gdy Sztab jest zasieciowany."
@@ -282,6 +347,12 @@
 					"default": 1
 				}
 			},
+			"images": [
+				{
+					"image": "mechanics/extra_initiative.png",
+					"mono": true
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Połączone jednostki wykonują dodatkowy atak w najbliższym niższym segmencie Inicjatywy, w którym jeszcze nie atakowały (nie niżej niż 0). Jedno źródło daje najwyżej jeden dodatkowy atak w Bitwie."
@@ -295,6 +366,12 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["module", "object", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/medic.png",
+					"mono": true
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Gdy połączona sojusznicza jednostka miałaby otrzymać Rany lub zostać zniszczona przez jedno źródło, Medyk ginie zamiast niej, a wszystkie Rany z tego źródła przepadają. Działa obowiązkowo. Jeżeli Medyk sam ginie w tym samym momencie, nie może uratować innej jednostki."
@@ -345,6 +422,12 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["module", "object", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/convert_attack.png",
+					"mono": true
+				}
+			],
 			"official": true,
 			"params": {
 				"from": {
@@ -394,6 +477,12 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["module", "object", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/movement_multiplier.png",
+					"mono": true
+				}
+			],
 			"official": true,
 			"params": {
 				"factor": {
@@ -414,6 +503,11 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["module", "object", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/redirect_module.png"
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Połączony Moduł wroga działa na korzyść właściciela Skopera: efekty pozytywne obejmują jego sojusznicze jednostki, a negatywne – jednostki jego przeciwników. Zasięg i właściciel Modułu się nie zmieniają. Jeżeli przejęty Moduł wymaga podjęcia decyzji w ramach użycia jego efektu, decyzje podejmuje właściciel Skopera. Dwa Skopery skierowane na siebie znoszą się. Nie działa na Sztaby ani Wszczepy."
@@ -427,6 +521,12 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["instant", "implant", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/start_battle.png",
+					"mono": true
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Rozpoczyna Bitwę. Zagranie żetonu kończy turę. Nie można go zagrać po tym, jak dowolny gracz dobrał swoje ostatnie żetony."
@@ -440,6 +540,15 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["instant", "implant", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/damage_area_bomb.png",
+					"params": {
+						"template": "bomb"
+					},
+					"mono": true
+				}
+			],
 			"official": true,
 			"params": {
 				"template": {
@@ -465,6 +574,12 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["instant", "implant", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/move.png",
+					"mono": true
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Dowolnie przesuń i obróć własną jednostkę na sąsiadujące wolne pole w zasięgu 1 hexa. Można także po prostu obrócić jednostkę bez przesunięcia lub przesunąć ją bez obrotu. Nie można użyć na zasieciowanej jednostce."
@@ -478,6 +593,12 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["instant", "implant", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/push.png",
+					"mono": true
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Własna jednostka odpycha sąsiadującą jednostkę wroga o 1 hex dalej od siebie na wolne pole bez możliwości jej obrócenia. Jeżeli jest kilka pól spełniających ten opis, wybiera właściciel odpychanej jednostki. Zasieciowaną jednostką nie można odpychać, ani zasieciowana jednostka nie może być odpychana."
@@ -491,6 +612,12 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["instant", "implant", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/snipe.png",
+					"mono": true
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Zadaj 1 Ranę wybranej jednostce wroga na planszy, oprócz Sztabu. Zadaje rany także żetonom podłoża. Jeżeli na żetonie podłoża znajduje się jednostka, zagrywający wybiera, co na tym polu otrzymuje Ranę."
@@ -504,6 +631,12 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["instant", "implant", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/grenade.png",
+					"mono": true
+				}
+			],
 			"official": true,
 			"description": {
 				"pl": "Zniszcz dowolną jednostkę wroga sąsiadującą z twoim Sztabem, oprócz Sztabu. Niszczy także żetony podłoża, również ten znajdujący się pod twoim Sztabem. Jeżeli na żetonie podłoża znajduje się jednostka, zagrywający wybiera, co na tym polu zostaje zniszczone. Nie można zagrać, jeżeli twój Sztab jest zasieciowany lub sparaliżowany."

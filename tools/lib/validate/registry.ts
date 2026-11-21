@@ -26,6 +26,35 @@ export function checkMechanics(ctx: Context, mechanics: readonly Mechanic[]): vo
 		for (const lang of Object.keys(mechanic.description) as Lang[]) {
 			checkTemplate(ctx, `${path}.description.${lang}`, mechanic, lang);
 		}
+		checkImages(ctx, path, mechanic);
+	});
+}
+
+/**
+ * Pictures: under `mechanics/`, each variant's params are the mechanic's own with valid values, no two pictures for the
+ * same params (at most one general picture).
+ */
+function checkImages(ctx: Context, path: string, mechanic: Mechanic): void {
+	const seen = new Set<string>();
+	(mechanic.images ?? []).forEach((picture, index) => {
+		const at = `${path}.images[${String(index)}]`;
+		if (!picture.image.startsWith('mechanics/')) {
+			ctx.report('E_MECH_IMAGE', FILE, `${at}.image`, `${mechanic.id}: pictures live under "mechanics/"`);
+		}
+		const params = picture.params ?? {};
+		for (const [name, value] of Object.entries(params)) {
+			const spec = mechanic.params?.[name];
+			if (spec === undefined) {
+				ctx.report('E_MECH_IMAGE', FILE, `${at}.params.${name}`, `${mechanic.id}: no parameter "${name}"`);
+				continue;
+			}
+			checkValue(ctx, FILE, `${at}.params.${name}`, value, spec, `${mechanic.id}.${name}`);
+		}
+		const key = JSON.stringify(Object.entries(params).sort(([a], [b]) => a.localeCompare(b)));
+		if (seen.has(key)) {
+			ctx.report('E_MECH_IMAGE', FILE, at, `${mechanic.id}: two pictures for the same parameters`);
+		}
+		seen.add(key);
 	});
 }
 

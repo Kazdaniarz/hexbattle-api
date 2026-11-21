@@ -14,6 +14,8 @@ export const ISSUE_CODES = {
 	E_MARKER_DUP: 'marker id defined twice',
 	E_MECH_SCOPE: 'army-specific mechanic used by another army, or scoped to an unknown army',
 	E_MECH_TILE: 'mechanic on a tile type its tile_categories leave out',
+	E_MECH_IMAGE:
+		'a mechanic picture outside mechanics/, with an unknown parameter or value, or twice for the same parameters',
 	E_PARAM_LABELS: 'param labels do not match its values exactly',
 	E_TEMPLATE: 'malformed placeholder, unknown param, or number-only syntax on a non-number',
 	E_TEMPLATE_LABEL: 'placeholder of a non-numeric param without labels, or a label without the template language',
