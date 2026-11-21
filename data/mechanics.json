@@ -208,7 +208,7 @@
 			"id": "ranged_plus1_aura",
 			"kind": "ability",
 			"name": {
-				"pl": "+1 do strzału"
+				"pl": "+1 do strzału (aura)"
 			},
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
@@ -222,7 +222,7 @@
 			"id": "melee_plus1_aura",
 			"kind": "ability",
 			"name": {
-				"pl": "+1 do ciosu"
+				"pl": "+1 do ciosu (aura)"
 			},
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
@@ -236,7 +236,7 @@
 			"id": "initiative_plus1_aura",
 			"kind": "ability",
 			"name": {
-				"pl": "+1 do Inicjatywy"
+				"pl": "+1 do Inicjatywy (aura)"
 			},
 			"placement": ["slot"],
 			"allowed_categories": ["hq"],
