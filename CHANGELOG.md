@@ -2,6 +2,10 @@
 
 Data releases of the HexBattle Online data API (`dataset_version` in `/v1/index.json`). Dates are Europe/Warsaw dates.
 
+## 0.1.1 – 2026-11-21
+
+- Aktualizacja nazw mechanik
+
 ## 0.1.0 – unreleased
 
 First version of the API built on the Zod 4 schema.
