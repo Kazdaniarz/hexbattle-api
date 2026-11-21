@@ -300,6 +300,12 @@
 			"width": 891,
 			"height": 771
 		},
+		"mechanics/grant_ability_mobility.png": {
+			"sha256": "fdbef26ba0b6e8517245f81f1da26444d46ad99a7ee6c2e2c5a312c207c41844",
+			"bytes": 9546,
+			"width": 891,
+			"height": 771
+		},
 		"mechanics/grenade.png": {
 			"sha256": "6e869bc1650f7b8a59669df6098750cfd24da1f13cf5f6a36188b5e7618c572a",
 			"bytes": 20041,

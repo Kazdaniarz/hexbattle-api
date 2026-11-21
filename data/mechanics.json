@@ -457,6 +457,15 @@
 			},
 			"placement": ["center"],
 			"tile_categories": ["module", "object", "technology", "swap"],
+			"images": [
+				{
+					"image": "mechanics/grant_ability_mobility.png",
+					"params": {
+						"ability": "mobility"
+					},
+					"mono": true
+				}
+			],
 			"official": true,
 			"params": {
 				"ability": {
