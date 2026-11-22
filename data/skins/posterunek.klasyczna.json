@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Neuroshima Hex 3.0"
 	},
+	"order": 3,
 	"tiles": {
 		"posterunek.sztab": {
 			"front": "skins/posterunek/klasyczna/sztab_front.png"

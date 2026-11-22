@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Sezon 2013"
 	},
+	"order": 2,
 	"tiles": {
 		"borgo.sztab": {
 			"front": "skins/borgo/alternatywna/sztab_front.png",

@@ -33,7 +33,10 @@ export const SkinTile = z.strictObject({
 });
 export type SkinTile = z.infer<typeof SkinTile>;
 
-/** One skin of one army: a single tile (e.g. a Sztab skin), several tiles or the whole army. */
+/**
+ * One skin of one army: a single tile (e.g. a Sztab skin), several tiles or the whole army. An army skin may also bring
+ * its own HP markers and mechanic pictures.
+ */
 export const Skin = z
 	.strictObject({
 		id: ArmyScopedId,
@@ -42,9 +45,26 @@ export const Skin = z
 		army: Id,
 		// ? the game edition this skin's art comes from, e.g. „Edycja Roku Molocha”
 		edition: Text.optional(),
+		// ? the order the army's skins were released in (1 = the first after Domyślna); lists follow it
+		order: z.int().min(1).optional(),
 		tiles: z.record(ArmyScopedId, SkinTile),
 		// ? tile-back image of this skin
 		back: AssetRef.optional(),
+		// ? an army skin that always draws its own Sztab: no Sztab skin can be chosen with it
+		own_hq: z.literal(true).optional(),
+		// ? the skin's own HP markers, used instead of the army's while the skin is chosen – one per Sztab (or Obiekt)
+		hp_markers: z
+			.array(
+				z.strictObject({
+					tile_id: ArmyScopedId.optional(),
+					image: AssetRef,
+				}),
+			)
+			.min(1)
+			.optional(),
+		// ? the skin's own drawing of mechanic pictures, keyed by the default picture it replaces; shown for this army
+		// only, always in its own colours (never recoloured like a mono glyph)
+		mechanic_images: z.record(AssetRef, AssetRef).optional(),
 	})
 	.meta({ id: 'Skin' });
 export type Skin = z.infer<typeof Skin>;

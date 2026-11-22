@@ -1,0 +1,151 @@
+{
+	"id": "hegemonia.retro",
+	"name": {
+		"pl": "Retro"
+	},
+	"official": true,
+	"army": "hegemonia",
+	"edition": {
+		"pl": "Neuroshima Hex 2.0"
+	},
+	"order": 4,
+	"tiles": {
+		"hegemonia.sztab": {
+			"front": "skins/hegemonia/retro/sztab_front.png"
+		},
+		"hegemonia.biegacz": {
+			"front": "skins/hegemonia/retro/biegacz_front.png",
+			"turn": 5,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				},
+				{
+					"feature": 2,
+					"slot": "c4"
+				}
+			]
+		},
+		"hegemonia.ganger": {
+			"front": "skins/hegemonia/retro/ganger_front.png",
+			"turn": 1,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"hegemonia.bydlak": {
+			"front": "skins/hegemonia/retro/bydlak_front.png",
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c5"
+				}
+			]
+		},
+		"hegemonia.straznik": {
+			"front": "skins/hegemonia/retro/straznik_front.png",
+			"turn": 2,
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c5"
+				},
+				{
+					"feature": 4,
+					"slot": "c2"
+				}
+			]
+		},
+		"hegemonia.gladiator": {
+			"front": "skins/hegemonia/retro/gladiator_front.png",
+			"badges": [
+				{
+					"feature": 6,
+					"slot": "c5"
+				}
+			]
+		},
+		"hegemonia.uniwersalny_zolnierz": {
+			"front": "skins/hegemonia/retro/uniwersalny_zolnierz_front.png",
+			"turn": 1,
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c5"
+				}
+			]
+		},
+		"hegemonia.sieciarz": {
+			"front": "skins/hegemonia/retro/sieciarz_front.png",
+			"turn": 2
+		},
+		"hegemonia.super_sieciarz": {
+			"front": "skins/hegemonia/retro/super_sieciarz_front.png",
+			"turn": 3,
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c5"
+				}
+			]
+		},
+		"hegemonia.oficer_i": {
+			"front": "skins/hegemonia/retro/oficer_i_front.png"
+		},
+		"hegemonia.oficer_ii": {
+			"front": "skins/hegemonia/retro/oficer_ii_front.png"
+		},
+		"hegemonia.boss": {
+			"front": "skins/hegemonia/retro/boss_front.png"
+		},
+		"hegemonia.zwiadowca": {
+			"front": "skins/hegemonia/retro/zwiadowca_front.png"
+		},
+		"hegemonia.kwatermistrz": {
+			"front": "skins/hegemonia/retro/kwatermistrz_front.png"
+		},
+		"hegemonia.transport": {
+			"front": "skins/hegemonia/retro/transport_front.png"
+		},
+		"hegemonia.bitwa": {
+			"front": "skins/hegemonia/retro/bitwa_front.png"
+		},
+		"hegemonia.ruch": {
+			"front": "skins/hegemonia/retro/ruch_front.png"
+		},
+		"hegemonia.odepchniecie": {
+			"front": "skins/hegemonia/retro/odepchniecie_front.png"
+		},
+		"hegemonia.snajper": {
+			"front": "skins/hegemonia/retro/snajper_front.png"
+		}
+	},
+	"back": "skins/hegemonia/retro/back.png",
+	"own_hq": true,
+	"hp_markers": [
+		{
+			"tile_id": "hegemonia.sztab",
+			"image": "skins/hegemonia/retro/hp_marker.png"
+		}
+	],
+	"mechanic_images": {
+		"mechanics/armor.png": "skins/hegemonia/retro/mechanics/armor.png",
+		"mechanics/convert_attack.png": "skins/hegemonia/retro/mechanics/convert_attack.png",
+		"mechanics/grant_ability_mobility.png": "skins/hegemonia/retro/mechanics/grant_ability_mobility.png",
+		"mechanics/initiative.png": "skins/hegemonia/retro/mechanics/initiative.png",
+		"mechanics/melee.png": "skins/hegemonia/retro/mechanics/melee.png",
+		"mechanics/melee_plus1_aura.png": "skins/hegemonia/retro/mechanics/melee_plus1_aura.png",
+		"mechanics/mobility.png": "skins/hegemonia/retro/mechanics/mobility.png",
+		"mechanics/move.png": "skins/hegemonia/retro/mechanics/move.png",
+		"mechanics/net.png": "skins/hegemonia/retro/mechanics/net.png",
+		"mechanics/push.png": "skins/hegemonia/retro/mechanics/push.png",
+		"mechanics/ranged.png": "skins/hegemonia/retro/mechanics/ranged.png",
+		"mechanics/snipe.png": "skins/hegemonia/retro/mechanics/snipe.png",
+		"mechanics/start_battle.png": "skins/hegemonia/retro/mechanics/start_battle.png",
+		"mechanics/toughness.png": "skins/hegemonia/retro/mechanics/toughness.png"
+	}
+}

@@ -1,7 +1,7 @@
 /*
  * The build: validated source data → every published file of /v1/ (path → JSON value). Writing is done by the caller.
  */
-import type { AssetsInfo, BoardSkinsIndex, Index, Lang, ReleaseArmy, SkinsIndex } from '@hexbattle/schema';
+import type { AssetsInfo, BoardSkinsIndex, Index, Lang, ReleaseArmy, Skin, SkinsIndex } from '@hexbattle/schema';
 import { type AssetManifest, checkManifest, collectAssetRefs, WEBP, webpSizes } from './assets.ts';
 import { standardBoard } from './board.ts';
 import type { SourceData } from './data-files.ts';
@@ -58,7 +58,14 @@ export function build(source: SourceData, options: BuildOptions): BuildResult {
 	}
 
 	const armyById = new Map(armies.map(({ data }) => [data.id, data]));
-	const skins = [...source.skins].sort((a, b) => a.data.id.localeCompare(b.data.id));
+	// ? army by army, each army's skins in their release order (without one: after them, by id)
+	const releaseOrder = (skin: Skin) => skin.order ?? Number.MAX_SAFE_INTEGER;
+	const skins = [...source.skins].sort(
+		(a, b) =>
+			a.data.army.localeCompare(b.data.army) ||
+			releaseOrder(a.data) - releaseOrder(b.data) ||
+			a.data.id.localeCompare(b.data.id),
+	);
 	const skinsIndex: SkinsIndex = {
 		skins: skins.map(({ data: skin }) => ({
 			id: skin.id,
@@ -67,6 +74,7 @@ export function build(source: SourceData, options: BuildOptions): BuildResult {
 			official: skin.official,
 			href: `skins/${skin.id}.json`,
 			coverage: skinCoverage(skin, armyById.get(skin.army)),
+			...(skin.own_hq && { own_hq: skin.own_hq }),
 		})),
 	};
 	for (const { data: skin } of skins) {

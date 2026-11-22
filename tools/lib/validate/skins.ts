@@ -1,7 +1,7 @@
 /*
  * Checks of army skins and board skins.
  */
-import type { BoardSkin, Skin, SkinTile, Slot, Tile } from '@hexbattle/schema';
+import type { Army, BoardSkin, Skin, SkinTile, Slot, Tile } from '@hexbattle/schema';
 import type { DataFile } from '../data-files.ts';
 import { insideHex, SLOT_RING } from './army.ts';
 import type { Context } from './context.ts';
@@ -10,7 +10,21 @@ import type { Context } from './context.ts';
 
 export function checkSkins(ctx: Context, skins: readonly DataFile<Skin>[]): void {
 	const seen = new Set<string>();
+	const orders = new Map<string, string>();
 	for (const { file, data: skin } of skins) {
+		if (skin.order !== undefined) {
+			const key = `${skin.army}:${String(skin.order)}`;
+			const other = orders.get(key);
+			if (other !== undefined) {
+				ctx.report(
+					'E_SKIN_ORDER',
+					file,
+					'order',
+					`${skin.army}: order ${String(skin.order)} is also ${other}'s`,
+				);
+			}
+			orders.set(key, skin.id);
+		}
 		if (seen.has(skin.id)) {
 			ctx.report('E_SKIN_DUP', file, 'id', `skin "${skin.id}" is defined twice`);
 		}
@@ -31,6 +45,7 @@ export function checkSkins(ctx: Context, skins: readonly DataFile<Skin>[]): void
 		if (skin.back !== undefined && skin.back !== `${folder}/back.png`) {
 			ctx.report('E_SKIN_IMAGE_PATH', file, 'back', `expected "${folder}/back.png", got "${skin.back}"`);
 		}
+		checkSkinExtras(ctx, file, skin, army, folder);
 		for (const [tileId, images] of Object.entries(skin.tiles)) {
 			const path = `tiles.${tileId}`;
 			const tile = army.tiles?.find((t) => t.id === tileId);
@@ -62,6 +77,55 @@ export function checkSkins(ctx: Context, skins: readonly DataFile<Skin>[]): void
 				}
 			}
 			checkSkinLayout(ctx, file, path, tile, images);
+		}
+	}
+}
+
+/**
+ * What an army skin may bring besides tile images: its own Sztab (only on a skin of every tile), HP markers (one per
+ * Sztab or Obiekt, in the skin's folder) and mechanic pictures (each replacing a default picture, same file name).
+ */
+function checkSkinExtras(ctx: Context, file: string, skin: Skin, army: Army, folder: string): void {
+	const tiles = army.tiles ?? [];
+	if (skin.own_hq === true && !tiles.every((tile) => tile.id in skin.tiles)) {
+		ctx.report('E_SKIN_OWN_HQ', file, 'own_hq', `own_hq needs a skin of every tile of ${army.id}`);
+	}
+	const holders = new Set(
+		tiles.filter((tile) => tile.category === 'hq' || tile.category === 'object').map((t) => t.id),
+	);
+	(skin.hp_markers ?? []).forEach((marker, index) => {
+		const path = `hp_markers[${String(index)}]`;
+		if (marker.tile_id !== undefined && !holders.has(marker.tile_id)) {
+			ctx.report(
+				'E_HP_MARKER_TILE',
+				file,
+				`${path}.tile_id`,
+				`"${marker.tile_id}" is not a Sztab or Obiekt of ${army.id}`,
+			);
+		}
+		if (
+			!/^hp_marker(?:_[a-z0-9_]+)?\.png$/.test(marker.image.slice(folder.length + 1)) ||
+			!marker.image.startsWith(`${folder}/`)
+		) {
+			ctx.report(
+				'E_SKIN_IMAGE_PATH',
+				file,
+				`${path}.image`,
+				`expected "${folder}/hp_marker.png", got "${marker.image}"`,
+			);
+		}
+	});
+	const pictures = new Set(
+		[...ctx.mechanics.values()].flatMap((mechanic) => (mechanic.images ?? []).map((p) => p.image)),
+	);
+	for (const [original, image] of Object.entries(skin.mechanic_images ?? {})) {
+		const path = `mechanic_images.${original}`;
+		if (!pictures.has(original)) {
+			ctx.report('E_SKIN_MECHANIC_IMAGE', file, path, `"${original}" is no mechanic picture`);
+		}
+		const expected = `${folder}/mechanics/${original.split('/').at(-1) ?? ''}`;
+		if (image !== expected) {
+			ctx.report('E_SKIN_IMAGE_PATH', file, path, `expected "${expected}", got "${image}"`);
 		}
 	}
 }

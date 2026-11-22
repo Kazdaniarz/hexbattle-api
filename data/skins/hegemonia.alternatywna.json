@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Sezon 2013"
 	},
+	"order": 2,
 	"tiles": {
 		"hegemonia.sztab": {
 			"front": "skins/hegemonia/alternatywna/sztab_front.png",

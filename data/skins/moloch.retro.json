@@ -1,0 +1,186 @@
+{
+	"id": "moloch.retro",
+	"name": {
+		"pl": "Retro"
+	},
+	"official": true,
+	"army": "moloch",
+	"edition": {
+		"pl": "Neuroshima Hex 2.0"
+	},
+	"order": 4,
+	"tiles": {
+		"moloch.sztab": {
+			"front": "skins/moloch/retro/sztab_front.png"
+		},
+		"moloch.szerszen": {
+			"front": "skins/moloch/retro/szerszen_front.png",
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"moloch.lowca": {
+			"front": "skins/moloch/retro/lowca_front.png",
+			"badges": [
+				{
+					"feature": 4,
+					"slot": "c5"
+				}
+			]
+		},
+		"moloch.opancerzony_lowca": {
+			"front": "skins/moloch/retro/opancerzony_lowca_front.png",
+			"badges": [
+				{
+					"feature": 8,
+					"slot": "c5"
+				}
+			]
+		},
+		"moloch.hybryda": {
+			"front": "skins/moloch/retro/hybryda_front.png",
+			"turn": 4
+		},
+		"moloch.wartownik": {
+			"front": "skins/moloch/retro/wartownik_front.png",
+			"turn": 1
+		},
+		"moloch.opancerzony_wartownik": {
+			"front": "skins/moloch/retro/opancerzony_wartownik_front.png",
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c5"
+				}
+			]
+		},
+		"moloch.obronca": {
+			"front": "skins/moloch/retro/obronca_front.png",
+			"badges": [
+				{
+					"feature": 4,
+					"slot": "c3"
+				}
+			]
+		},
+		"moloch.szturmowiec": {
+			"front": "skins/moloch/retro/szturmowiec_front.png"
+		},
+		"moloch.juggernaut": {
+			"front": "skins/moloch/retro/juggernaut_front.png",
+			"badges": [
+				{
+					"feature": 5,
+					"slot": "c5"
+				},
+				{
+					"feature": 6,
+					"slot": "c3"
+				}
+			]
+		},
+		"moloch.dzialko_gaussa": {
+			"front": "skins/moloch/retro/dzialko_gaussa_front.png",
+			"turn": 2,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				},
+				{
+					"feature": 2,
+					"slot": "c3"
+				}
+			]
+		},
+		"moloch.klaun": {
+			"front": "skins/moloch/retro/klaun_front.png",
+			"turn": 1,
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c1"
+				},
+				{
+					"feature": 3,
+					"slot": "c0"
+				},
+				{
+					"feature": 4,
+					"slot": "c3"
+				}
+			]
+		},
+		"moloch.sieciarz": {
+			"front": "skins/moloch/retro/sieciarz_front.png"
+		},
+		"moloch.bloker": {
+			"front": "skins/moloch/retro/bloker_front.png",
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c2"
+				},
+				{
+					"feature": 2,
+					"slot": "c3"
+				}
+			]
+		},
+		"moloch.matka": {
+			"front": "skins/moloch/retro/matka_front.png"
+		},
+		"moloch.medyk": {
+			"front": "skins/moloch/retro/medyk_front.png"
+		},
+		"moloch.mozg": {
+			"front": "skins/moloch/retro/mozg_front.png"
+		},
+		"moloch.oficer": {
+			"front": "skins/moloch/retro/oficer_front.png"
+		},
+		"moloch.zwiadowca": {
+			"front": "skins/moloch/retro/zwiadowca_front.png"
+		},
+		"moloch.bitwa": {
+			"front": "skins/moloch/retro/bitwa_front.png"
+		},
+		"moloch.bomba": {
+			"front": "skins/moloch/retro/bomba_front.png"
+		},
+		"moloch.ruch": {
+			"front": "skins/moloch/retro/ruch_front.png"
+		},
+		"moloch.odepchniecie": {
+			"front": "skins/moloch/retro/odepchniecie_front.png"
+		}
+	},
+	"back": "skins/moloch/retro/back.png",
+	"own_hq": true,
+	"hp_markers": [
+		{
+			"tile_id": "moloch.sztab",
+			"image": "skins/moloch/retro/hp_marker.png"
+		}
+	],
+	"mechanic_images": {
+		"mechanics/armor.png": "skins/moloch/retro/mechanics/armor.png",
+		"mechanics/damage_area_bomb.png": "skins/moloch/retro/mechanics/damage_area_bomb.png",
+		"mechanics/explosion.png": "skins/moloch/retro/mechanics/explosion.png",
+		"mechanics/extra_initiative.png": "skins/moloch/retro/mechanics/extra_initiative.png",
+		"mechanics/gauss.png": "skins/moloch/retro/mechanics/gauss.png",
+		"mechanics/initiative.png": "skins/moloch/retro/mechanics/initiative.png",
+		"mechanics/medic.png": "skins/moloch/retro/mechanics/medic.png",
+		"mechanics/melee.png": "skins/moloch/retro/mechanics/melee.png",
+		"mechanics/move.png": "skins/moloch/retro/mechanics/move.png",
+		"mechanics/net.png": "skins/moloch/retro/mechanics/net.png",
+		"mechanics/push.png": "skins/moloch/retro/mechanics/push.png",
+		"mechanics/ranged.png": "skins/moloch/retro/mechanics/ranged.png",
+		"mechanics/ranged_plus1_aura.png": "skins/moloch/retro/mechanics/ranged_plus1_aura.png",
+		"mechanics/start_battle.png": "skins/moloch/retro/mechanics/start_battle.png",
+		"mechanics/toughness.png": "skins/moloch/retro/mechanics/toughness.png"
+	}
+}

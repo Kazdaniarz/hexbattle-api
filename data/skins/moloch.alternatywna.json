@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Sezon 2013"
 	},
+	"order": 2,
 	"tiles": {
 		"moloch.sztab": {
 			"front": "skins/moloch/alternatywna/sztab_front.png",

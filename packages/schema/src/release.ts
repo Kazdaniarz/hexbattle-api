@@ -108,6 +108,8 @@ export const SkinsIndex = z
 				official: z.boolean(),
 				href: z.string(),
 				coverage: SkinCoverage,
+				// ? the skin always draws its own Sztab (no Sztab skin with it)
+				own_hq: z.literal(true).optional(),
 			}),
 		),
 	})

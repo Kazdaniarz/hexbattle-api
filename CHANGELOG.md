@@ -2,6 +2,12 @@
 
 Data releases of the HexBattle Online data API (`dataset_version` in `/v1/index.json`). Dates are Europe/Warsaw dates.
 
+## 0.5.0 – 2026-11-22
+
+- Skórki armii „Retro” (Neuroshima Hex 2.0) dla wszystkich czterech armii – wszystkie żetony i własny rewers, z obrotem (`turn`) i miejscami odznak (`badges`) tam, gdzie grafika różni się od danych
+- Skórka może mieć własne znaczniki Sztabu (`hp_markers`), własne obrazy mechanik (`mechanic_images` – zamiast domyślnych, tylko dla swojej armii) i własny Sztab (`own_hq` – bez osobnej skórki Sztabu); Retro ma wszystkie trzy (`@hexbattle/schema` 0.8.0)
+- Skórki mają kolejność wydania (`order`) i w tej kolejności są na liście `skins/index.json`: Rok Molocha, Alternatywna, Klasyczna, Retro (`@hexbattle/schema` 0.9.0)
+
 ## 0.4.0 – 2026-11-22
 
 - Skórki armii „Klasyczna” (Neuroshima Hex 3.0) dla wszystkich czterech armii – wszystkie żetony i własny rewers, z obrotem (`turn`) i miejscami odznak (`badges`) tam, gdzie grafika różni się od danych

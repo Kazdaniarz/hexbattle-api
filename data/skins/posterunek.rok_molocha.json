@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Edycja Roku Molocha"
 	},
+	"order": 1,
 	"tiles": {
 		"posterunek.sztab": {
 			"front": "skins/posterunek/rok_molocha/sztab_front.png"

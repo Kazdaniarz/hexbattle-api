@@ -99,6 +99,10 @@ export function collectAssetRefs(source: SourceData): Map<string, string> {
 			add(file, images.front);
 			add(file, images.back);
 		});
+		for (const marker of data.hp_markers ?? []) add(file, marker.image);
+		Object.values(data.mechanic_images ?? {}).forEach((ref) => {
+			add(file, ref);
+		});
 	}
 	for (const { file, data } of source.boardSkins) {
 		add(file, data.image);

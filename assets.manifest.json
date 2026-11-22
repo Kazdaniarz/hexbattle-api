@@ -770,6 +770,174 @@
 			"width": 891,
 			"height": 771
 		},
+		"skins/borgo/retro/back.png": {
+			"sha256": "d2fd4116a45c8e41f6e240402af8bd1e01a24b0d09c4882622a71eef205f49b2",
+			"bytes": 639073,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/bitwa_front.png": {
+			"sha256": "4dba8ffe5f7c97fda811201f1a064cae133013a0066dc13d5175bb05128d49c0",
+			"bytes": 198917,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/granat_front.png": {
+			"sha256": "d7d57f58a381fb67f0121557405627662a8ae20e6158854c814d70892986d1d1",
+			"bytes": 162474,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/hp_marker.png": {
+			"sha256": "a9f903d8e434248d304a88d0d87cbc6db90ac3a628377fca97c3f05415f97c7b",
+			"bytes": 75157,
+			"width": 430,
+			"height": 430
+		},
+		"skins/borgo/retro/mechanics/armor.png": {
+			"sha256": "10a40e019f24a5c7e8100fdee84df35eb6723e692f20365922bdd1300144fa5b",
+			"bytes": 32734,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/grenade.png": {
+			"sha256": "771214573345c6677f00f7882e1f8bc2faffcdf661f2ac2e4d08bee338818a0c",
+			"bytes": 54866,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/initiative.png": {
+			"sha256": "553c2b20f0c94acafd44e675f64d73d34d145be83c8572920918a44339e1ed0e",
+			"bytes": 34274,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/initiative_plus1_aura.png": {
+			"sha256": "65d5b820f2abc60c87bf4839f1e95ce88913a782a94c49af30414080d540f8b3",
+			"bytes": 38742,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/medic.png": {
+			"sha256": "48c353c08f813e9268d66806dc3038611987ec5df0848f70fa2f920afc2a09f7",
+			"bytes": 17244,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/melee.png": {
+			"sha256": "dacc865eaaa0e43c643f0bc97d1f4fe6b3be16551021f806a2059e882aa0fcff",
+			"bytes": 27337,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/mobility.png": {
+			"sha256": "c06bd39fefcc7f3d2a3538ace55a2d5630e5785c545855506f4ef6c51fca9e6c",
+			"bytes": 35161,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/move.png": {
+			"sha256": "00689c2383b1e4f0823844b7527f5e7462d723b54b369582f601a284aeb5f01c",
+			"bytes": 35680,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/net.png": {
+			"sha256": "6330f113f2036878293c20b1ae631f95beac86fbc27fc512ee20ba7a9b1c8810",
+			"bytes": 104744,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/ranged.png": {
+			"sha256": "3d15ef48ec8fbacfc379365be6888aa8562cb502df43fe703b9a40c327e77dff",
+			"bytes": 37265,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/start_battle.png": {
+			"sha256": "a43764266c777491a26da3bbda2e9727b00d8df8adc50cf8239ce47ad84e6f61",
+			"bytes": 97583,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mechanics/toughness.png": {
+			"sha256": "b41c2cce93d9cd43879fd60387f89920d81a4831a960029173a9157d56370294",
+			"bytes": 34023,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/medyk_front.png": {
+			"sha256": "5c211beaf6b867023ae3804a28e42a91ca69683ca2f344fd6d056d2980a0391d",
+			"bytes": 650145,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/mutant_front.png": {
+			"sha256": "e8df9eb60027a8dd2b91f902c3a4ce5bcb0713c9c05fb01db3836d924b953839",
+			"bytes": 816850,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/oficer_front.png": {
+			"sha256": "7855e367abcf604209c4904cfb88152735688350281fbee1de7300da9c89df7f",
+			"bytes": 620805,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/ruch_front.png": {
+			"sha256": "e6bdaa1b9bd9002f8cacf613dd5d5f9d01289a7d30b9ffbc9e2bfef7c5db127f",
+			"bytes": 89596,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/sieciarz_front.png": {
+			"sha256": "00bf0971db008bfa6f339aad167c7feccf9a2b4bf654f8a46d0f8069a197b787",
+			"bytes": 873367,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/silacz_front.png": {
+			"sha256": "bb5e5eb757e09c9fc106d8a10c6557d1be478a3820f1aa6b0af530eb402f5d0b",
+			"bytes": 850066,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/super_mutant_front.png": {
+			"sha256": "ca1f5d2d5d3898f13d5567874c6079208c4bd0e07760c76a1d2f2f22276d12b0",
+			"bytes": 900086,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/super_oficer_front.png": {
+			"sha256": "7f3148de9ea92b94e46e4db496d42da406ce1be0b3be3d93c78506b12b601a8b",
+			"bytes": 630088,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/szpon_front.png": {
+			"sha256": "b8be36d8d3290e8f8a44a8fc0fae75fe923f288940dacddb8c1c882fa994b5f7",
+			"bytes": 804749,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/sztab_front.png": {
+			"sha256": "a170ee65a5940b6f23f6a7bd3f62182c67991db645568301b80d36bb59b994dc",
+			"bytes": 497186,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/zabojca_front.png": {
+			"sha256": "1d2e3f6ff97e3a743bc34df31cf915a9e931bd9bf987f4e1b1121411fee89020",
+			"bytes": 788580,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/retro/zwiadowca_front.png": {
+			"sha256": "5676cf96e1b667a3c7bca3fa9113a74864e67fefadc8ece0b7f30ef020bd5e54",
+			"bytes": 653954,
+			"width": 891,
+			"height": 771
+		},
 		"skins/borgo/rok_molocha/back.png": {
 			"sha256": "be28bcfecae49a18302c0c1d6586197f7a16abe3198bca6622b5a371d4ba79e7",
 			"bytes": 629935,
@@ -983,6 +1151,216 @@
 		"skins/hegemonia/klasyczna/zwiadowca_front.png": {
 			"sha256": "6659f124d5ef810ec1c90b5ff4ae419a9acd56bb5765ebbc3ade494cab30ea52",
 			"bytes": 983676,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/back.png": {
+			"sha256": "ceaec1e84c24bbcb1967f1f61af4669dca4109c85483417d1f275c96bc1b2bbd",
+			"bytes": 660826,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/biegacz_front.png": {
+			"sha256": "fe5ca896f29e6f6cc5ab612226c8909e17dce23c90d2b73358792f02cb2d79e0",
+			"bytes": 770499,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/bitwa_front.png": {
+			"sha256": "d0cde48aa4979ccae20609cca0fe2fc85935aa201abf65bc8b66dde56349433e",
+			"bytes": 194989,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/boss_front.png": {
+			"sha256": "5edba2005d3c6c5430a55c46fd3c897ae9f6a2c461fb2ed0c80a3c8936c2340c",
+			"bytes": 654083,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/bydlak_front.png": {
+			"sha256": "71fd610b5f59e83e6a21c518817d31bd07574f5dc14bea45aa777da4264a8938",
+			"bytes": 928720,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/ganger_front.png": {
+			"sha256": "f3657bae1f2985b1e69a8b7719bebd457db9292217b25896d793abebbaac763c",
+			"bytes": 834004,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/gladiator_front.png": {
+			"sha256": "122f559a49d12674ec83335d8fdd06f3a4441fadaa63f2e8f0d623efbe919de9",
+			"bytes": 932157,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/hp_marker.png": {
+			"sha256": "e694ccf3e196e0814cba0edb8b6720bca5b3eb8725369b63508a16df78f86d6f",
+			"bytes": 79158,
+			"width": 430,
+			"height": 430
+		},
+		"skins/hegemonia/retro/kwatermistrz_front.png": {
+			"sha256": "28c36b9b37d0f857acb87570b6b28d59ae7c5ceca67b624add82bed7abd83557",
+			"bytes": 680774,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/armor.png": {
+			"sha256": "10a40e019f24a5c7e8100fdee84df35eb6723e692f20365922bdd1300144fa5b",
+			"bytes": 32734,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/convert_attack.png": {
+			"sha256": "37425a3bca8c868d7128bc246bb85675840a9a34122bc2e5613d4f9b61177cd8",
+			"bytes": 8420,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/grant_ability_mobility.png": {
+			"sha256": "14a1e320e9cff7f3f2f5154609f061765705ad0e94c73a407323ea52dd1d5c05",
+			"bytes": 11051,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/initiative.png": {
+			"sha256": "553c2b20f0c94acafd44e675f64d73d34d145be83c8572920918a44339e1ed0e",
+			"bytes": 34274,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/melee.png": {
+			"sha256": "dacc865eaaa0e43c643f0bc97d1f4fe6b3be16551021f806a2059e882aa0fcff",
+			"bytes": 27337,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/melee_plus1_aura.png": {
+			"sha256": "ebed8cff328b29b0cfc30d45d52e5ef76b8ee1cfbcdf56c6fcc5cc20b4a60868",
+			"bytes": 42416,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/mobility.png": {
+			"sha256": "c06bd39fefcc7f3d2a3538ace55a2d5630e5785c545855506f4ef6c51fca9e6c",
+			"bytes": 35161,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/move.png": {
+			"sha256": "fcbbe9c7a6b72e65988f64918ec6ffc8e5efad5cf1cdc7d7ff6a391bfb4948b9",
+			"bytes": 33756,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/net.png": {
+			"sha256": "6330f113f2036878293c20b1ae631f95beac86fbc27fc512ee20ba7a9b1c8810",
+			"bytes": 104744,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/push.png": {
+			"sha256": "b09deb1afdc17df2c6d4693f0b336d10d3d03b3a586037a645eb6be8315bcb09",
+			"bytes": 23158,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/ranged.png": {
+			"sha256": "3d15ef48ec8fbacfc379365be6888aa8562cb502df43fe703b9a40c327e77dff",
+			"bytes": 37265,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/snipe.png": {
+			"sha256": "f139d0caaf8701c0e39f43cf1be6e107572256745df6549c0e45621f351fefbf",
+			"bytes": 75898,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/start_battle.png": {
+			"sha256": "f3c2f7ab3289f0bf48b81976f065d0cdb18933a9e141c91ebb6773b274f606c3",
+			"bytes": 93080,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/mechanics/toughness.png": {
+			"sha256": "b41c2cce93d9cd43879fd60387f89920d81a4831a960029173a9157d56370294",
+			"bytes": 34023,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/odepchniecie_front.png": {
+			"sha256": "f646bf48043621431201f9aba88400f4f2e78c791fdb43639273930423c2beac",
+			"bytes": 59866,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/oficer_i_front.png": {
+			"sha256": "6534aa27295814d69d76f688cb2debebec123743df312739a4bc2ced42f7832b",
+			"bytes": 619268,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/oficer_ii_front.png": {
+			"sha256": "0a2ab59faea29d34e6ed9513790929b99e00a7ce7b96c47537325d70ad6baa7b",
+			"bytes": 618388,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/ruch_front.png": {
+			"sha256": "d85eab9390041e846d3f5ec937ff0f63d7abec5051087a1544f6dfc156db6a08",
+			"bytes": 88011,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/sieciarz_front.png": {
+			"sha256": "2b64f470b3a3826a6d73458fb12517868c7971d6fb6b34d365280aef06704511",
+			"bytes": 932400,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/snajper_front.png": {
+			"sha256": "983da0e5a365bb22e3af7b3ea0543d9a1c307a4ffd844be3a4c16135b144a8c6",
+			"bytes": 171692,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/straznik_front.png": {
+			"sha256": "b791dc35ed7976ef66c24b1dcbf6d62d52017732dbec95784265e61e64fdd227",
+			"bytes": 871221,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/super_sieciarz_front.png": {
+			"sha256": "45e6e85000187eef964615d7160ac38a1036f1d39306f04814d09fd31e619c1b",
+			"bytes": 871071,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/sztab_front.png": {
+			"sha256": "f7e47cd9888949c11188af41fe0395fc4bb0abe5263973f15b0b7101b9944538",
+			"bytes": 507275,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/transport_front.png": {
+			"sha256": "c9becc3676ff9d8c2a39aed5689256b9920c7bc06465052831d4abd848af1435",
+			"bytes": 567595,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/uniwersalny_zolnierz_front.png": {
+			"sha256": "6935388f628eb2cb8de9ab0d8236f746a2d679c5b0bc93242d7a5f0c85c1eb39",
+			"bytes": 854701,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/retro/zwiadowca_front.png": {
+			"sha256": "2e1ea02611a755a80835682634ddc1a2fcffe7088d304cda1c6b0532dbf0901f",
+			"bytes": 651533,
 			"width": 891,
 			"height": 771
 		},
@@ -1256,6 +1634,246 @@
 			"width": 891,
 			"height": 771
 		},
+		"skins/moloch/retro/back.png": {
+			"sha256": "ff2dfcc41311c869af92f317a5095566c40fdec41741d7110066b6965075ed1c",
+			"bytes": 442678,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/bitwa_front.png": {
+			"sha256": "0f57e18651e3ca70447a6f74bb51df0b01e42b89ad56c171fe6064ff951a9151",
+			"bytes": 212476,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/bloker_front.png": {
+			"sha256": "3bf3044b6388effdd7558ef924c9ea678314aab5ad9ed82d58c14151ce56b58f",
+			"bytes": 913858,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/bomba_front.png": {
+			"sha256": "0e2e8803ac4c26637c6ac7c4bb12dd4361e33ec80bef2a2e7aad6480b4a9ec98",
+			"bytes": 114787,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/dzialko_gaussa_front.png": {
+			"sha256": "90777c59f7f466777df4dfc7c8844840b767ddd893213b7b3a168fca5f15df8a",
+			"bytes": 829903,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/hp_marker.png": {
+			"sha256": "4c3a8100d051da897f65964c8908cfc77bb5f62b837df6be816e4e93f4ef7317",
+			"bytes": 50112,
+			"width": 430,
+			"height": 430
+		},
+		"skins/moloch/retro/hybryda_front.png": {
+			"sha256": "27ca0e4dc67569d78cbcf0dcdc05e02b6fa1dd06100bc7a20e29b042f5919fed",
+			"bytes": 884871,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/juggernaut_front.png": {
+			"sha256": "68c6fffa4a66a5dee74dcce96f30211835e540c0767fd6d428b2b767f7fb04e8",
+			"bytes": 944960,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/klaun_front.png": {
+			"sha256": "9ac839ed52b703fc202849a5e3accea087405506d3e4f7b8382e7ac9ebf9513f",
+			"bytes": 771190,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/lowca_front.png": {
+			"sha256": "77c8b79b34543790d1a8d8172e9f40b50415cadf7b3ab5fd0b7df145920658e8",
+			"bytes": 834747,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/matka_front.png": {
+			"sha256": "40c01383e97d4bb80f91320984e69f612527b70bcaa6b6fc1e78b9fd19de17f9",
+			"bytes": 644555,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/armor.png": {
+			"sha256": "10a40e019f24a5c7e8100fdee84df35eb6723e692f20365922bdd1300144fa5b",
+			"bytes": 32734,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/damage_area_bomb.png": {
+			"sha256": "81ffaca2444458a9b20806e4858ac7f29df35b9fd81b9667849b850ba34c5afa",
+			"bytes": 49034,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/explosion.png": {
+			"sha256": "73a04db5815bc13b72a31fc9584efc9be1ed4ae5b2d1d6e8afe4e0738b85c43d",
+			"bytes": 7533,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/extra_initiative.png": {
+			"sha256": "b4010591b0ab022b73f4da33f5c4795880dbc954024b366d4c616831f970fa9e",
+			"bytes": 17985,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/gauss.png": {
+			"sha256": "5555277d7cf3b69594e750ee0e913381f9eb948573d9e667b35827f870a5354d",
+			"bytes": 38340,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/initiative.png": {
+			"sha256": "553c2b20f0c94acafd44e675f64d73d34d145be83c8572920918a44339e1ed0e",
+			"bytes": 34274,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/medic.png": {
+			"sha256": "48c353c08f813e9268d66806dc3038611987ec5df0848f70fa2f920afc2a09f7",
+			"bytes": 17244,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/melee.png": {
+			"sha256": "dacc865eaaa0e43c643f0bc97d1f4fe6b3be16551021f806a2059e882aa0fcff",
+			"bytes": 27337,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/move.png": {
+			"sha256": "74c8400b1c6748a98177545df98426acfba56710861a11621ab110ba3a0ae2c2",
+			"bytes": 33872,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/net.png": {
+			"sha256": "6330f113f2036878293c20b1ae631f95beac86fbc27fc512ee20ba7a9b1c8810",
+			"bytes": 104744,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/push.png": {
+			"sha256": "ad06413264878168f2d7ab1f4e9704181ea03b117f15e4f239a3c38d097b8805",
+			"bytes": 23582,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/ranged.png": {
+			"sha256": "3d15ef48ec8fbacfc379365be6888aa8562cb502df43fe703b9a40c327e77dff",
+			"bytes": 37265,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/ranged_plus1_aura.png": {
+			"sha256": "2cbcdd901900bf7b5f6bf944ed0d1a64d22e47555dd51ee324ce061f0db18e78",
+			"bytes": 42663,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/start_battle.png": {
+			"sha256": "aeafa52a560e06c2a87d4337cacd734be769d194648d27910beb26b4b7499d0b",
+			"bytes": 97337,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mechanics/toughness.png": {
+			"sha256": "b41c2cce93d9cd43879fd60387f89920d81a4831a960029173a9157d56370294",
+			"bytes": 34023,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/medyk_front.png": {
+			"sha256": "e98bbdec00a5c0d46f67892f33b41631696f118c85ed658bf2e059ce3e00bd97",
+			"bytes": 589246,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/mozg_front.png": {
+			"sha256": "6a0e13064f4391df2f6775be707af90baea439879c9f1a0742d0699503e92c19",
+			"bytes": 578218,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/obronca_front.png": {
+			"sha256": "ca40837139fb1a60b945bc46fba8faa552579abbf413c4f19d97caa5c6dabf97",
+			"bytes": 939296,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/odepchniecie_front.png": {
+			"sha256": "9ee73b9835b796e4f9060e9d1776f248f66204f5704b9dff29a941a53593cf32",
+			"bytes": 63508,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/oficer_front.png": {
+			"sha256": "e52ddb3045dabce9b0885e9601ec948d3404b446c4ace2aaa999edd8378bb680",
+			"bytes": 569281,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/opancerzony_lowca_front.png": {
+			"sha256": "7bd7e80ec824178ff7a446458dcdff512a0cb4e8c5a084872c0b48d2bc6220a9",
+			"bytes": 915158,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/opancerzony_wartownik_front.png": {
+			"sha256": "325847a41286ab0a29dab7fe1e522bc280957fc33d7fefb46860119b1474260a",
+			"bytes": 1025575,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/ruch_front.png": {
+			"sha256": "88b6e2589cb5d8682922668c52ba88a662c287538bc0d86c3709a4f9c92c9891",
+			"bytes": 93898,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/sieciarz_front.png": {
+			"sha256": "fc8ebc23b537f65d50292e8b16d7b1c8bec6e5fe545b927af45072d36c0928bc",
+			"bytes": 1033066,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/szerszen_front.png": {
+			"sha256": "474490b95349210eaabd8f87d54b579d859354115ae36784bf0935ae73a8030c",
+			"bytes": 848460,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/sztab_front.png": {
+			"sha256": "2ff318cc5488436f793a0d9fe117ba5c8c7fb0a727b0a9704ac01a3b950b782e",
+			"bytes": 459712,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/szturmowiec_front.png": {
+			"sha256": "e769e4bea28c480278dc71d4f76166bbaead8483810f32af033276570886e3bb",
+			"bytes": 818744,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/wartownik_front.png": {
+			"sha256": "27c8390c9ccc60e9c10895362d7c54813fbe28811c0bf935cc2a68907a018fc9",
+			"bytes": 926759,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/retro/zwiadowca_front.png": {
+			"sha256": "31d96c9a2ecc6db79a983b05abb159daf4dc36bc0071d977ac836674adb6c4c4",
+			"bytes": 592962,
+			"width": 891,
+			"height": 771
+		},
 		"skins/moloch/rok_molocha/back.png": {
 			"sha256": "82aa8b61006c4f49260a67d7056a3bd7067824640e1c3728becbaec12476d074",
 			"bytes": 562456,
@@ -1505,6 +2123,180 @@
 		"skins/posterunek/klasyczna/zwiadowca_front.png": {
 			"sha256": "f430024a8d483233ad791f7df4226b3a95892fa6a8f66293095e7b7407387548",
 			"bytes": 1077382,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/back.png": {
+			"sha256": "6979492addad06c2f404ea6c429198b1a2882c7613466bad6a972bc3b16347bd",
+			"bytes": 645441,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/biegacz_front.png": {
+			"sha256": "c8830d02407652460791b3c62991afe693f3fafe481601a6fd1d1c2f278ececc",
+			"bytes": 733893,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/bitwa_front.png": {
+			"sha256": "b599c3de7643d12e88827db7a3497baf59b88d60606e4b03fc22f09167d52376",
+			"bytes": 208606,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/centrum_rozpoznania_front.png": {
+			"sha256": "7ec4a498e9f24d7cbd0c101c13d9db089d658bf28b6e9c3ffda5ef7bcc77d50b",
+			"bytes": 641072,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/ckm_front.png": {
+			"sha256": "9966ee088afaa3e19bf0ba705b8d5188512b3e7187b9f5ce237377eca23dee81",
+			"bytes": 882070,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/dywersant_front.png": {
+			"sha256": "aae54de70d9a7effce28bbb022752060ad4d39153f59310dbd979d436f6eed38",
+			"bytes": 567676,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/hp_marker.png": {
+			"sha256": "f778e56929f1c6569f52dfe0433f17737070d4eb1f16d8144421f74629cd0957",
+			"bytes": 85598,
+			"width": 430,
+			"height": 430
+		},
+		"skins/posterunek/retro/komandos_front.png": {
+			"sha256": "fa38dd7b04c135f7d996c8884fc7fbcbc3652380af689058edcf9dec4290830c",
+			"bytes": 711462,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/likwidator_front.png": {
+			"sha256": "116c4d8da1d325b969baf275de6057568ae76f2531f88a67f5cc2e67254ec5ad",
+			"bytes": 803494,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/extra_initiative_aura.png": {
+			"sha256": "cab4cce281573fe3361b051bbf4da230824e21ce5a8a1ac1b2f482a078604c47",
+			"bytes": 62254,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/initiative.png": {
+			"sha256": "553c2b20f0c94acafd44e675f64d73d34d145be83c8572920918a44339e1ed0e",
+			"bytes": 34274,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/medic.png": {
+			"sha256": "48c353c08f813e9268d66806dc3038611987ec5df0848f70fa2f920afc2a09f7",
+			"bytes": 17244,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/melee.png": {
+			"sha256": "dacc865eaaa0e43c643f0bc97d1f4fe6b3be16551021f806a2059e882aa0fcff",
+			"bytes": 27337,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/mobility.png": {
+			"sha256": "c06bd39fefcc7f3d2a3538ace55a2d5630e5785c545855506f4ef6c51fca9e6c",
+			"bytes": 35161,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/move.png": {
+			"sha256": "a7996e244a0920df304ff15d324648d54399d546e823b7ef3a7493119be8fc4b",
+			"bytes": 36364,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/movement_multiplier.png": {
+			"sha256": "8be0d801b822c52ee12d613c3c5dcb34e1db2dd72052382879b122ef60a707df",
+			"bytes": 11330,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/ranged.png": {
+			"sha256": "3d15ef48ec8fbacfc379365be6888aa8562cb502df43fe703b9a40c327e77dff",
+			"bytes": 37265,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/redirect_module.png": {
+			"sha256": "3217dd31d02d47389c01332a1725c2b5ac480c4146a675437928b40c65cb51d7",
+			"bytes": 11837,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/snipe.png": {
+			"sha256": "b1b4f06423c7be0c7b244182f30fb3eaae7778ff1e043f6e64e28906f016c0b2",
+			"bytes": 81823,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/mechanics/start_battle.png": {
+			"sha256": "70070faba5ae5858612de6fe6182f1916932c2ffeb3fe3af1fb2ce32a5bf5184",
+			"bytes": 101555,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/medyk_front.png": {
+			"sha256": "723bcb3f7d2520cc5655731b4447b9867e7989197375398bc85b0fc61f5cfdfe",
+			"bytes": 614351,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/oficer_front.png": {
+			"sha256": "a82a766b46ed13db3a6b0079f45bbcfedd997c65a4a13327d88e423260ecd540",
+			"bytes": 558903,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/pancerz_wspomagany_front.png": {
+			"sha256": "5ba24f205bc1718a418b8ff6cc12b6cdec7dfada3dfc5bab863ceb6df0b4a8ca",
+			"bytes": 882231,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/ruch_front.png": {
+			"sha256": "71cabcbf8074d631f088f6bfcdfedb88699ddc1e3706097c7731b154911e6529",
+			"bytes": 92798,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/silacz_front.png": {
+			"sha256": "080ec1415f05d009683a66ab242d2bf61d92604d26bdb8f2a92033ba2482d0cd",
+			"bytes": 854372,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/skoper_front.png": {
+			"sha256": "f5f6d11e1876eb6a20af191f663cc715269a3d850437a47410d95c8b3a4a55d1",
+			"bytes": 560074,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/snajper_front.png": {
+			"sha256": "126b6f559ec471b2be6b3e5c0f97fbfd9ad7b79a59e2bc9dee19191283998f9a",
+			"bytes": 185790,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/sztab_front.png": {
+			"sha256": "aa50b37cf7cb8b6b7404519bd5070732a4128c0f912a4d9b7609ace3e396a904",
+			"bytes": 546791,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/retro/zwiadowca_front.png": {
+			"sha256": "182b561214f30546496aec0855a6db37669045fca16b3f29d2df7b6b5bb79afd",
+			"bytes": 617834,
 			"width": 891,
 			"height": 771
 		},

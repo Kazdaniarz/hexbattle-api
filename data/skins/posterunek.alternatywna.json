@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Sezon 2013"
 	},
+	"order": 2,
 	"tiles": {
 		"posterunek.sztab": {
 			"front": "skins/posterunek/alternatywna/sztab_front.png",
