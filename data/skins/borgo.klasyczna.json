@@ -1,0 +1,76 @@
+{
+	"id": "borgo.klasyczna",
+	"name": {
+		"pl": "Klasyczna"
+	},
+	"official": true,
+	"army": "borgo",
+	"edition": {
+		"pl": "Neuroshima Hex 3.0"
+	},
+	"tiles": {
+		"borgo.sztab": {
+			"front": "skins/borgo/klasyczna/sztab_front.png"
+		},
+		"borgo.mutant": {
+			"front": "skins/borgo/klasyczna/mutant_front.png",
+			"turn": 3
+		},
+		"borgo.super_mutant": {
+			"front": "skins/borgo/klasyczna/super_mutant_front.png"
+		},
+		"borgo.silacz": {
+			"front": "skins/borgo/klasyczna/silacz_front.png",
+			"turn": 2,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "e5"
+				}
+			]
+		},
+		"borgo.szpon": {
+			"front": "skins/borgo/klasyczna/szpon_front.png"
+		},
+		"borgo.sieciarz": {
+			"front": "skins/borgo/klasyczna/sieciarz_front.png",
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c0"
+				}
+			]
+		},
+		"borgo.zabojca": {
+			"front": "skins/borgo/klasyczna/zabojca_front.png",
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "e0"
+				}
+			]
+		},
+		"borgo.medyk": {
+			"front": "skins/borgo/klasyczna/medyk_front.png"
+		},
+		"borgo.zwiadowca": {
+			"front": "skins/borgo/klasyczna/zwiadowca_front.png"
+		},
+		"borgo.oficer": {
+			"front": "skins/borgo/klasyczna/oficer_front.png"
+		},
+		"borgo.super_oficer": {
+			"front": "skins/borgo/klasyczna/super_oficer_front.png"
+		},
+		"borgo.bitwa": {
+			"front": "skins/borgo/klasyczna/bitwa_front.png"
+		},
+		"borgo.ruch": {
+			"front": "skins/borgo/klasyczna/ruch_front.png"
+		},
+		"borgo.granat": {
+			"front": "skins/borgo/klasyczna/granat_front.png"
+		}
+	},
+	"back": "skins/borgo/klasyczna/back.png"
+}

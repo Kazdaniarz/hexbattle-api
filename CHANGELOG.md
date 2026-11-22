@@ -2,6 +2,10 @@
 
 Data releases of the HexBattle Online data API (`dataset_version` in `/v1/index.json`). Dates are Europe/Warsaw dates.
 
+## 0.4.0 – 2026-11-22
+
+- Skórki armii „Klasyczna” (Neuroshima Hex 3.0) dla wszystkich czterech armii – wszystkie żetony i własny rewers, z obrotem (`turn`) i miejscami odznak (`badges`) tam, gdzie grafika różni się od danych
+
 ## 0.3.0 – 2026-11-22
 
 - Nowe domyślne obrazy żetonów wszystkich czterech armii bazowych (Wydanie 20-lecia, lepsze skany; `display.edition`); dane żetonów odczytane z nich na nowo: Borgo – Mutant, Siłacz, Zabójca, Super-Oficer; Hegemonia – Biegacz, Ganger, Bydlak, Strażnik, Uniwersalny Żołnierz, Sieciarz, Super-Sieciarz; Posterunek – Biegacz, Siłacz, Pancerz Wspomagany, CKM, Komandos, Likwidator
