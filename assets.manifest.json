@@ -680,6 +680,96 @@
 			"width": 891,
 			"height": 771
 		},
+		"skins/borgo/klasyczna/back.png": {
+			"sha256": "614ca24c5488e032edb3c846f9592fed253501bbaf1832596691b8ce4cdacd31",
+			"bytes": 1611661,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/bitwa_front.png": {
+			"sha256": "5c0eaa0f2faac4c5c51382dedb7005fcdb7824d5bac23e0fa45dcd8d696c27dd",
+			"bytes": 914194,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/granat_front.png": {
+			"sha256": "8ea06d5de34e2ed8cb5a74d8b6c490fc3cd0033fe8478bf04dfb7f3f92754cfb",
+			"bytes": 885138,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/medyk_front.png": {
+			"sha256": "0e4b6625f5e9ab5828a1580b2196cfe5f30207a6dfb398cd518a6971defaa8cf",
+			"bytes": 1018211,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/mutant_front.png": {
+			"sha256": "7455225273c6b992374d64d9c9d05693f6fcfe2a80a68fe8c23f145b847e9b97",
+			"bytes": 1147971,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/oficer_front.png": {
+			"sha256": "09af8291f6265c5593c46dea52eb797b46466b5a49892b5935fe7deca31e0ee1",
+			"bytes": 1028308,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/ruch_front.png": {
+			"sha256": "f34ce5b9d136490310f7db0b6ca12cc10df417c2eab9483bcdcf32cb32b4f855",
+			"bytes": 893688,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/sieciarz_front.png": {
+			"sha256": "6d98c3e8c5f7e6ad2cef2c36cd841f1482889326d9df973b19782fce9db0583e",
+			"bytes": 1123623,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/silacz_front.png": {
+			"sha256": "b265b25005bc06a7fabd99aad0718bc31b202e3466a66efca4717da6c8975fde",
+			"bytes": 1142131,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/super_mutant_front.png": {
+			"sha256": "2e690a885260ed973489a71eb3d9238c842dc015e90c34730f09865e0af52442",
+			"bytes": 1062229,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/super_oficer_front.png": {
+			"sha256": "330441ca22497e73290de250e1b91cd3f2038739b3fdd96ec6b891c065361f5b",
+			"bytes": 1039063,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/szpon_front.png": {
+			"sha256": "606099bf65ebe7ec02c7eb01837581dd05a181078359cf772a056dcd5e905f84",
+			"bytes": 1150107,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/sztab_front.png": {
+			"sha256": "d459a3c06619d3d87c3a1e8fd0f8ffc888edf60c1c4ecaea38dba1e9f3c6747d",
+			"bytes": 989161,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/zabojca_front.png": {
+			"sha256": "8a975d313247538c16c445272231f2a33d481ae477f27e2ee5ec343f9057e984",
+			"bytes": 1069159,
+			"width": 891,
+			"height": 771
+		},
+		"skins/borgo/klasyczna/zwiadowca_front.png": {
+			"sha256": "9abd3de132ef098bb9b292e02c8fa97f5bc58a30283340161ed41a07474e0630",
+			"bytes": 1057157,
+			"width": 891,
+			"height": 771
+		},
 		"skins/borgo/rok_molocha/back.png": {
 			"sha256": "be28bcfecae49a18302c0c1d6586197f7a16abe3198bca6622b5a371d4ba79e7",
 			"bytes": 629935,
@@ -773,6 +863,126 @@
 		"skins/hegemonia/alternatywna/sztab_front.png": {
 			"sha256": "e4eed9ed566cb82f11f64a9e79090b25b17c77659588e2d58441e43ba5a22f73",
 			"bytes": 1096350,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/back.png": {
+			"sha256": "c6bdec3ccd6acb8c6afd6528a9d0d7114fba8a6469c46eccc68afa34564bf79b",
+			"bytes": 1520849,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/biegacz_front.png": {
+			"sha256": "a1e46bd9d84c7deafef79573b9e2fe6e11a4b5ef03766d74ba362cc3147ed17c",
+			"bytes": 1035975,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/bitwa_front.png": {
+			"sha256": "dc36b38991e970d76a7707ead41bfcaf79fe507912e5e28aca4da3a2d5046731",
+			"bytes": 851004,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/boss_front.png": {
+			"sha256": "fa16bcdb36bdebbfddc20a10d78e540abe1ff1e01096020d80578f46f49e2051",
+			"bytes": 952533,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/bydlak_front.png": {
+			"sha256": "ad26e21654b4ed0d2b39ba09f1dc9ac835a96ad6a9104d435250ba8f086c029f",
+			"bytes": 1060640,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/ganger_front.png": {
+			"sha256": "f63763069fdbf31e8277f8d6a979a86913adfe55f1dd6a97956dc5a956d3d1a9",
+			"bytes": 1044475,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/gladiator_front.png": {
+			"sha256": "170d308efab66b7ecf944cd702844eb67e551cb0485237c1d8e9013453c595d2",
+			"bytes": 1059538,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/kwatermistrz_front.png": {
+			"sha256": "9f00f362364ce16ecc02c1eedd66e4857dcf7a27a82ad59f99b321ebf5200901",
+			"bytes": 930603,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/odepchniecie_front.png": {
+			"sha256": "17d8cb512411ca63b88797fb74d29b3126a080cfb4e9c5ed9eba7d36fa9663b5",
+			"bytes": 781832,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/oficer_i_front.png": {
+			"sha256": "2a3b239ff5c300c75832a377e6d1a8a54a3dbdc6b3f93fef12097f2a31406b5b",
+			"bytes": 942980,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/oficer_ii_front.png": {
+			"sha256": "30ed8ae2f3a8cc9369b90dcdfc06ac972084d245defda85ee4f92d69574aad9c",
+			"bytes": 962448,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/ruch_front.png": {
+			"sha256": "0671498b3a06b4fd0fed4137d6ccdd2d970344311b14d1113f58758dd2cf669e",
+			"bytes": 793958,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/sieciarz_front.png": {
+			"sha256": "03b8149f587a08c5f8fb92da3e2f372685a97c1f91a6dcd42c9b85496fa52db8",
+			"bytes": 1125404,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/snajper_front.png": {
+			"sha256": "34c4a4614972375911d86c4ac9f51158ec23f0e4b96e9c921cba5a0fc0e929e0",
+			"bytes": 823787,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/straznik_front.png": {
+			"sha256": "a04327421546dffdfe80f70c711b4637f4886baeb729309d8e6a6194590f4cdd",
+			"bytes": 1077307,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/super_sieciarz_front.png": {
+			"sha256": "4d5452e5d2e08a8004bc7ff354df1eb9628f82837ec39f52a383c20e7184b8be",
+			"bytes": 1145485,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/sztab_front.png": {
+			"sha256": "fbf2ddb7632b5620751cd15d2dfae15e5be08d9fdd12f52d37d327acb2f52638",
+			"bytes": 945818,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/transport_front.png": {
+			"sha256": "4b86b228f54f17c894486b6a05377cead271572060f5dd06636cc92aaf320ff5",
+			"bytes": 1023587,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/uniwersalny_zolnierz_front.png": {
+			"sha256": "9f3821a83dcf63aaa7b8bbb728852f30254de66350cedd4b36aa9952be64ca9f",
+			"bytes": 979188,
+			"width": 891,
+			"height": 771
+		},
+		"skins/hegemonia/klasyczna/zwiadowca_front.png": {
+			"sha256": "6659f124d5ef810ec1c90b5ff4ae419a9acd56bb5765ebbc3ade494cab30ea52",
+			"bytes": 983676,
 			"width": 891,
 			"height": 771
 		},
@@ -899,6 +1109,150 @@
 		"skins/moloch/alternatywna/sztab_front.png": {
 			"sha256": "5634f538ba3192b6e7233a6ac5f20469eea081a9f36aab4a8b304761e6b47c2d",
 			"bytes": 1117340,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/back.png": {
+			"sha256": "6483f44489a00178d2fd218a3ca2c7ba5e5280b0bc276e31381d1f78bc3a05af",
+			"bytes": 1357434,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/bitwa_front.png": {
+			"sha256": "1d6eb0a81cbe831f0861c083ce0a84ae339d7bd04e7d704fb46a373f78fbae35",
+			"bytes": 733979,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/bloker_front.png": {
+			"sha256": "4f4da2d6df9a7a6eb1701f01e2eedb573d76a2ae5527548a1cd0b9c02c4283ff",
+			"bytes": 920332,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/bomba_front.png": {
+			"sha256": "6a72b135b6e939a24414376c128144ebef4ef2c20ef6097c897408fd305469ea",
+			"bytes": 692264,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/dzialko_gaussa_front.png": {
+			"sha256": "2d8ddb23e3c555577042794b7fbbcca12d47839a199fb6c2c562a89c6246fbe6",
+			"bytes": 1043305,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/hybryda_front.png": {
+			"sha256": "d84bad9474e3644f61f8c90ad63cf3f4cd5c3faa1b4bc293449540a405560989",
+			"bytes": 1033419,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/juggernaut_front.png": {
+			"sha256": "e0b41994124c09b6443d735cb3664194abbe11501865ebefd4978f23e7a841f9",
+			"bytes": 936150,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/klaun_front.png": {
+			"sha256": "42302809a13258ecdc8a2db55ed27ce92c1033df8e72c11f63ed66bdcd7c4d6a",
+			"bytes": 920775,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/lowca_front.png": {
+			"sha256": "909e6cda5d6bcd0769278529383b478ea280a7a85fb3278d4fda5b0995c287b1",
+			"bytes": 1060672,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/matka_front.png": {
+			"sha256": "f7c4b59796848809a698ecd006f266413790b955f677cfbada7c4e3088ecec4f",
+			"bytes": 849532,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/medyk_front.png": {
+			"sha256": "4a81c33fa29c5a2d47e67a6267d2d50bcf83c878fe1b1d9d3d8ad3eef21ea569",
+			"bytes": 894049,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/mozg_front.png": {
+			"sha256": "e46b33c84fc6076824be791116c3739c9b38bc3129f71745bc4f2068c9ae43a9",
+			"bytes": 906586,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/obronca_front.png": {
+			"sha256": "e41c5c1c30b0ee4949f65943eefd0cddf938e3b93b91f666dc94d1227b4c8e5d",
+			"bytes": 934243,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/odepchniecie_front.png": {
+			"sha256": "dfd6a01f28dfce0ff2e2e0d4d90153e2b33747b85b7f2abf85f8ec8fefb567ba",
+			"bytes": 699742,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/oficer_front.png": {
+			"sha256": "43e95fd98da58dfcdfafb17b33b8d0be08b85cbd04334779f9ab9ae306df3f58",
+			"bytes": 917620,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/opancerzony_lowca_front.png": {
+			"sha256": "88e62ce2e0d71175232b44154d95fb92f767a9dc16261efff5e7615fa4d7c33f",
+			"bytes": 995760,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/opancerzony_wartownik_front.png": {
+			"sha256": "c5854c1e431bb57a6c5abff0d2fce839ce7b461a452fb5dd191cea3b38eed615",
+			"bytes": 829457,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/ruch_front.png": {
+			"sha256": "c135da9fdee9c617d190694cefc4bc1c2bef9270d54b37cbe750de62518f0d39",
+			"bytes": 702868,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/sieciarz_front.png": {
+			"sha256": "b9887f6553931537786afdb3cd06b994a69103fe95e3e9d83445c94ea6db27f7",
+			"bytes": 1056061,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/szerszen_front.png": {
+			"sha256": "ac5fc6ac2b351ad9796b0404bc7a22b87d36f2264c55480688c07859856045d6",
+			"bytes": 1036052,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/sztab_front.png": {
+			"sha256": "9e103d7a6a2c7b7902c87e63da1d4d8e75f038c0a8f3d5913f34871d1c05b6df",
+			"bytes": 909106,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/szturmowiec_front.png": {
+			"sha256": "c6329cd79faee87d6482bd646bb7d86e9a7566737c6f8bfabd2680ed0278b434",
+			"bytes": 1034343,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/wartownik_front.png": {
+			"sha256": "8006b45f5c4fe8f93141cc7e6216450d90e2b1337e073619d175954534fe5345",
+			"bytes": 1012304,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/klasyczna/zwiadowca_front.png": {
+			"sha256": "00b31414cd746dab72f8827604e66126b2d318c1e64665da640dbd36baaf3726",
+			"bytes": 932788,
 			"width": 891,
 			"height": 771
 		},
@@ -1049,6 +1403,108 @@
 		"skins/posterunek/alternatywna/sztab_front.png": {
 			"sha256": "02f1af6fb505d4e2039df4c46c5b205afb7937200759405fe501fcfb0942a248",
 			"bytes": 1069406,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/back.png": {
+			"sha256": "cee6d76a2d5350041d6d7173ede53da4d89019ffa7d3a61d4d1bf40b4ad732ab",
+			"bytes": 1597788,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/biegacz_front.png": {
+			"sha256": "1b6653878e3d1b79faa460e8c0f6c8501d4bab4a70041a148a2f827da66a8d75",
+			"bytes": 1112092,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/bitwa_front.png": {
+			"sha256": "f398f1cd627084b5a7c7117fdd549fd4ee37bd3f0486e5aa44aa1b0e1ab2c452",
+			"bytes": 933898,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/centrum_rozpoznania_front.png": {
+			"sha256": "94815e0d4a2a767563cf2aa2a54b37cc92e61628ad9c189abf5d55667dd82676",
+			"bytes": 1021884,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/ckm_front.png": {
+			"sha256": "0a44643e946b0537ea5fb81e4471ab84123ecb85fc8d8c2043a1fe4de8d10b9d",
+			"bytes": 1119014,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/dywersant_front.png": {
+			"sha256": "335a1634cc5a723b6be88c2433a2e05af6443499d1b83124d57ffa0b27da146f",
+			"bytes": 1120430,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/komandos_front.png": {
+			"sha256": "f52a8bdcbbb0f749e2f072eb79bba385582b6571f3274442f45bf0bea86f9b9a",
+			"bytes": 1030118,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/likwidator_front.png": {
+			"sha256": "719f11099b96903c1f31749fcbf0405ad9cc7a76e53e33d3ad60cb54c4f08148",
+			"bytes": 1051705,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/medyk_front.png": {
+			"sha256": "52d7b84c296d9249efc1689412b986cef374fc8706bb390881489ae844a2bf8f",
+			"bytes": 1037219,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/oficer_front.png": {
+			"sha256": "5e8a7d0cc37ab738a94157f6765ced0e0281396021ffe59ad3b955c09d695720",
+			"bytes": 1101911,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/pancerz_wspomagany_front.png": {
+			"sha256": "2dd2c0c1d84ac5696c09d1f476f922be56034bb93fcf162bc70237c6542d43e4",
+			"bytes": 1119691,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/ruch_front.png": {
+			"sha256": "a08a0f01d1e61aeebec7953a7d18f3e650265864ce5d1af6df52c140f61029bb",
+			"bytes": 942364,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/silacz_front.png": {
+			"sha256": "0d35bc8dc5624ee49a795a4f4c632113c15c4bbe536d9a621e377dda451f60bd",
+			"bytes": 1124530,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/skoper_front.png": {
+			"sha256": "f782dc76b05aacfd202d4917aee237ba2f84da9267c53cfd8328c75df9e60e98",
+			"bytes": 1113032,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/snajper_front.png": {
+			"sha256": "57cba897e3321605c63d39c5ab04d3283ed8be2f7fe7cfd42ab20712504c7ae2",
+			"bytes": 928816,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/sztab_front.png": {
+			"sha256": "6d1f311b57ba35171df1df7e911ba2f83f4472295c5a4d182d6b3e09c42d2276",
+			"bytes": 1062920,
+			"width": 891,
+			"height": 771
+		},
+		"skins/posterunek/klasyczna/zwiadowca_front.png": {
+			"sha256": "f430024a8d483233ad791f7df4226b3a95892fa6a8f66293095e7b7407387548",
+			"bytes": 1077382,
 			"width": 891,
 			"height": 771
 		},

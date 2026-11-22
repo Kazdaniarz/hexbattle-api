@@ -1,0 +1,128 @@
+{
+	"id": "hegemonia.klasyczna",
+	"name": {
+		"pl": "Klasyczna"
+	},
+	"official": true,
+	"army": "hegemonia",
+	"edition": {
+		"pl": "Neuroshima Hex 3.0"
+	},
+	"tiles": {
+		"hegemonia.sztab": {
+			"front": "skins/hegemonia/klasyczna/sztab_front.png"
+		},
+		"hegemonia.biegacz": {
+			"front": "skins/hegemonia/klasyczna/biegacz_front.png",
+			"turn": 5,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				},
+				{
+					"feature": 2,
+					"slot": "c2"
+				}
+			]
+		},
+		"hegemonia.ganger": {
+			"front": "skins/hegemonia/klasyczna/ganger_front.png",
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"hegemonia.bydlak": {
+			"front": "skins/hegemonia/klasyczna/bydlak_front.png",
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c2"
+				}
+			]
+		},
+		"hegemonia.straznik": {
+			"front": "skins/hegemonia/klasyczna/straznik_front.png",
+			"turn": 1,
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c3"
+				},
+				{
+					"feature": 4,
+					"slot": "c2"
+				}
+			]
+		},
+		"hegemonia.gladiator": {
+			"front": "skins/hegemonia/klasyczna/gladiator_front.png",
+			"badges": [
+				{
+					"feature": 6,
+					"slot": "e4"
+				},
+				{
+					"feature": 7,
+					"slot": "c1"
+				}
+			]
+		},
+		"hegemonia.uniwersalny_zolnierz": {
+			"front": "skins/hegemonia/klasyczna/uniwersalny_zolnierz_front.png",
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c0"
+				}
+			]
+		},
+		"hegemonia.sieciarz": {
+			"front": "skins/hegemonia/klasyczna/sieciarz_front.png",
+			"turn": 3
+		},
+		"hegemonia.super_sieciarz": {
+			"front": "skins/hegemonia/klasyczna/super_sieciarz_front.png",
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c3"
+				}
+			]
+		},
+		"hegemonia.oficer_i": {
+			"front": "skins/hegemonia/klasyczna/oficer_i_front.png"
+		},
+		"hegemonia.oficer_ii": {
+			"front": "skins/hegemonia/klasyczna/oficer_ii_front.png"
+		},
+		"hegemonia.boss": {
+			"front": "skins/hegemonia/klasyczna/boss_front.png"
+		},
+		"hegemonia.zwiadowca": {
+			"front": "skins/hegemonia/klasyczna/zwiadowca_front.png"
+		},
+		"hegemonia.kwatermistrz": {
+			"front": "skins/hegemonia/klasyczna/kwatermistrz_front.png"
+		},
+		"hegemonia.transport": {
+			"front": "skins/hegemonia/klasyczna/transport_front.png"
+		},
+		"hegemonia.bitwa": {
+			"front": "skins/hegemonia/klasyczna/bitwa_front.png"
+		},
+		"hegemonia.ruch": {
+			"front": "skins/hegemonia/klasyczna/ruch_front.png"
+		},
+		"hegemonia.odepchniecie": {
+			"front": "skins/hegemonia/klasyczna/odepchniecie_front.png"
+		},
+		"hegemonia.snajper": {
+			"front": "skins/hegemonia/klasyczna/snajper_front.png"
+		}
+	},
+	"back": "skins/hegemonia/klasyczna/back.png"
+}

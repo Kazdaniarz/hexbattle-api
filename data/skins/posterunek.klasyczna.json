@@ -1,0 +1,82 @@
+{
+	"id": "posterunek.klasyczna",
+	"name": {
+		"pl": "Klasyczna"
+	},
+	"official": true,
+	"army": "posterunek",
+	"edition": {
+		"pl": "Neuroshima Hex 3.0"
+	},
+	"tiles": {
+		"posterunek.sztab": {
+			"front": "skins/posterunek/klasyczna/sztab_front.png"
+		},
+		"posterunek.biegacz": {
+			"front": "skins/posterunek/klasyczna/biegacz_front.png",
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c2"
+				}
+			]
+		},
+		"posterunek.silacz": {
+			"front": "skins/posterunek/klasyczna/silacz_front.png",
+			"turn": 4,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c1"
+				}
+			]
+		},
+		"posterunek.pancerz_wspomagany": {
+			"front": "skins/posterunek/klasyczna/pancerz_wspomagany_front.png"
+		},
+		"posterunek.ckm": {
+			"front": "skins/posterunek/klasyczna/ckm_front.png"
+		},
+		"posterunek.komandos": {
+			"front": "skins/posterunek/klasyczna/komandos_front.png"
+		},
+		"posterunek.likwidator": {
+			"front": "skins/posterunek/klasyczna/likwidator_front.png",
+			"turn": 3,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"posterunek.medyk": {
+			"front": "skins/posterunek/klasyczna/medyk_front.png"
+		},
+		"posterunek.zwiadowca": {
+			"front": "skins/posterunek/klasyczna/zwiadowca_front.png"
+		},
+		"posterunek.oficer": {
+			"front": "skins/posterunek/klasyczna/oficer_front.png"
+		},
+		"posterunek.dywersant": {
+			"front": "skins/posterunek/klasyczna/dywersant_front.png"
+		},
+		"posterunek.skoper": {
+			"front": "skins/posterunek/klasyczna/skoper_front.png"
+		},
+		"posterunek.centrum_rozpoznania": {
+			"front": "skins/posterunek/klasyczna/centrum_rozpoznania_front.png"
+		},
+		"posterunek.bitwa": {
+			"front": "skins/posterunek/klasyczna/bitwa_front.png"
+		},
+		"posterunek.ruch": {
+			"front": "skins/posterunek/klasyczna/ruch_front.png"
+		},
+		"posterunek.snajper": {
+			"front": "skins/posterunek/klasyczna/snajper_front.png"
+		}
+	},
+	"back": "skins/posterunek/klasyczna/back.png"
+}
