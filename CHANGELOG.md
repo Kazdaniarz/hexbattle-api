@@ -4,8 +4,10 @@ Data releases of the HexBattle Online data API (`dataset_version` in `/v1/index.
 
 ## 0.2.0 – 2026-11-22
 
-- Moloch: nowe domyślne obrazy żetonów (zestaw grafik z instrukcji armii, skórka „Domyślny”); dane żetonów odczytane z nich na nowo – Szerszeń i Wartownik obrócone (Inicjatywa prosto), miejsca odznak u Działka Gaussa, Hybrydy, Juggernauta, Opancerzonego Łowcy, Opancerzonego Wartownika i Szturmowca
-- Pierwsza skórka armii: `moloch.rok_molocha` („Rok Molocha”) – dotychczasowe obrazy 3.0 wszystkich 23 żetonów i rewers, z własnym obrotem (`turn`) i miejscami odznak (`badges`) tam, gdzie grafika różni się od danych (`@hexbattle/schema` 0.6.1)
+- Moloch: nowe domyślne obrazy żetonów (Wydanie 20-lecia, skórka „Domyślna”; `display.edition`); dane żetonów odczytane z nich na nowo – Szerszeń i Wartownik obrócone (Inicjatywa prosto), miejsca odznak u Działka Gaussa, Hybrydy, Juggernauta, Opancerzonego Łowcy, Opancerzonego Wartownika i Szturmowca
+- Pierwsza skórka armii: `moloch.rok_molocha` („Rok Molocha”, Edycja Roku Molocha) – dotychczasowe obrazy wszystkich 23 żetonów i rewers, z własnym obrotem (`turn`) i miejscami odznak (`badges`) tam, gdzie grafika różni się od danych
+- Pierwsza skórka Sztabu: `moloch.alternatywna` („Alternatywna”, Sezon 2013) – sama grafika (`front_art_only`), na rewersie domyślny Sztab
+- Skórki i armie mają pole `edition` – wydanie gry, z którego pochodzi grafika (`@hexbattle/schema` 0.7.0)
 
 ## 0.1.2 – 2026-11-21
 

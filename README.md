@@ -2,7 +2,7 @@
 
 Data API of HexBattle Online: the armies, tiles, mechanics and markers of the board game Neuroshima Hex (edition 3.0, Portal Games) as versioned, validated JSON.
 
-> **Status: live.** The public API runs at `https://api.hexbattle.online/v1/` (data release 0.1.0: the four base armies). You can also [run your own copy](#running-your-own-copy) – every example in this README works with both.
+> **Status: live.** The public API runs at `https://api.hexbattle.online/v1/` (data release 0.2.0: the four base armies and the first Moloch skins – Rok Molocha for the army, Alternatywna for the Sztab). You can also [run your own copy](#running-your-own-copy) – every example in this README works with both.
 
 **Contents:** [Using the public API](#using-the-public-api) · [Running your own copy](#running-your-own-copy) · [What the API serves](#what-the-api-serves) · [Files and folders](#files-and-folders) · [Data structure](#data-structure) · [Images](#images) · [Descriptions](#descriptions) · [Using the API with curl](#using-the-api-with-curl) · [Versioning](#versioning) · [Development](#development) · [Security](#security) · [Licence](#licence)
 
@@ -159,8 +159,8 @@ The example below is the tile in the next section's first JSON example – the s
 ```json
 {
 	"meta": {
-		"dataset_version": "0.1.0",
-		"schema_version": "0.6.1",
+		"dataset_version": "0.2.0",
+		"schema_version": "0.7.0",
 		"languages": ["pl"],
 		"generated_at": "2026-11-13T14:03:04.864Z",
 		"build": "release"
@@ -240,6 +240,7 @@ Example (Moloch, its 23 tiles left out):
 		"colors": { "primary": "#8D2418", "secondary": "#4E0505", "layout": "solid" },
 		"logo": { "image": "moloch/logo.svg" },
 		"back": "moloch/back.png",
+		"edition": { "pl": "Wydanie 20-lecia" },
 		"hp_markers": [{ "tile_id": "moloch.sztab", "image": "moloch/hp_marker.png" }]
 	},
 	"deck": { "size": 35 },
@@ -451,7 +452,7 @@ Example (Modyfikator):
 
 ### Army skin – `skins/<skin_id>.json`
 
-Replacement images for some or all tiles of one army: `id` (army-scoped), `name`, `official`, `army`, `tiles` (per tile id: `front`/`back` image, `front_art_only`/`back_art_only` for a face printed without icons), optional `back`. A skin's art may be printed turned against the tile data and may draw badges elsewhere: `turn` (1–5 – the image shows the tile turned k × 60° clockwise; turn it back by as much to lay it over the data's edges) and `badges` (per badge of the front face: `feature` = its index in the face's features, `slot` and optional `pos` as on the unturned skin image). The game meaning never changes. `skins/index.json` lists every skin with its `coverage` (tiles covered, whole army or not, Sztab included, own back). The army data describes the army's default images; a skin covering every tile is an army skin, one covering only the Sztab a Sztab skin. Shortened example (2 of 23 tiles):
+Replacement images for some or all tiles of one army: `id` (army-scoped), `name`, `official`, `army`, optional `edition` (the game edition the art comes from), `tiles` (per tile id: `front`/`back` image, `front_art_only`/`back_art_only` for a face printed without icons), optional `back`. A skin's art may be printed turned against the tile data and may draw badges elsewhere: `turn` (1–5 – the image shows the tile turned k × 60° clockwise; turn it back by as much to lay it over the data's edges) and `badges` (per badge of the front face: `feature` = its index in the face's features, `slot` and optional `pos` as on the unturned skin image). The game meaning never changes. `skins/index.json` lists every skin with its `coverage` (tiles covered, whole army or not, Sztab included, own back). The army data describes the army's default images (their edition in `display.edition`); a skin covering every tile is an army skin, one covering only the Sztab a Sztab skin. An art-only face keeps every feature of the tile's data – only the icons are not printed. A Sztab skin may show the army's default Sztab on its reverse: its `back` is then that tile's own front image from the army data. Shortened example (2 of 23 tiles):
 
 ```json
 {
@@ -459,6 +460,7 @@ Replacement images for some or all tiles of one army: `id` (army-scoped), `name`
 	"name": { "pl": "Rok Molocha" },
 	"official": true,
 	"army": "moloch",
+	"edition": { "pl": "Edycja Roku Molocha" },
 	"tiles": {
 		"moloch.sztab": { "front": "skins/moloch/rok_molocha/sztab_front.png" },
 		"moloch.szerszen": {
@@ -468,6 +470,27 @@ Replacement images for some or all tiles of one army: `id` (army-scoped), `name`
 		}
 	},
 	"back": "skins/moloch/rok_molocha/back.png"
+}
+```
+
+<!-- schema: Skin -->
+
+A Sztab skin – the art without icons on one side, the default Sztab on the other:
+
+```json
+{
+	"id": "moloch.alternatywna",
+	"name": { "pl": "Alternatywna" },
+	"official": true,
+	"army": "moloch",
+	"edition": { "pl": "Sezon 2013" },
+	"tiles": {
+		"moloch.sztab": {
+			"front": "skins/moloch/alternatywna/sztab_front.png",
+			"back": "moloch/sztab_front.png",
+			"front_art_only": true
+		}
+	}
 }
 ```
 

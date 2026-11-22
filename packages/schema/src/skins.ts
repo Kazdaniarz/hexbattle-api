@@ -40,6 +40,8 @@ export const Skin = z
 		name: Text,
 		official: z.boolean(),
 		army: Id,
+		// ? the game edition this skin's art comes from, e.g. „Edycja Roku Molocha”
+		edition: Text.optional(),
 		tiles: z.record(ArmyScopedId, SkinTile),
 		// ? tile-back image of this skin
 		back: AssetRef.optional(),

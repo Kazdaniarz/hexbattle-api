@@ -47,6 +47,12 @@ export function checkSkins(ctx: Context, skins: readonly DataFile<Skin>[]): void
 				if (image === undefined) {
 					continue;
 				}
+				// ? a one-sided tile shown in a skin may carry its own default front on the reverse (e.g. a Sztab skin
+				// with the art on one side and the standard Sztab on the other) – the data's image, no copy of it
+				const ownFront = tile.faces.find((face) => face.side === 'front')?.image;
+				if (side === 'back' && image === ownFront && !tile.faces.some((face) => face.side === 'back')) {
+					continue;
+				}
 				if (!tile.faces.some((face) => face.side === side)) {
 					ctx.report('E_SKIN_FACE', file, `${path}.${side}`, `${tileId} has no ${side} face`);
 				}
