@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Neuroshima Hex 3.0"
 	},
+	"order": 3,
 	"tiles": {
 		"borgo.sztab": {
 			"front": "skins/borgo/klasyczna/sztab_front.png"

@@ -2,7 +2,7 @@
 
 Data API of HexBattle Online: the armies, tiles, mechanics and markers of the board game Neuroshima Hex (edition 3.0, Portal Games) as versioned, validated JSON.
 
-> **Status: live.** The public API runs at `https://api.hexbattle.online/v1/` (data release 0.4.0: the four base armies with their skins – Rok Molocha and Klasyczna for each army, Alternatywna for each Sztab – and links to the army manuals). You can also [run your own copy](#running-your-own-copy) – every example in this README works with both.
+> **Status: live.** The public API runs at `https://api.hexbattle.online/v1/` (data release 0.5.0: the four base armies with their skins – Rok Molocha, Klasyczna and Retro for each army, Alternatywna for each Sztab – and links to the army manuals). You can also [run your own copy](#running-your-own-copy) – every example in this README works with both.
 
 **Contents:** [Using the public API](#using-the-public-api) · [Running your own copy](#running-your-own-copy) · [What the API serves](#what-the-api-serves) · [Files and folders](#files-and-folders) · [Data structure](#data-structure) · [Images](#images) · [Descriptions](#descriptions) · [Using the API with curl](#using-the-api-with-curl) · [Versioning](#versioning) · [Development](#development) · [Security](#security) · [Licence](#licence)
 
@@ -160,7 +160,7 @@ The example below is the tile in the next section's first JSON example – the s
 {
 	"meta": {
 		"dataset_version": "0.2.0",
-		"schema_version": "0.7.0",
+		"schema_version": "0.9.0",
 		"languages": ["pl"],
 		"generated_at": "2026-11-13T14:03:04.864Z",
 		"build": "release"
@@ -453,7 +453,7 @@ Example (Modyfikator):
 
 ### Army skin – `skins/<skin_id>.json`
 
-Replacement images for some or all tiles of one army: `id` (army-scoped), `name`, `official`, `army`, optional `edition` (the game edition the art comes from), `tiles` (per tile id: `front`/`back` image, `front_art_only`/`back_art_only` for a face printed without icons), optional `back`. A skin's art may be printed turned against the tile data and may draw badges elsewhere: `turn` (1–5 – the image shows the tile turned k × 60° clockwise; turn it back by as much to lay it over the data's edges) and `badges` (per badge of the front face: `feature` = its index in the face's features, `slot` and optional `pos` as on the unturned skin image). The game meaning never changes. `skins/index.json` lists every skin with its `coverage` (tiles covered, whole army or not, Sztab included, own back). The army data describes the army's default images (their edition in `display.edition`); a skin covering every tile is an army skin, one covering only the Sztab a Sztab skin. An art-only face keeps every feature of the tile's data – only the icons are not printed. A one-sided tile (the Sztab) shows its own front on the reverse too – in the army data and in every skin – so a skin gives it a `back` only when the reverse differs: a Sztab skin may show the army's default Sztab there, its `back` being that tile's own front image from the army data. Shortened example (2 of 23 tiles):
+Replacement images for some or all tiles of one army: `id` (army-scoped), `name`, `official`, `army`, optional `edition` (the game edition the art comes from), optional `order` (the order the army's skins were released in – 1 is the first after the default art), `tiles` (per tile id: `front`/`back` image, `front_art_only`/`back_art_only` for a face printed without icons), optional `back`. An army skin may also bring `hp_markers` (its own HP markers, one per Sztab or Obiekt like `display.hp_markers`, used instead of the army's while the skin is chosen), `mechanic_images` (its own drawing of mechanic pictures: each key is a default picture from `mechanics.json`, each value the skin's image with the same file name, shown for this army only and always in its own colours) and `own_hq: true` (the skin always draws its own Sztab – no Sztab skin can be chosen with it). A skin's art may be printed turned against the tile data and may draw badges elsewhere: `turn` (1–5 – the image shows the tile turned k × 60° clockwise; turn it back by as much to lay it over the data's edges) and `badges` (per badge of the front face: `feature` = its index in the face's features, `slot` and optional `pos` as on the unturned skin image). The game meaning never changes. `skins/index.json` lists every skin with its `coverage` (tiles covered, whole army or not, Sztab included, own back) and `own_hq` where set – army by army, each army's skins in their release `order`. The army data describes the army's default images (their edition in `display.edition`); a skin covering every tile is an army skin, one covering only the Sztab a Sztab skin. An art-only face keeps every feature of the tile's data – only the icons are not printed. A one-sided tile (the Sztab) shows its own front on the reverse too – in the army data and in every skin – so a skin gives it a `back` only when the reverse differs: a Sztab skin may show the army's default Sztab there, its `back` being that tile's own front image from the army data. Shortened example (2 of 23 tiles):
 
 ```json
 {
@@ -471,6 +471,32 @@ Replacement images for some or all tiles of one army: `id` (army-scoped), `name`
 		}
 	},
 	"back": "skins/moloch/rok_molocha/back.png"
+}
+```
+
+<!-- schema: Skin -->
+
+An army skin with its own Sztab, HP marker and mechanic pictures (2 of 23 tiles, 2 of 15 pictures):
+
+```json
+{
+	"id": "moloch.retro",
+	"name": { "pl": "Retro" },
+	"official": true,
+	"army": "moloch",
+	"edition": { "pl": "Neuroshima Hex 2.0" },
+	"order": 4,
+	"tiles": {
+		"moloch.sztab": { "front": "skins/moloch/retro/sztab_front.png" },
+		"moloch.hybryda": { "front": "skins/moloch/retro/hybryda_front.png", "turn": 4 }
+	},
+	"back": "skins/moloch/retro/back.png",
+	"own_hq": true,
+	"hp_markers": [{ "tile_id": "moloch.sztab", "image": "skins/moloch/retro/hp_marker.png" }],
+	"mechanic_images": {
+		"mechanics/melee.png": "skins/moloch/retro/mechanics/melee.png",
+		"mechanics/ranged.png": "skins/moloch/retro/mechanics/ranged.png"
+	}
 }
 ```
 

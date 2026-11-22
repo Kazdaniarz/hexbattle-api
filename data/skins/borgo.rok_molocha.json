@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Edycja Roku Molocha"
 	},
+	"order": 1,
 	"tiles": {
 		"borgo.sztab": {
 			"front": "skins/borgo/rok_molocha/sztab_front.png"

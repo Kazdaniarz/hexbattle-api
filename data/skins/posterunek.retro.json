@@ -1,0 +1,119 @@
+{
+	"id": "posterunek.retro",
+	"name": {
+		"pl": "Retro"
+	},
+	"official": true,
+	"army": "posterunek",
+	"edition": {
+		"pl": "Neuroshima Hex 2.0"
+	},
+	"order": 4,
+	"tiles": {
+		"posterunek.sztab": {
+			"front": "skins/posterunek/retro/sztab_front.png"
+		},
+		"posterunek.biegacz": {
+			"front": "skins/posterunek/retro/biegacz_front.png",
+			"turn": 1,
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c2"
+				}
+			]
+		},
+		"posterunek.silacz": {
+			"front": "skins/posterunek/retro/silacz_front.png",
+			"turn": 4,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"posterunek.pancerz_wspomagany": {
+			"front": "skins/posterunek/retro/pancerz_wspomagany_front.png",
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c2"
+				},
+				{
+					"feature": 3,
+					"slot": "c4"
+				},
+				{
+					"feature": 4,
+					"slot": "c5"
+				}
+			]
+		},
+		"posterunek.ckm": {
+			"front": "skins/posterunek/retro/ckm_front.png"
+		},
+		"posterunek.komandos": {
+			"front": "skins/posterunek/retro/komandos_front.png",
+			"turn": 4,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"posterunek.likwidator": {
+			"front": "skins/posterunek/retro/likwidator_front.png",
+			"turn": 5
+		},
+		"posterunek.medyk": {
+			"front": "skins/posterunek/retro/medyk_front.png"
+		},
+		"posterunek.zwiadowca": {
+			"front": "skins/posterunek/retro/zwiadowca_front.png"
+		},
+		"posterunek.oficer": {
+			"front": "skins/posterunek/retro/oficer_front.png"
+		},
+		"posterunek.dywersant": {
+			"front": "skins/posterunek/retro/dywersant_front.png"
+		},
+		"posterunek.skoper": {
+			"front": "skins/posterunek/retro/skoper_front.png"
+		},
+		"posterunek.centrum_rozpoznania": {
+			"front": "skins/posterunek/retro/centrum_rozpoznania_front.png"
+		},
+		"posterunek.bitwa": {
+			"front": "skins/posterunek/retro/bitwa_front.png"
+		},
+		"posterunek.ruch": {
+			"front": "skins/posterunek/retro/ruch_front.png"
+		},
+		"posterunek.snajper": {
+			"front": "skins/posterunek/retro/snajper_front.png"
+		}
+	},
+	"back": "skins/posterunek/retro/back.png",
+	"own_hq": true,
+	"hp_markers": [
+		{
+			"tile_id": "posterunek.sztab",
+			"image": "skins/posterunek/retro/hp_marker.png"
+		}
+	],
+	"mechanic_images": {
+		"mechanics/extra_initiative_aura.png": "skins/posterunek/retro/mechanics/extra_initiative_aura.png",
+		"mechanics/initiative.png": "skins/posterunek/retro/mechanics/initiative.png",
+		"mechanics/medic.png": "skins/posterunek/retro/mechanics/medic.png",
+		"mechanics/melee.png": "skins/posterunek/retro/mechanics/melee.png",
+		"mechanics/mobility.png": "skins/posterunek/retro/mechanics/mobility.png",
+		"mechanics/move.png": "skins/posterunek/retro/mechanics/move.png",
+		"mechanics/movement_multiplier.png": "skins/posterunek/retro/mechanics/movement_multiplier.png",
+		"mechanics/ranged.png": "skins/posterunek/retro/mechanics/ranged.png",
+		"mechanics/redirect_module.png": "skins/posterunek/retro/mechanics/redirect_module.png",
+		"mechanics/snipe.png": "skins/posterunek/retro/mechanics/snipe.png",
+		"mechanics/start_battle.png": "skins/posterunek/retro/mechanics/start_battle.png"
+	}
+}

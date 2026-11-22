@@ -532,6 +532,60 @@ const CASES: Case[] = [
 		change: (s) => s.skins[0] && (s.skins[0].data.back = 'testowa/back.png'),
 	},
 	{
+		code: 'E_SKIN_ORDER',
+		name: 'two skins of one army with one release order',
+		change: (s) => {
+			const first = s.skins[0];
+			if (!first) return;
+			first.data.order = 1;
+			s.skins.push({
+				file: 'skins/testowa.druga.json',
+				data: {
+					id: 'testowa.druga',
+					name: first.data.name,
+					official: true,
+					army: 'testowa',
+					order: 1,
+					tiles: {},
+				},
+			});
+		},
+	},
+	{
+		code: 'E_SKIN_OWN_HQ',
+		name: 'own Sztab on a skin of one tile',
+		change: (s) => s.skins[0] && (s.skins[0].data.own_hq = true),
+	},
+	{
+		code: 'E_HP_MARKER_TILE',
+		name: 'skin HP marker for a tile that is no Sztab',
+		change: (s) =>
+			s.skins[0] &&
+			(s.skins[0].data.hp_markers = [{ tile_id: 'testowa.nikt', image: 'skins/testowa/wariant/hp_marker.png' }]),
+	},
+	{
+		code: 'E_SKIN_IMAGE_PATH',
+		name: 'skin HP marker outside the skin folder',
+		change: (s) => s.skins[0] && (s.skins[0].data.hp_markers = [{ image: 'testowa/hp_marker.png' }]),
+	},
+	{
+		code: 'E_SKIN_MECHANIC_IMAGE',
+		name: 'skin mechanic picture replacing no default picture',
+		change: (s) =>
+			s.skins[0] &&
+			(s.skins[0].data.mechanic_images = { 'mechanics/nic.png': 'skins/testowa/wariant/mechanics/nic.png' }),
+	},
+	{
+		code: 'E_SKIN_IMAGE_PATH',
+		name: 'skin mechanic picture under another name',
+		change: (s) => {
+			const mechanic = s.mechanics?.data.mechanics[0];
+			if (mechanic) mechanic.images = [{ image: 'mechanics/cios.png' }];
+			if (s.skins[0])
+				s.skins[0].data.mechanic_images = { 'mechanics/cios.png': 'skins/testowa/wariant/cios.png' };
+		},
+	},
+	{
 		code: 'E_SKIN_NO_FRONT',
 		name: 'turn without a front image',
 		change: (s) => s.skins[0] && (s.skins[0].data.tiles = { 'testowa.sztab': { turn: 1 } }),

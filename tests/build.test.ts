@@ -1,7 +1,7 @@
 /*
  * The build: published files, derived values and the board layout, on the test fixture.
  */
-import type { Index, ReleaseArmy } from '@hexbattle/schema';
+import type { Index, ReleaseArmy, SkinsIndex } from '@hexbattle/schema';
 import { describe, expect, it } from 'vitest';
 import { standardBoard } from '../tools/lib/board.ts';
 import { build, type BuildOptions } from '../tools/lib/build.ts';
@@ -73,6 +73,25 @@ describe('build', () => {
 			const schema = schemaFor(file);
 			if (schema) expect(schema.safeParse(value).success, file).toBe(true);
 		}
+	});
+	it('lists the skins army by army in their release order, those without one after them', () => {
+		const data = source();
+		const bare = (id: string) => ({ id, name: skin().name, official: true, army: 'testowa', tiles: {} });
+		const later = { ...bare('testowa.pozniejsza'), order: 2 };
+		const unordered = bare('testowa.bez_kolejnosci');
+		data.skins = [
+			{ file: 'skins/testowa.bez_kolejnosci.json', data: unordered },
+			{ file: 'skins/testowa.pozniejsza.json', data: later },
+			{ file: 'skins/testowa.wariant.json', data: { ...skin(), order: 1 } },
+		];
+		const built = build(data, OPTIONS);
+		expect(built.issues).toEqual([]);
+		const index = built.files.get('skins/index.json') as SkinsIndex;
+		expect(index.skins.map((entry) => entry.id)).toEqual([
+			'testowa.wariant',
+			'testowa.pozniejsza',
+			'testowa.bez_kolejnosci',
+		]);
 	});
 	it('adds derived values to the army and its tiles', () => {
 		const release = files.get('armies/testowa.json') as ReleaseArmy;

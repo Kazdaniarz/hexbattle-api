@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Neuroshima Hex 3.0"
 	},
+	"order": 3,
 	"tiles": {
 		"hegemonia.sztab": {
 			"front": "skins/hegemonia/klasyczna/sztab_front.png"

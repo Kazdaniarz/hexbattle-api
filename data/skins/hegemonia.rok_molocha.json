@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Edycja Roku Molocha"
 	},
+	"order": 1,
 	"tiles": {
 		"hegemonia.sztab": {
 			"front": "skins/hegemonia/rok_molocha/sztab_front.png"

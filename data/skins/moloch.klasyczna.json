@@ -8,6 +8,7 @@
 	"edition": {
 		"pl": "Neuroshima Hex 3.0"
 	},
+	"order": 3,
 	"tiles": {
 		"moloch.sztab": {
 			"front": "skins/moloch/klasyczna/sztab_front.png"

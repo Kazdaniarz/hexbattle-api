@@ -1,0 +1,123 @@
+{
+	"id": "borgo.retro",
+	"name": {
+		"pl": "Retro"
+	},
+	"official": true,
+	"army": "borgo",
+	"edition": {
+		"pl": "Neuroshima Hex 2.0"
+	},
+	"order": 4,
+	"tiles": {
+		"borgo.sztab": {
+			"front": "skins/borgo/retro/sztab_front.png"
+		},
+		"borgo.mutant": {
+			"front": "skins/borgo/retro/mutant_front.png",
+			"turn": 3,
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c5"
+				}
+			]
+		},
+		"borgo.super_mutant": {
+			"front": "skins/borgo/retro/super_mutant_front.png",
+			"badges": [
+				{
+					"feature": 6,
+					"slot": "c5"
+				}
+			]
+		},
+		"borgo.silacz": {
+			"front": "skins/borgo/retro/silacz_front.png",
+			"turn": 2,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"borgo.szpon": {
+			"front": "skins/borgo/retro/szpon_front.png",
+			"turn": 1
+		},
+		"borgo.sieciarz": {
+			"front": "skins/borgo/retro/sieciarz_front.png",
+			"turn": 4,
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c2"
+				}
+			]
+		},
+		"borgo.zabojca": {
+			"front": "skins/borgo/retro/zabojca_front.png",
+			"turn": 1,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				},
+				{
+					"feature": 2,
+					"slot": "c0"
+				}
+			]
+		},
+		"borgo.medyk": {
+			"front": "skins/borgo/retro/medyk_front.png"
+		},
+		"borgo.zwiadowca": {
+			"front": "skins/borgo/retro/zwiadowca_front.png"
+		},
+		"borgo.oficer": {
+			"front": "skins/borgo/retro/oficer_front.png"
+		},
+		"borgo.super_oficer": {
+			"front": "skins/borgo/retro/super_oficer_front.png",
+			"badges": [
+				{
+					"feature": 4,
+					"slot": "c2"
+				}
+			]
+		},
+		"borgo.bitwa": {
+			"front": "skins/borgo/retro/bitwa_front.png"
+		},
+		"borgo.ruch": {
+			"front": "skins/borgo/retro/ruch_front.png"
+		},
+		"borgo.granat": {
+			"front": "skins/borgo/retro/granat_front.png"
+		}
+	},
+	"back": "skins/borgo/retro/back.png",
+	"own_hq": true,
+	"hp_markers": [
+		{
+			"tile_id": "borgo.sztab",
+			"image": "skins/borgo/retro/hp_marker.png"
+		}
+	],
+	"mechanic_images": {
+		"mechanics/armor.png": "skins/borgo/retro/mechanics/armor.png",
+		"mechanics/grenade.png": "skins/borgo/retro/mechanics/grenade.png",
+		"mechanics/initiative.png": "skins/borgo/retro/mechanics/initiative.png",
+		"mechanics/initiative_plus1_aura.png": "skins/borgo/retro/mechanics/initiative_plus1_aura.png",
+		"mechanics/medic.png": "skins/borgo/retro/mechanics/medic.png",
+		"mechanics/melee.png": "skins/borgo/retro/mechanics/melee.png",
+		"mechanics/mobility.png": "skins/borgo/retro/mechanics/mobility.png",
+		"mechanics/move.png": "skins/borgo/retro/mechanics/move.png",
+		"mechanics/net.png": "skins/borgo/retro/mechanics/net.png",
+		"mechanics/ranged.png": "skins/borgo/retro/mechanics/ranged.png",
+		"mechanics/start_battle.png": "skins/borgo/retro/mechanics/start_battle.png",
+		"mechanics/toughness.png": "skins/borgo/retro/mechanics/toughness.png"
+	}
+}

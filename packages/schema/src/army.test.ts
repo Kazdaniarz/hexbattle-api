@@ -168,6 +168,26 @@ describe('Skin and BoardSkin', () => {
 		const badSlot = { ...tile, badges: [{ feature: 1, slot: 'x1' }] };
 		expect(Skin.safeParse({ ...skin, tiles: { 'moloch.szerszen': badSlot } }).success).toBe(false);
 	});
+	it('accepts an army skin with its own Sztab, HP markers and mechanic pictures', () => {
+		const skin = {
+			id: 'moloch.retro',
+			name: { pl: 'Retro' },
+			official: true,
+			army: 'moloch',
+			tiles: {},
+			own_hq: true,
+			hp_markers: [{ image: 'skins/moloch/retro/hp_marker.png' }],
+			mechanic_images: { 'mechanics/melee.png': 'skins/moloch/retro/mechanics/melee.png' },
+		};
+		expect(Skin.safeParse(skin).success).toBe(true);
+		expect(Skin.safeParse({ ...skin, order: 4 }).success).toBe(true);
+		expect(Skin.safeParse({ ...skin, order: 0 }).success).toBe(false);
+		expect(Skin.safeParse({ ...skin, own_hq: false }).success).toBe(false);
+		expect(Skin.safeParse({ ...skin, hp_markers: [] }).success).toBe(false);
+		expect(
+			Skin.safeParse({ ...skin, mechanic_images: { melee: 'skins/moloch/retro/mechanics/melee.png' } }).success,
+		).toBe(false);
+	});
 	it('accepts a default board skin, never default: false', () => {
 		const board = {
 			id: 'zniszczone_miasto2013',
