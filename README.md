@@ -660,7 +660,7 @@ curl -i "$API/v1/query/tiles?colour=red"
 curl -i -X POST "$API/v1/index.json"
 ```
 
-Every response has `Access-Control-Allow-Origin: *`, `Cache-Control` (`index.json` 60 s, other JSON and query answers 5 min, images 1 day – or **a year when you add the image's hash**, `?v=<sha256 from index.json → assets.files>`, which is the recommended way: a replaced image gets a new hash and so a new address) and an `ETag`; asking again with `If-None-Match` and the same ETag answers `304 Not Modified` without a body. The second-to-last example answers `400 bad_query`, the last `405 method_not_allowed`.
+Every response has `Access-Control-Allow-Origin: *`, `Cache-Control` (every JSON answer – `index.json`, the data files and query answers – `max-age=0, must-revalidate`: a cache keeps it but asks again on every use, so a new release is seen at once and its files are never mixed with older ones; images 1 day – or **a year when you add the image's hash**, `?v=<sha256 from index.json → assets.files>`, which is the recommended way: a replaced image gets a new hash and so a new address) and an `ETag`; asking again with `If-None-Match` and the same ETag answers `304 Not Modified` without a body. The second-to-last example answers `400 bad_query`, the last `405 method_not_allowed`.
 
 In PowerShell, `Invoke-RestMethod` turns an answer into objects:
 

@@ -19,29 +19,26 @@ export function contentType(file: string): string | undefined {
 
 /* * Caching */
 
-/** Seconds a client or edge cache may keep a file before revalidating with its ETag. */
+/** Seconds a client or edge cache may keep an image before revalidating with its ETag. */
 export const MAX_AGE = {
-	/** `index.json` changes with every release; clients poll it to detect new data. */
-	index: 60,
-	/** Other JSON files change only with a release. */
-	json: 300,
 	/** Images are replaced rarely; `index.json` lists each image's hash to detect a replacement. */
 	assets: 86_400,
 	/** An image asked for with its hash (`?v=<sha256>`): a new image gets a new address, so it may be kept a year. */
 	versioned: 31_536_000,
 } as const;
 
+/**
+ * Every JSON answer (`index.json`, the data files, query answers): a cache may store it but asks again with its ETag
+ * on every use – a 304 costs a few bytes – so the files of one release are never mixed with older ones in a browser
+ * or at the edge (a skin index cached from before a release once hid that release's skins).
+ */
+export const JSON_CACHE = 'public, max-age=0, must-revalidate';
+
 /** An image address with its hash never changes its content, so caches may keep it without asking again. */
 export const VERSIONED_CACHE = `public, max-age=${String(MAX_AGE.versioned)}, immutable`;
 
 export function cacheControl(publishedPath: string): string {
-	const maxAge =
-		publishedPath === 'index.json'
-			? MAX_AGE.index
-			: publishedPath.startsWith('assets/')
-				? MAX_AGE.assets
-				: MAX_AGE.json;
-	return `public, max-age=${String(maxAge)}`;
+	return publishedPath.startsWith('assets/') ? `public, max-age=${String(MAX_AGE.assets)}` : JSON_CACHE;
 }
 
 /* * Shared headers */
