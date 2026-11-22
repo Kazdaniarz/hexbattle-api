@@ -7,7 +7,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import type { Server } from 'node:http';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
-import { MAX_AGE, VERSIONED_CACHE } from '../tools/lib/http-headers.ts';
+import { JSON_CACHE, MAX_AGE, VERSIONED_CACHE } from '../tools/lib/http-headers.ts';
 import { createApiServer } from '../tools/lib/server.ts';
 
 /* * Setup */
@@ -53,15 +53,15 @@ describe('GET', () => {
 			'access-control-allow-origin': '*',
 			'x-content-type-options': 'nosniff',
 			'cross-origin-resource-policy': 'cross-origin',
-			'cache-control': `public, max-age=${String(MAX_AGE.json)}`,
+			'cache-control': JSON_CACHE,
 		});
 		expect(response.headers.get('etag')).toMatch(/^"[\w-]+"$/);
 	});
-	it('serves the index at /v1/ and /v1/index.json with the short cache', async () => {
+	it('serves the index at /v1/ and /v1/index.json, revalidated on every use like every JSON answer', async () => {
 		for (const url of ['/v1/', '/v1/index.json']) {
 			const response = await fetch(`${base}${url}`);
 			expect(response.status).toBe(200);
-			expect(response.headers.get('cache-control')).toBe(`public, max-age=${String(MAX_AGE.index)}`);
+			expect(response.headers.get('cache-control')).toBe(JSON_CACHE);
 		}
 	});
 	it('serves images with their types, the long cache and a sandboxing CSP', async () => {

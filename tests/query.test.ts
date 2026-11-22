@@ -256,7 +256,7 @@ describe('/v1/query/ routes', () => {
 		const response = await fetch(`${base}/v1/query/tiles?category=warrior`);
 		expect(response.status).toBe(200);
 		expect(response.headers.get('access-control-allow-origin')).toBe('*');
-		expect(response.headers.get('cache-control')).toBe('public, max-age=300');
+		expect(response.headers.get('cache-control')).toBe('public, max-age=0, must-revalidate');
 		const body = TileQueryResult.parse(await response.json());
 		expect([body.total, body.results[0]?.id]).toEqual([1, T('wojownik')]);
 		const again = await fetch(`${base}/v1/query/tiles?category=warrior`, {
