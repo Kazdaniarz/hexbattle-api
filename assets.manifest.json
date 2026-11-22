@@ -409,32 +409,32 @@
 			"height": 771
 		},
 		"moloch/back.png": {
-			"sha256": "82aa8b61006c4f49260a67d7056a3bd7067824640e1c3728becbaec12476d074",
-			"bytes": 562456,
+			"sha256": "dbbc14a1c99984d2a6c682baf38eee499b3e52d0fc7d924e030c6f7e58bff1d8",
+			"bytes": 1148984,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/bitwa_front.png": {
-			"sha256": "5fe3af4993ac712f0e40c3448e16871ee32aeebca94e3331004775edcb388f50",
-			"bytes": 823554,
+			"sha256": "6540c752ccd751fe9350c5a118341adafd6adda171059c4f93e70436c31ed625",
+			"bytes": 1133665,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/bloker_front.png": {
-			"sha256": "c4c4ac8f27135518a924589b030d94adb9a4c24e35e0a7476c2463470a6827bc",
-			"bytes": 797983,
+			"sha256": "f925e1015874b6bc9c5b6d3bfef7907e027d7050db481a220ad023ea231e51a3",
+			"bytes": 1361455,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/bomba_front.png": {
-			"sha256": "a8463262c66186e5852ea72ceec71a214c641c8e1e0456dce1231d7a7144dc1b",
-			"bytes": 815433,
+			"sha256": "d3bc702761134a6e98ff358dbc40684f779b6559b0a3254b68fd0c3139d7dfd8",
+			"bytes": 1125718,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/dzialko_gaussa_front.png": {
-			"sha256": "f856dc78e64bf8e7f8ef755b5ffce959ce0ca266a58baeeb07f6681f026da4eb",
-			"bytes": 990019,
+			"sha256": "eb6af453455a0fd8e916860c63076c19efefed8b5e37d956417800afbf6755b3",
+			"bytes": 1184873,
 			"width": 891,
 			"height": 771
 		},
@@ -445,20 +445,20 @@
 			"height": 430
 		},
 		"moloch/hybryda_front.png": {
-			"sha256": "73a0e6b68e456942211811026076420df04003db4d0da04f7b63216033c93f13",
-			"bytes": 952589,
+			"sha256": "1a1ebd9e6744bd72b7ebb472c53d4edafb25b9d93622409baf6e7a709bdf1114",
+			"bytes": 1230913,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/juggernaut_front.png": {
-			"sha256": "1bdf25f9478618b2058ddc6700c2510b92e33876323d1e24d0c7378a813a837b",
-			"bytes": 847634,
+			"sha256": "6a9237feb6b5b4b415fb737fb6c37b751a643c99f27812cd5063b26f594e8130",
+			"bytes": 1168564,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/klaun_front.png": {
-			"sha256": "a0b1fda0a1f8d82703091a10e7fd20dd5f04d53b39d008dc4aa5ef828de849ba",
-			"bytes": 938834,
+			"sha256": "60fcb6420e12c6a902a4c56898192df99c465989d713a4ce73260733ed696d36",
+			"bytes": 1242309,
 			"width": 891,
 			"height": 771
 		},
@@ -467,98 +467,98 @@
 			"bytes": 504
 		},
 		"moloch/lowca_front.png": {
-			"sha256": "5afb02e9f6eff247d4b05fa5851cd14d89b091b53d51bc73a77af6d62bc34528",
-			"bytes": 990778,
+			"sha256": "754d1f388b34cb26df937d3c4fe296199ce50ed49da77a49d403618394f5d483",
+			"bytes": 1379791,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/matka_front.png": {
-			"sha256": "b3bef3ca0a86ba8a34b251001c2a6888033f737e2e8e180a8b5ac21150d92d29",
-			"bytes": 869638,
+			"sha256": "c0b7e8ca36fe080b7d36f637fc1ebee5a97f4aa07989f2ce09fa5f11bb385d81",
+			"bytes": 1227526,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/medyk_front.png": {
-			"sha256": "a5f05ed181960ee3af2113d7d857aba76ec353470c0c9813c36f54a03212fd64",
-			"bytes": 919796,
+			"sha256": "e2210cba8d21670a5a087db9f94d71b1a2d8e8808914d51d29cee52a51952243",
+			"bytes": 1182917,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/mozg_front.png": {
-			"sha256": "d5921564720c74932be977005d822da4825547628e6d3e8747f4709393491f8d",
-			"bytes": 810063,
+			"sha256": "a6cd4d8f05156915d2d69a10211dbd730e5de656ed724d4059c94eed371d77cc",
+			"bytes": 1122730,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/obronca_front.png": {
-			"sha256": "7992e8a8be900b2c151c73677ffc06fa93f8f3e583e98ea5c53fb296793d7764",
-			"bytes": 898187,
+			"sha256": "983db6820bb27d34bc297bac3d49cbb3136230681a6b306cb14c6c9261ffeaad",
+			"bytes": 1314486,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/odepchniecie_front.png": {
-			"sha256": "35d3256b3c6e7b81a8bbb4bbaf2d772239fa0020b47f78818498563bea2225e6",
-			"bytes": 810838,
+			"sha256": "74ad5ceca81b4caaa36591fdcea0c86c5f3305959c2c3a8a4f814a2457e63526",
+			"bytes": 1068038,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/oficer_front.png": {
-			"sha256": "9d382659b0f4ff006e07dfc3586d3c7e2f7b5739d80409ac43161bd17053b9c4",
-			"bytes": 922455,
+			"sha256": "a73d37ff3c937bcff289f9ad73ace5ba0ccdc2663e218d0dec70aa8314f520b7",
+			"bytes": 1230961,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/opancerzony_lowca_front.png": {
-			"sha256": "c5ff8f6ecb606fe0a2620aa5aa05d5369a34f1ec1f230fd714cedae189b2fdb6",
-			"bytes": 938524,
+			"sha256": "bc62f2faa036fe1395f97acb515d6c6dc688415f0fd83509e4425a019c59d981",
+			"bytes": 1374433,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/opancerzony_wartownik_front.png": {
-			"sha256": "e23c9feae8c0bbaeaa57c43ff1d76f5359cf47b10f2e00f7779e2c9fdb726e72",
-			"bytes": 942637,
+			"sha256": "7dede20f4294f0587d49bedfdc1d7b3bc33d907235c231476dc3e6679f56de9e",
+			"bytes": 1276437,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/ruch_front.png": {
-			"sha256": "e5714bc96f98bf5738fa649cbb1d0e4a0f25bc64b934660203a38f960bbed05c",
-			"bytes": 810738,
+			"sha256": "c3ad2de61e8789d6d3c1978f1ff909ac5bf4ec7d2ea1f7383096e78d147c8c86",
+			"bytes": 1144984,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/sieciarz_front.png": {
-			"sha256": "1de678edcfbbf48e6b490582f6786232026333b0fae83dc32a848398ea68eb83",
-			"bytes": 1066854,
+			"sha256": "c8b4278bb0f3ccb6eb1774828ccb8c1c8847f01f187ced87aa933685064940eb",
+			"bytes": 1389798,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/szerszen_front.png": {
-			"sha256": "5a5dbd1fa077adb07b06150251fcdeff70cb8c6ce1b2d5ade8199db99cb9001f",
-			"bytes": 952303,
+			"sha256": "395aaf312ad18ffc54be68fb5569f530658a2809a95ea1319aa31e3e498cd13a",
+			"bytes": 1310415,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/sztab_front.png": {
-			"sha256": "773660b0aa1d83392b462330e952c88d9a5a74122c5b1f9926d0a684ff3eb132",
-			"bytes": 863616,
+			"sha256": "cac5121e883edcc38a630c0ce1f199d4c97004c4ed9afd7a34a1aabc34051ebc",
+			"bytes": 1172462,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/szturmowiec_front.png": {
-			"sha256": "d793132dd46f8dca9532a513d93bbb5b32ec522073bda4a5230e1595fbc8306d",
-			"bytes": 1026361,
+			"sha256": "540d5d2cb9922e3fc159cff2eed24def2734ffe243150f76a92956861f553db6",
+			"bytes": 1346663,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/wartownik_front.png": {
-			"sha256": "2c449eef97e3ada06602e52d8833a33fb535f77fb0c540844ee83078fb74aaa3",
-			"bytes": 966932,
+			"sha256": "ffcdd5388d29ec8e61943ed7f211622c3dc3f41adeec3f1275809b1f4b27a261",
+			"bytes": 1292865,
 			"width": 891,
 			"height": 771
 		},
 		"moloch/zwiadowca_front.png": {
-			"sha256": "7e3857f77dac44c64ed6a678852911b659e0b821e5f889bf2dc05d1a56114b47",
-			"bytes": 924354,
+			"sha256": "5639f18e419c0f2a2fbdfbf11b5eb4f084cf41b88a8cbe7eb46a1eb09a740bb8",
+			"bytes": 1235029,
 			"width": 891,
 			"height": 771
 		},
@@ -671,6 +671,150 @@
 		"posterunek/zwiadowca_front.png": {
 			"sha256": "53be13dc38541059eedcb187b68e3375e389f37581795fc01a027fe893fda04e",
 			"bytes": 737628,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/back.png": {
+			"sha256": "82aa8b61006c4f49260a67d7056a3bd7067824640e1c3728becbaec12476d074",
+			"bytes": 562456,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/bitwa_front.png": {
+			"sha256": "5fe3af4993ac712f0e40c3448e16871ee32aeebca94e3331004775edcb388f50",
+			"bytes": 823554,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/bloker_front.png": {
+			"sha256": "c4c4ac8f27135518a924589b030d94adb9a4c24e35e0a7476c2463470a6827bc",
+			"bytes": 797983,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/bomba_front.png": {
+			"sha256": "a8463262c66186e5852ea72ceec71a214c641c8e1e0456dce1231d7a7144dc1b",
+			"bytes": 815433,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/dzialko_gaussa_front.png": {
+			"sha256": "f856dc78e64bf8e7f8ef755b5ffce959ce0ca266a58baeeb07f6681f026da4eb",
+			"bytes": 990019,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/hybryda_front.png": {
+			"sha256": "73a0e6b68e456942211811026076420df04003db4d0da04f7b63216033c93f13",
+			"bytes": 952589,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/juggernaut_front.png": {
+			"sha256": "1bdf25f9478618b2058ddc6700c2510b92e33876323d1e24d0c7378a813a837b",
+			"bytes": 847634,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/klaun_front.png": {
+			"sha256": "a0b1fda0a1f8d82703091a10e7fd20dd5f04d53b39d008dc4aa5ef828de849ba",
+			"bytes": 938834,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/lowca_front.png": {
+			"sha256": "5afb02e9f6eff247d4b05fa5851cd14d89b091b53d51bc73a77af6d62bc34528",
+			"bytes": 990778,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/matka_front.png": {
+			"sha256": "b3bef3ca0a86ba8a34b251001c2a6888033f737e2e8e180a8b5ac21150d92d29",
+			"bytes": 869638,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/medyk_front.png": {
+			"sha256": "a5f05ed181960ee3af2113d7d857aba76ec353470c0c9813c36f54a03212fd64",
+			"bytes": 919796,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/mozg_front.png": {
+			"sha256": "d5921564720c74932be977005d822da4825547628e6d3e8747f4709393491f8d",
+			"bytes": 810063,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/obronca_front.png": {
+			"sha256": "7992e8a8be900b2c151c73677ffc06fa93f8f3e583e98ea5c53fb296793d7764",
+			"bytes": 898187,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/odepchniecie_front.png": {
+			"sha256": "35d3256b3c6e7b81a8bbb4bbaf2d772239fa0020b47f78818498563bea2225e6",
+			"bytes": 810838,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/oficer_front.png": {
+			"sha256": "9d382659b0f4ff006e07dfc3586d3c7e2f7b5739d80409ac43161bd17053b9c4",
+			"bytes": 922455,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/opancerzony_lowca_front.png": {
+			"sha256": "c5ff8f6ecb606fe0a2620aa5aa05d5369a34f1ec1f230fd714cedae189b2fdb6",
+			"bytes": 938524,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/opancerzony_wartownik_front.png": {
+			"sha256": "e23c9feae8c0bbaeaa57c43ff1d76f5359cf47b10f2e00f7779e2c9fdb726e72",
+			"bytes": 942637,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/ruch_front.png": {
+			"sha256": "e5714bc96f98bf5738fa649cbb1d0e4a0f25bc64b934660203a38f960bbed05c",
+			"bytes": 810738,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/sieciarz_front.png": {
+			"sha256": "1de678edcfbbf48e6b490582f6786232026333b0fae83dc32a848398ea68eb83",
+			"bytes": 1066854,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/szerszen_front.png": {
+			"sha256": "5a5dbd1fa077adb07b06150251fcdeff70cb8c6ce1b2d5ade8199db99cb9001f",
+			"bytes": 952303,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/sztab_front.png": {
+			"sha256": "773660b0aa1d83392b462330e952c88d9a5a74122c5b1f9926d0a684ff3eb132",
+			"bytes": 863616,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/szturmowiec_front.png": {
+			"sha256": "d793132dd46f8dca9532a513d93bbb5b32ec522073bda4a5230e1595fbc8306d",
+			"bytes": 1026361,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/wartownik_front.png": {
+			"sha256": "2c449eef97e3ada06602e52d8833a33fb535f77fb0c540844ee83078fb74aaa3",
+			"bytes": 966932,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/rok_molocha/zwiadowca_front.png": {
+			"sha256": "7e3857f77dac44c64ed6a678852911b659e0b821e5f889bf2dc05d1a56114b47",
+			"bytes": 924354,
 			"width": 891,
 			"height": 771
 		}

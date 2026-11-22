@@ -16,7 +16,7 @@ const DECK_ROLES = new Set<Tile['setup_role']>(['draw_pile', 'starting_hq', 'sta
 const BASE_HP: Partial<Record<Tile['category'], number>> = { hq: 20, object: 10 };
 
 /** The 12 badge positions in clockwise order; neighbours in this ring overlap. */
-const SLOT_RING: readonly Slot[] = ['e0', 'c0', 'e1', 'c1', 'e2', 'c2', 'e3', 'c3', 'e4', 'c4', 'e5', 'c5'];
+export const SLOT_RING: readonly Slot[] = ['e0', 'c0', 'e1', 'c1', 'e2', 'c2', 'e3', 'c3', 'e4', 'c4', 'e5', 'c5'];
 
 /** Edge features that leave no room for a Moduł feature on the same edge. */
 const BLOCKS_MODULE_FEATURE = new Set<Mechanic['kind']>(['attack', 'net']);
@@ -182,7 +182,7 @@ function checkFaces(ctx: Context, file: string, path: string, army: Army, tile: 
 }
 
 /** Whether a point (units of the outer radius, from the centre) lies on a flat-topped hex. */
-function insideHex(x: number, y: number): boolean {
+export function insideHex(x: number, y: number): boolean {
 	const halfHeight = Math.sqrt(3) / 2;
 	return Math.abs(y) <= halfHeight + 1e-9 && Math.abs(x) <= 1 - Math.abs(y) / Math.sqrt(3) + 1e-9;
 }

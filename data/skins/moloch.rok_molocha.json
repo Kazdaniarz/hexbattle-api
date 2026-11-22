@@ -1,0 +1,138 @@
+{
+	"id": "moloch.rok_molocha",
+	"name": {
+		"pl": "Rok Molocha"
+	},
+	"official": true,
+	"army": "moloch",
+	"tiles": {
+		"moloch.sztab": {
+			"front": "skins/moloch/rok_molocha/sztab_front.png"
+		},
+		"moloch.szerszen": {
+			"front": "skins/moloch/rok_molocha/szerszen_front.png",
+			"turn": 3,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "e2"
+				}
+			]
+		},
+		"moloch.lowca": {
+			"front": "skins/moloch/rok_molocha/lowca_front.png"
+		},
+		"moloch.opancerzony_lowca": {
+			"front": "skins/moloch/rok_molocha/opancerzony_lowca_front.png",
+			"badges": [
+				{
+					"feature": 8,
+					"slot": "c1"
+				}
+			]
+		},
+		"moloch.hybryda": {
+			"front": "skins/moloch/rok_molocha/hybryda_front.png",
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c2"
+				}
+			]
+		},
+		"moloch.wartownik": {
+			"front": "skins/moloch/rok_molocha/wartownik_front.png",
+			"turn": 1,
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "e4"
+				}
+			]
+		},
+		"moloch.opancerzony_wartownik": {
+			"front": "skins/moloch/rok_molocha/opancerzony_wartownik_front.png",
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "e4"
+				}
+			]
+		},
+		"moloch.obronca": {
+			"front": "skins/moloch/rok_molocha/obronca_front.png"
+		},
+		"moloch.szturmowiec": {
+			"front": "skins/moloch/rok_molocha/szturmowiec_front.png",
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c4"
+				},
+				{
+					"feature": 3,
+					"slot": "c2"
+				}
+			]
+		},
+		"moloch.juggernaut": {
+			"front": "skins/moloch/rok_molocha/juggernaut_front.png",
+			"badges": [
+				{
+					"feature": 5,
+					"slot": "c2"
+				},
+				{
+					"feature": 6,
+					"slot": "c3"
+				}
+			]
+		},
+		"moloch.dzialko_gaussa": {
+			"front": "skins/moloch/rok_molocha/dzialko_gaussa_front.png",
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c3"
+				}
+			]
+		},
+		"moloch.klaun": {
+			"front": "skins/moloch/rok_molocha/klaun_front.png"
+		},
+		"moloch.sieciarz": {
+			"front": "skins/moloch/rok_molocha/sieciarz_front.png"
+		},
+		"moloch.bloker": {
+			"front": "skins/moloch/rok_molocha/bloker_front.png"
+		},
+		"moloch.matka": {
+			"front": "skins/moloch/rok_molocha/matka_front.png"
+		},
+		"moloch.medyk": {
+			"front": "skins/moloch/rok_molocha/medyk_front.png"
+		},
+		"moloch.mozg": {
+			"front": "skins/moloch/rok_molocha/mozg_front.png"
+		},
+		"moloch.oficer": {
+			"front": "skins/moloch/rok_molocha/oficer_front.png"
+		},
+		"moloch.zwiadowca": {
+			"front": "skins/moloch/rok_molocha/zwiadowca_front.png"
+		},
+		"moloch.bitwa": {
+			"front": "skins/moloch/rok_molocha/bitwa_front.png"
+		},
+		"moloch.bomba": {
+			"front": "skins/moloch/rok_molocha/bomba_front.png"
+		},
+		"moloch.ruch": {
+			"front": "skins/moloch/rok_molocha/ruch_front.png"
+		},
+		"moloch.odepchniecie": {
+			"front": "skins/moloch/rok_molocha/odepchniecie_front.png"
+		}
+	},
+	"back": "skins/moloch/rok_molocha/back.png"
+}

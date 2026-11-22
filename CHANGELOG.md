@@ -2,6 +2,11 @@
 
 Data releases of the HexBattle Online data API (`dataset_version` in `/v1/index.json`). Dates are Europe/Warsaw dates.
 
+## 0.2.0 – 2026-11-22
+
+- Moloch: nowe domyślne obrazy żetonów (zestaw grafik z instrukcji armii, skórka „Domyślny”); dane żetonów odczytane z nich na nowo – Szerszeń i Wartownik obrócone (Inicjatywa prosto), miejsca odznak u Działka Gaussa, Hybrydy, Juggernauta, Opancerzonego Łowcy, Opancerzonego Wartownika i Szturmowca
+- Pierwsza skórka armii: `moloch.rok_molocha` („Rok Molocha”) – dotychczasowe obrazy 3.0 wszystkich 23 żetonów i rewers, z własnym obrotem (`turn`) i miejscami odznak (`badges`) tam, gdzie grafika różni się od danych (`@hexbattle/schema` 0.6.1)
+
 ## 0.1.2 – 2026-11-21
 
 - Obraz mechaniki Nadanie cechy: wariant z Mobilnością (Transport Hegemonii); obrazy 24 innych mechanik weszły z wersją 0.1.1
