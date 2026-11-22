@@ -1,0 +1,18 @@
+{
+	"id": "moloch.alternatywna",
+	"name": {
+		"pl": "Alternatywna"
+	},
+	"official": true,
+	"army": "moloch",
+	"edition": {
+		"pl": "Sezon 2013"
+	},
+	"tiles": {
+		"moloch.sztab": {
+			"front": "skins/moloch/alternatywna/sztab_front.png",
+			"back": "moloch/sztab_front.png",
+			"front_art_only": true
+		}
+	}
+}
