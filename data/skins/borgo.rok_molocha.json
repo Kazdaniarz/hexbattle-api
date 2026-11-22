@@ -1,0 +1,76 @@
+{
+	"id": "borgo.rok_molocha",
+	"name": {
+		"pl": "Rok Molocha"
+	},
+	"official": true,
+	"army": "borgo",
+	"edition": {
+		"pl": "Edycja Roku Molocha"
+	},
+	"tiles": {
+		"borgo.sztab": {
+			"front": "skins/borgo/rok_molocha/sztab_front.png"
+		},
+		"borgo.mutant": {
+			"front": "skins/borgo/rok_molocha/mutant_front.png",
+			"turn": 3
+		},
+		"borgo.super_mutant": {
+			"front": "skins/borgo/rok_molocha/super_mutant_front.png"
+		},
+		"borgo.silacz": {
+			"front": "skins/borgo/rok_molocha/silacz_front.png",
+			"turn": 2,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"borgo.szpon": {
+			"front": "skins/borgo/rok_molocha/szpon_front.png"
+		},
+		"borgo.sieciarz": {
+			"front": "skins/borgo/rok_molocha/sieciarz_front.png"
+		},
+		"borgo.zabojca": {
+			"front": "skins/borgo/rok_molocha/zabojca_front.png",
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"borgo.medyk": {
+			"front": "skins/borgo/rok_molocha/medyk_front.png"
+		},
+		"borgo.zwiadowca": {
+			"front": "skins/borgo/rok_molocha/zwiadowca_front.png"
+		},
+		"borgo.oficer": {
+			"front": "skins/borgo/rok_molocha/oficer_front.png"
+		},
+		"borgo.super_oficer": {
+			"front": "skins/borgo/rok_molocha/super_oficer_front.png",
+			"badges": [
+				{
+					"feature": 4,
+					"slot": "c2"
+				}
+			]
+		},
+		"borgo.bitwa": {
+			"front": "skins/borgo/rok_molocha/bitwa_front.png"
+		},
+		"borgo.ruch": {
+			"front": "skins/borgo/rok_molocha/ruch_front.png"
+		},
+		"borgo.granat": {
+			"front": "skins/borgo/rok_molocha/granat_front.png"
+		}
+	},
+	"back": "skins/borgo/rok_molocha/back.png"
+}

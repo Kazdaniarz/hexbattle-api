@@ -15,10 +15,19 @@
 			"image": "hegemonia/logo.svg"
 		},
 		"back": "hegemonia/back.png",
+		"edition": {
+			"pl": "Wydanie 20-lecia"
+		},
 		"hp_markers": [
 			{
 				"tile_id": "hegemonia.sztab",
 				"image": "hegemonia/hp_marker.png"
+			}
+		],
+		"manual": [
+			{
+				"language": "pl",
+				"pdf_url": "https://hexbattle.online/instrukcje/hegemonia.pdf"
 			}
 		]
 	},
@@ -134,7 +143,7 @@
 						{
 							"mechanic": "melee",
 							"at": {
-								"edge": 0
+								"edge": 1
 							},
 							"params": {
 								"strength": 1
@@ -187,7 +196,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c5"
+								"slot": "c3"
 							},
 							"params": {
 								"value": 3
@@ -242,7 +251,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c2"
+								"slot": "c1"
 							},
 							"params": {
 								"value": 2
@@ -270,15 +279,6 @@
 						{
 							"mechanic": "melee",
 							"at": {
-								"edge": 0
-							},
-							"params": {
-								"strength": 1
-							}
-						},
-						{
-							"mechanic": "melee",
-							"at": {
 								"edge": 5
 							},
 							"params": {
@@ -295,9 +295,18 @@
 							}
 						},
 						{
+							"mechanic": "melee",
+							"at": {
+								"edge": 3
+							},
+							"params": {
+								"strength": 1
+							}
+						},
+						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c3"
+								"slot": "c5"
 							},
 							"params": {
 								"value": 2
@@ -306,7 +315,7 @@
 						{
 							"mechanic": "toughness",
 							"at": {
-								"slot": "c2"
+								"slot": "c4"
 							},
 							"category": "unit"
 						}
@@ -432,7 +441,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "e0"
+								"slot": "c3"
 							},
 							"params": {
 								"value": 3
@@ -460,7 +469,7 @@
 						{
 							"mechanic": "net",
 							"at": {
-								"edge": 1
+								"edge": 4
 							}
 						}
 					]
@@ -506,7 +515,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c3"
+								"slot": "c5"
 							},
 							"params": {
 								"value": 2

@@ -1,0 +1,18 @@
+{
+	"id": "posterunek.alternatywna",
+	"name": {
+		"pl": "Alternatywna"
+	},
+	"official": true,
+	"army": "posterunek",
+	"edition": {
+		"pl": "Sezon 2013"
+	},
+	"tiles": {
+		"posterunek.sztab": {
+			"front": "skins/posterunek/alternatywna/sztab_front.png",
+			"back": "posterunek/sztab_front.png",
+			"front_art_only": true
+		}
+	}
+}

@@ -1,0 +1,118 @@
+{
+	"id": "hegemonia.rok_molocha",
+	"name": {
+		"pl": "Rok Molocha"
+	},
+	"official": true,
+	"army": "hegemonia",
+	"edition": {
+		"pl": "Edycja Roku Molocha"
+	},
+	"tiles": {
+		"hegemonia.sztab": {
+			"front": "skins/hegemonia/rok_molocha/sztab_front.png"
+		},
+		"hegemonia.biegacz": {
+			"front": "skins/hegemonia/rok_molocha/biegacz_front.png",
+			"turn": 5,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c1"
+				},
+				{
+					"feature": 2,
+					"slot": "c2"
+				}
+			]
+		},
+		"hegemonia.ganger": {
+			"front": "skins/hegemonia/rok_molocha/ganger_front.png",
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c5"
+				}
+			]
+		},
+		"hegemonia.bydlak": {
+			"front": "skins/hegemonia/rok_molocha/bydlak_front.png",
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c2"
+				}
+			]
+		},
+		"hegemonia.straznik": {
+			"front": "skins/hegemonia/rok_molocha/straznik_front.png",
+			"turn": 1,
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c3"
+				},
+				{
+					"feature": 4,
+					"slot": "c2"
+				}
+			]
+		},
+		"hegemonia.gladiator": {
+			"front": "skins/hegemonia/rok_molocha/gladiator_front.png"
+		},
+		"hegemonia.uniwersalny_zolnierz": {
+			"front": "skins/hegemonia/rok_molocha/uniwersalny_zolnierz_front.png",
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "e0"
+				}
+			]
+		},
+		"hegemonia.sieciarz": {
+			"front": "skins/hegemonia/rok_molocha/sieciarz_front.png",
+			"turn": 3
+		},
+		"hegemonia.super_sieciarz": {
+			"front": "skins/hegemonia/rok_molocha/super_sieciarz_front.png",
+			"badges": [
+				{
+					"feature": 3,
+					"slot": "c3"
+				}
+			]
+		},
+		"hegemonia.oficer_i": {
+			"front": "skins/hegemonia/rok_molocha/oficer_i_front.png"
+		},
+		"hegemonia.oficer_ii": {
+			"front": "skins/hegemonia/rok_molocha/oficer_ii_front.png"
+		},
+		"hegemonia.boss": {
+			"front": "skins/hegemonia/rok_molocha/boss_front.png"
+		},
+		"hegemonia.zwiadowca": {
+			"front": "skins/hegemonia/rok_molocha/zwiadowca_front.png"
+		},
+		"hegemonia.kwatermistrz": {
+			"front": "skins/hegemonia/rok_molocha/kwatermistrz_front.png"
+		},
+		"hegemonia.transport": {
+			"front": "skins/hegemonia/rok_molocha/transport_front.png"
+		},
+		"hegemonia.bitwa": {
+			"front": "skins/hegemonia/rok_molocha/bitwa_front.png"
+		},
+		"hegemonia.ruch": {
+			"front": "skins/hegemonia/rok_molocha/ruch_front.png"
+		},
+		"hegemonia.odepchniecie": {
+			"front": "skins/hegemonia/rok_molocha/odepchniecie_front.png"
+		},
+		"hegemonia.snajper": {
+			"front": "skins/hegemonia/rok_molocha/snajper_front.png"
+		}
+	},
+	"back": "skins/hegemonia/rok_molocha/back.png"
+}

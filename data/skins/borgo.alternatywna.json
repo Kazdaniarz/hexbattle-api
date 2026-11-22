@@ -1,0 +1,18 @@
+{
+	"id": "borgo.alternatywna",
+	"name": {
+		"pl": "Alternatywna"
+	},
+	"official": true,
+	"army": "borgo",
+	"edition": {
+		"pl": "Sezon 2013"
+	},
+	"tiles": {
+		"borgo.sztab": {
+			"front": "skins/borgo/alternatywna/sztab_front.png",
+			"back": "borgo/sztab_front.png",
+			"front_art_only": true
+		}
+	}
+}

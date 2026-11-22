@@ -1,0 +1,18 @@
+{
+	"id": "hegemonia.alternatywna",
+	"name": {
+		"pl": "Alternatywna"
+	},
+	"official": true,
+	"army": "hegemonia",
+	"edition": {
+		"pl": "Sezon 2013"
+	},
+	"tiles": {
+		"hegemonia.sztab": {
+			"front": "skins/hegemonia/alternatywna/sztab_front.png",
+			"back": "hegemonia/sztab_front.png",
+			"front_art_only": true
+		}
+	}
+}

@@ -2,6 +2,14 @@
 
 Data releases of the HexBattle Online data API (`dataset_version` in `/v1/index.json`). Dates are Europe/Warsaw dates.
 
+## 0.3.0 – 2026-11-22
+
+- Nowe domyślne obrazy żetonów wszystkich czterech armii bazowych (Wydanie 20-lecia, lepsze skany; `display.edition`); dane żetonów odczytane z nich na nowo: Borgo – Mutant, Siłacz, Zabójca, Super-Oficer; Hegemonia – Biegacz, Ganger, Bydlak, Strażnik, Uniwersalny Żołnierz, Sieciarz, Super-Sieciarz; Posterunek – Biegacz, Siłacz, Pancerz Wspomagany, CKM, Komandos, Likwidator
+- Skórki armii „Rok Molocha” (Edycja Roku Molocha – dotychczasowe obrazy wszystkich żetonów i rewers) dla Borgo, Hegemonii i Posterunku, z własnym obrotem (`turn`) i miejscami odznak (`badges`) tam, gdzie grafika różni się od danych
+- Skórki Sztabu „Alternatywna” (Sezon 2013) dla Borgo, Hegemonii i Posterunku – sama grafika, na rewersie domyślny Sztab
+- Moloch: lepsze skany domyślnych obrazów (ta sama grafika, dane bez zmian), rewers jak w Roku Molocha
+- Instrukcje armii (PDF) w `display.manual`: `https://hexbattle.online/instrukcje/<armia>.pdf`
+
 ## 0.2.0 – 2026-11-22
 
 - Moloch: nowe domyślne obrazy żetonów (Wydanie 20-lecia, skórka „Domyślna”; `display.edition`); dane żetonów odczytane z nich na nowo – Szerszeń i Wartownik obrócone (Inicjatywa prosto), miejsca odznak u Działka Gaussa, Hybrydy, Juggernauta, Opancerzonego Łowcy, Opancerzonego Wartownika i Szturmowca
