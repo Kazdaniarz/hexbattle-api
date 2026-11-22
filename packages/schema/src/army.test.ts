@@ -154,6 +154,20 @@ describe('Skin and BoardSkin', () => {
 		expect(Skin.safeParse(skin).success).toBe(true);
 		expect(Skin.safeParse({ ...skin, tiles: { sztab: {} } }).success).toBe(false);
 	});
+	it('accepts a turned skin tile with its own badge spots, nothing else', () => {
+		const tile = {
+			front: 'skins/moloch/rok_molocha/szerszen_front.png',
+			turn: 3,
+			badges: [{ feature: 1, slot: 'e2' }],
+		};
+		const skin = { id: 'moloch.rok_molocha', name: { pl: 'Rok Molocha' }, official: true, army: 'moloch' };
+		expect(Skin.safeParse({ ...skin, tiles: { 'moloch.szerszen': tile } }).success).toBe(true);
+		expect(Skin.safeParse({ ...skin, tiles: { 'moloch.szerszen': { ...tile, turn: 6 } } }).success).toBe(false);
+		expect(Skin.safeParse({ ...skin, tiles: { 'moloch.szerszen': { ...tile, turn: 0 } } }).success).toBe(false);
+		expect(Skin.safeParse({ ...skin, tiles: { 'moloch.szerszen': { ...tile, badges: [] } } }).success).toBe(false);
+		const badSlot = { ...tile, badges: [{ feature: 1, slot: 'x1' }] };
+		expect(Skin.safeParse({ ...skin, tiles: { 'moloch.szerszen': badSlot } }).success).toBe(false);
+	});
 	it('accepts a default board skin, never default: false', () => {
 		const board = {
 			id: 'zniszczone_miasto2013',

@@ -75,6 +75,8 @@ export const ISSUE_CODES = {
 	E_SKIN_FACE: 'skin image for a face the tile does not have',
 	E_SKIN_ART_ONLY: 'art-only flag without an image',
 	E_SKIN_IMAGE_PATH: 'skin image path does not follow the naming convention',
+	E_SKIN_NO_FRONT: 'a turn or badge spots on a skin tile without its own front image',
+	E_SKIN_BADGE: 'a skin badge spot pointing at no badge of the front face, or at one badge twice',
 	E_BOARD_SKIN_DUP: 'board skin id defined twice',
 	E_BOARD_SKIN_DEFAULT: 'not exactly one default board skin, or none in a release',
 	// ? images

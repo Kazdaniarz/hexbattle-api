@@ -1,8 +1,9 @@
 /*
  * Checks of army skins and board skins.
  */
-import type { BoardSkin, Skin } from '@hexbattle/schema';
+import type { BoardSkin, Skin, SkinTile, Slot, Tile } from '@hexbattle/schema';
 import type { DataFile } from '../data-files.ts';
+import { insideHex, SLOT_RING } from './army.ts';
 import type { Context } from './context.ts';
 
 /* * Army skins */
@@ -54,8 +55,65 @@ export function checkSkins(ctx: Context, skins: readonly DataFile<Skin>[]): void
 					ctx.report('E_SKIN_IMAGE_PATH', file, `${path}.${side}`, `expected "${expected}", got "${image}"`);
 				}
 			}
+			checkSkinLayout(ctx, file, path, tile, images);
 		}
 	}
+}
+
+/** a slot turned k x 60 degrees clockwise (two positions per step on the ring of twelve) */
+function turnSlot(slot: Slot, turn: number): Slot {
+	const index = SLOT_RING.indexOf(slot);
+	return SLOT_RING[(index + 2 * turn) % SLOT_RING.length] ?? slot;
+}
+
+/**
+ * The skin's own drawing of the front face: listed badges at their spots, the others where the data has them, turned
+ * with the image. Badges must not share or neighbour a spot, like on the data's face.
+ */
+function checkSkinLayout(ctx: Context, file: string, path: string, tile: Tile, images: SkinTile): void {
+	if (images.turn === undefined && images.badges === undefined) {
+		return;
+	}
+	if (images.front === undefined) {
+		ctx.report('E_SKIN_NO_FRONT', file, path, `${tile.id}: turn or badges need the skin's own front image`);
+		return;
+	}
+	const features = tile.faces.find((face) => face.side === 'front')?.features ?? [];
+	const spots = new Map<number, Slot>();
+	features.forEach((feature, index) => {
+		const at = feature.at;
+		if (at && 'slot' in at && at.slot !== null) {
+			spots.set(index, turnSlot(at.slot, images.turn ?? 0));
+		}
+	});
+	const listed = new Set<number>();
+	(images.badges ?? []).forEach((badge, i) => {
+		const where = `${path}.badges[${String(i)}]`;
+		if (!spots.has(badge.feature) || listed.has(badge.feature)) {
+			ctx.report(
+				'E_SKIN_BADGE',
+				file,
+				where,
+				`${tile.id}: feature ${String(badge.feature)} is no badge, or listed twice`,
+			);
+			return;
+		}
+		listed.add(badge.feature);
+		spots.set(badge.feature, badge.slot);
+		if (badge.pos !== undefined && !insideHex(badge.pos.x, badge.pos.y)) {
+			ctx.report('E_POS_OUTSIDE', file, `${where}.pos`, `${tile.id}: position outside the hex`);
+		}
+	});
+	const taken = [...spots.values()];
+	if (new Set(taken).size !== taken.length) {
+		ctx.report('E_SLOT_DUP', file, path, `${tile.id}: two badges on one spot in this skin`);
+	}
+	SLOT_RING.forEach((slot, index) => {
+		const next = SLOT_RING[(index + 1) % SLOT_RING.length] ?? slot;
+		if (taken.includes(slot) && taken.includes(next)) {
+			ctx.report('E_SLOT_OVERLAP', file, path, `${tile.id}: badges on ${slot} and ${next} overlap in this skin`);
+		}
+	});
 }
 
 /* * Board skins */

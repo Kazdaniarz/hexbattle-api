@@ -88,7 +88,7 @@ v1/
   armies/
     borgo.json  hegemonia.json  moloch.json  posterunek.json
   skins/
-    index.json                    all army skins (none published yet)
+    index.json                    all army skins
   board_skins/
     index.json                    all board skins + the default
     zniszczone_miasto2013.json
@@ -150,7 +150,7 @@ How to read an anchor:
 
 The example below is the tile in the next section's first JSON example – the same four features as printed on the tile:
 
-<p align="center"><img src="docs/images/tile-example.svg" width="820" alt="The tile moloch.szturmowiec on the hex: 1 – a ranged attack spike on edge 0 at the top, at edge 0; 2 – the Inicjatywa 2 badge in slot c5, upper left; 3 – the Inicjatywa 1 badge in slot c4, at the left corner; 4 – the Wytrzymałość shield badge in slot c2, lower right."></p>
+<p align="center"><img src="docs/images/tile-example.svg" width="820" alt="The tile moloch.szturmowiec on the hex: 1 – a ranged attack spike on edge 0 at the top, at edge 0; 2 – the Inicjatywa 2 badge in slot c5, upper left; 3 – the Inicjatywa 1 badge in slot c0, upper right; 4 – the Wytrzymałość shield badge in slot c3, lower left."></p>
 
 ### `index.json` – release
 
@@ -160,7 +160,7 @@ The example below is the tile in the next section's first JSON example – the s
 {
 	"meta": {
 		"dataset_version": "0.1.0",
-		"schema_version": "0.5.0",
+		"schema_version": "0.6.1",
 		"languages": ["pl"],
 		"generated_at": "2026-11-13T14:03:04.864Z",
 		"build": "release"
@@ -304,8 +304,8 @@ Example – a warrior (Moloch Szturmowiec: Strzał on the top edge, two Inicjaty
 			"features": [
 				{ "mechanic": "ranged", "at": { "edge": 0 }, "params": { "strength": 1 } },
 				{ "mechanic": "initiative", "at": { "slot": "c5" }, "params": { "value": 2 } },
-				{ "mechanic": "initiative", "at": { "slot": "c4" }, "params": { "value": 1 } },
-				{ "mechanic": "toughness", "at": { "slot": "c2" }, "category": "unit" }
+				{ "mechanic": "initiative", "at": { "slot": "c0" }, "params": { "value": 1 } },
+				{ "mechanic": "toughness", "at": { "slot": "c3" }, "category": "unit" }
 			]
 		}
 	],
@@ -451,15 +451,23 @@ Example (Modyfikator):
 
 ### Army skin – `skins/<skin_id>.json`
 
-Replacement images for some or all tiles of one army: `id` (army-scoped), `name`, `official`, `army`, `tiles` (per tile id: `front`/`back` image, `front_art_only`/`back_art_only` for a face printed without icons), optional `back`. `skins/index.json` lists every skin with its `coverage` (tiles covered, whole army or not, Sztab included, own back). No skins are published yet; the example shows the form:
+Replacement images for some or all tiles of one army: `id` (army-scoped), `name`, `official`, `army`, `tiles` (per tile id: `front`/`back` image, `front_art_only`/`back_art_only` for a face printed without icons), optional `back`. A skin's art may be printed turned against the tile data and may draw badges elsewhere: `turn` (1–5 – the image shows the tile turned k × 60° clockwise; turn it back by as much to lay it over the data's edges) and `badges` (per badge of the front face: `feature` = its index in the face's features, `slot` and optional `pos` as on the unturned skin image). The game meaning never changes. `skins/index.json` lists every skin with its `coverage` (tiles covered, whole army or not, Sztab included, own back). The army data describes the army's default images; a skin covering every tile is an army skin, one covering only the Sztab a Sztab skin. Shortened example (2 of 23 tiles):
 
 ```json
 {
-	"id": "borgo.przykladowy",
-	"name": { "pl": "Przykładowy" },
+	"id": "moloch.rok_molocha",
+	"name": { "pl": "Rok Molocha" },
 	"official": true,
-	"army": "borgo",
-	"tiles": { "borgo.sztab": { "front": "skins/borgo/przykladowy/sztab_front.png", "front_art_only": true } }
+	"army": "moloch",
+	"tiles": {
+		"moloch.sztab": { "front": "skins/moloch/rok_molocha/sztab_front.png" },
+		"moloch.szerszen": {
+			"front": "skins/moloch/rok_molocha/szerszen_front.png",
+			"turn": 3,
+			"badges": [{ "feature": 1, "slot": "e2" }]
+		}
+	},
+	"back": "skins/moloch/rok_molocha/back.png"
 }
 ```
 

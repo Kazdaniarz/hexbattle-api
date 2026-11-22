@@ -53,6 +53,14 @@ describe('clean fixture', () => {
 		expect(validate(source(), DEV)).toEqual([]);
 		expect(validate(source(), { release: true, requireLangs: ['en'] })).toEqual([]);
 	});
+	it('accepts a skin tile turned against the data, with its own badge spots', () => {
+		const data = source();
+		const front = 'skins/testowa/wariant/sztab_front.png';
+		// ? turned once, the badges c5 / c1 / c3 are drawn on c0 / c2 / c4; the Inicjatywa moved to e0 is clear of them
+		const tile = { front, turn: 1, badges: [{ feature: 1, slot: 'e0' as const }] };
+		if (data.skins[0]) data.skins[0].data.tiles = { 'testowa.sztab': tile };
+		expect(validate(data, DEV)).toEqual([]);
+	});
 });
 
 /* * One case per code */
@@ -510,6 +518,47 @@ const CASES: Case[] = [
 		code: 'E_SKIN_IMAGE_PATH',
 		name: 'back image name',
 		change: (s) => s.skins[0] && (s.skins[0].data.back = 'testowa/back.png'),
+	},
+	{
+		code: 'E_SKIN_NO_FRONT',
+		name: 'turn without a front image',
+		change: (s) => s.skins[0] && (s.skins[0].data.tiles = { 'testowa.sztab': { turn: 1 } }),
+	},
+	{
+		code: 'E_SKIN_BADGE',
+		name: 'badge spot for a feature that is no badge',
+		change: (s) =>
+			s.skins[0] &&
+			(s.skins[0].data.tiles = {
+				'testowa.sztab': {
+					front: 'skins/testowa/wariant/sztab_front.png',
+					badges: [{ feature: 9, slot: 'e0' }],
+				},
+			}),
+	},
+	{
+		code: 'E_SLOT_DUP',
+		name: 'skin badge on a spot another badge keeps',
+		change: (s) =>
+			s.skins[0] &&
+			(s.skins[0].data.tiles = {
+				'testowa.sztab': {
+					front: 'skins/testowa/wariant/sztab_front.png',
+					badges: [{ feature: 1, slot: 'c1' }],
+				},
+			}),
+	},
+	{
+		code: 'E_SLOT_OVERLAP',
+		name: 'skin badge next to another one',
+		change: (s) =>
+			s.skins[0] &&
+			(s.skins[0].data.tiles = {
+				'testowa.sztab': {
+					front: 'skins/testowa/wariant/sztab_front.png',
+					badges: [{ feature: 1, slot: 'e1' }],
+				},
+			}),
 	},
 	{
 		code: 'E_BOARD_SKIN_DUP',
