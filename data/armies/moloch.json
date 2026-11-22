@@ -23,6 +23,12 @@
 				"tile_id": "moloch.sztab",
 				"image": "moloch/hp_marker.png"
 			}
+		],
+		"manual": [
+			{
+				"language": "pl",
+				"pdf_url": "https://hexbattle.online/instrukcje/moloch.pdf"
+			}
 		]
 	},
 	"deck": {

@@ -15,10 +15,19 @@
 			"image": "posterunek/logo.svg"
 		},
 		"back": "posterunek/back.png",
+		"edition": {
+			"pl": "Wydanie 20-lecia"
+		},
 		"hp_markers": [
 			{
 				"tile_id": "posterunek.sztab",
 				"image": "posterunek/hp_marker.png"
+			}
+		],
+		"manual": [
+			{
+				"language": "pl",
+				"pdf_url": "https://hexbattle.online/instrukcje/posterunek.pdf"
 			}
 		]
 	},
@@ -147,7 +156,7 @@
 						{
 							"mechanic": "melee",
 							"at": {
-								"edge": 1
+								"edge": 5
 							},
 							"params": {
 								"strength": 1
@@ -156,7 +165,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c0"
+								"slot": "c4"
 							},
 							"params": {
 								"value": 2
@@ -165,7 +174,7 @@
 						{
 							"mechanic": "mobility",
 							"at": {
-								"slot": "e2"
+								"slot": "e1"
 							},
 							"category": "unit"
 						}
@@ -191,7 +200,7 @@
 						{
 							"mechanic": "melee",
 							"at": {
-								"edge": 1
+								"edge": 2
 							},
 							"params": {
 								"strength": 2
@@ -200,7 +209,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "e2"
+								"slot": "c0"
 							},
 							"params": {
 								"value": 3
@@ -246,14 +255,14 @@
 						{
 							"mechanic": "mobility",
 							"at": {
-								"slot": "c0"
+								"slot": "c3"
 							},
 							"category": "unit"
 						},
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c4"
+								"slot": "c1"
 							},
 							"params": {
 								"value": 2
@@ -262,7 +271,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c3"
+								"slot": "c2"
 							},
 							"params": {
 								"value": 3
@@ -308,7 +317,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c4"
+								"slot": "c0"
 							},
 							"params": {
 								"value": 1
@@ -336,7 +345,7 @@
 						{
 							"mechanic": "ranged",
 							"at": {
-								"edge": 4
+								"edge": 2
 							},
 							"params": {
 								"strength": 1
@@ -345,7 +354,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c3"
+								"slot": "c0"
 							},
 							"params": {
 								"value": 3
@@ -382,7 +391,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "e2"
+								"slot": "c0"
 							},
 							"params": {
 								"value": 2

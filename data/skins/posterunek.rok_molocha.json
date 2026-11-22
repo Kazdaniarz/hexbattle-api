@@ -1,0 +1,109 @@
+{
+	"id": "posterunek.rok_molocha",
+	"name": {
+		"pl": "Rok Molocha"
+	},
+	"official": true,
+	"army": "posterunek",
+	"edition": {
+		"pl": "Edycja Roku Molocha"
+	},
+	"tiles": {
+		"posterunek.sztab": {
+			"front": "skins/posterunek/rok_molocha/sztab_front.png"
+		},
+		"posterunek.biegacz": {
+			"front": "skins/posterunek/rok_molocha/biegacz_front.png",
+			"turn": 2,
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "e2"
+				}
+			]
+		},
+		"posterunek.silacz": {
+			"front": "skins/posterunek/rok_molocha/silacz_front.png",
+			"turn": 5,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "e2"
+				}
+			]
+		},
+		"posterunek.pancerz_wspomagany": {
+			"front": "skins/posterunek/rok_molocha/pancerz_wspomagany_front.png",
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c0"
+				},
+				{
+					"feature": 3,
+					"slot": "c4"
+				},
+				{
+					"feature": 4,
+					"slot": "c3"
+				}
+			]
+		},
+		"posterunek.ckm": {
+			"front": "skins/posterunek/rok_molocha/ckm_front.png",
+			"badges": [
+				{
+					"feature": 2,
+					"slot": "c4"
+				}
+			]
+		},
+		"posterunek.komandos": {
+			"front": "skins/posterunek/rok_molocha/komandos_front.png",
+			"turn": 2,
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "c3"
+				}
+			]
+		},
+		"posterunek.likwidator": {
+			"front": "skins/posterunek/rok_molocha/likwidator_front.png",
+			"badges": [
+				{
+					"feature": 1,
+					"slot": "e2"
+				}
+			]
+		},
+		"posterunek.medyk": {
+			"front": "skins/posterunek/rok_molocha/medyk_front.png"
+		},
+		"posterunek.zwiadowca": {
+			"front": "skins/posterunek/rok_molocha/zwiadowca_front.png"
+		},
+		"posterunek.oficer": {
+			"front": "skins/posterunek/rok_molocha/oficer_front.png"
+		},
+		"posterunek.dywersant": {
+			"front": "skins/posterunek/rok_molocha/dywersant_front.png"
+		},
+		"posterunek.skoper": {
+			"front": "skins/posterunek/rok_molocha/skoper_front.png"
+		},
+		"posterunek.centrum_rozpoznania": {
+			"front": "skins/posterunek/rok_molocha/centrum_rozpoznania_front.png"
+		},
+		"posterunek.bitwa": {
+			"front": "skins/posterunek/rok_molocha/bitwa_front.png"
+		},
+		"posterunek.ruch": {
+			"front": "skins/posterunek/rok_molocha/ruch_front.png"
+		},
+		"posterunek.snajper": {
+			"front": "skins/posterunek/rok_molocha/snajper_front.png"
+		}
+	},
+	"back": "skins/posterunek/rok_molocha/back.png"
+}

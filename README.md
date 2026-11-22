@@ -2,7 +2,7 @@
 
 Data API of HexBattle Online: the armies, tiles, mechanics and markers of the board game Neuroshima Hex (edition 3.0, Portal Games) as versioned, validated JSON.
 
-> **Status: live.** The public API runs at `https://api.hexbattle.online/v1/` (data release 0.2.0: the four base armies and the first Moloch skins – Rok Molocha for the army, Alternatywna for the Sztab). You can also [run your own copy](#running-your-own-copy) – every example in this README works with both.
+> **Status: live.** The public API runs at `https://api.hexbattle.online/v1/` (data release 0.3.0: the four base armies with their skins – Rok Molocha for each army, Alternatywna for each Sztab – and links to the army manuals). You can also [run your own copy](#running-your-own-copy) – every example in this README works with both.
 
 **Contents:** [Using the public API](#using-the-public-api) · [Running your own copy](#running-your-own-copy) · [What the API serves](#what-the-api-serves) · [Files and folders](#files-and-folders) · [Data structure](#data-structure) · [Images](#images) · [Descriptions](#descriptions) · [Using the API with curl](#using-the-api-with-curl) · [Versioning](#versioning) · [Development](#development) · [Security](#security) · [Licence](#licence)
 
@@ -241,7 +241,8 @@ Example (Moloch, its 23 tiles left out):
 		"logo": { "image": "moloch/logo.svg" },
 		"back": "moloch/back.png",
 		"edition": { "pl": "Wydanie 20-lecia" },
-		"hp_markers": [{ "tile_id": "moloch.sztab", "image": "moloch/hp_marker.png" }]
+		"hp_markers": [{ "tile_id": "moloch.sztab", "image": "moloch/hp_marker.png" }],
+		"manual": [{ "language": "pl", "pdf_url": "https://hexbattle.online/instrukcje/moloch.pdf" }]
 	},
 	"deck": { "size": 35 },
 	"derived": {

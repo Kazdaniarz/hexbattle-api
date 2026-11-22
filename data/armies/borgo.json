@@ -15,10 +15,19 @@
 			"image": "borgo/logo.svg"
 		},
 		"back": "borgo/back.png",
+		"edition": {
+			"pl": "Wydanie 20-lecia"
+		},
 		"hp_markers": [
 			{
 				"tile_id": "borgo.sztab",
 				"image": "borgo/hp_marker.png"
+			}
+		],
+		"manual": [
+			{
+				"language": "pl",
+				"pdf_url": "https://hexbattle.online/instrukcje/borgo.pdf"
 			}
 		]
 	},
@@ -134,7 +143,7 @@
 						{
 							"mechanic": "melee",
 							"at": {
-								"edge": 5
+								"edge": 2
 							},
 							"params": {
 								"strength": 1
@@ -143,7 +152,7 @@
 						{
 							"mechanic": "melee",
 							"at": {
-								"edge": 0
+								"edge": 3
 							},
 							"params": {
 								"strength": 1
@@ -152,7 +161,7 @@
 						{
 							"mechanic": "melee",
 							"at": {
-								"edge": 1
+								"edge": 4
 							},
 							"params": {
 								"strength": 1
@@ -161,7 +170,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c4"
+								"slot": "c1"
 							},
 							"params": {
 								"value": 2
@@ -269,7 +278,7 @@
 						{
 							"mechanic": "melee",
 							"at": {
-								"edge": 0
+								"edge": 4
 							},
 							"params": {
 								"strength": 2
@@ -278,7 +287,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c5"
+								"slot": "c2"
 							},
 							"params": {
 								"value": 2
@@ -404,7 +413,7 @@
 						{
 							"mechanic": "initiative",
 							"at": {
-								"slot": "c5"
+								"slot": "c3"
 							},
 							"params": {
 								"value": 3
@@ -644,7 +653,7 @@
 						{
 							"mechanic": "toughness",
 							"at": {
-								"slot": "c2"
+								"slot": "c3"
 							},
 							"category": "unit"
 						}
