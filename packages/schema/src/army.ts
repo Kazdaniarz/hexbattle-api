@@ -111,6 +111,8 @@ export const Display = z.strictObject({
 	// ? upright SVG logo; never changed by skins
 	logo: z.strictObject({ image: AssetRef }),
 	back: AssetRef,
+	// ? the game edition the army's own (default) tile art comes from, e.g. „Wydanie 20-lecia”
+	edition: Text.optional(),
 	// ? one per Sztab (or Obiekt)
 	hp_markers: z
 		.array(

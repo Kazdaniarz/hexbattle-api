@@ -15,6 +15,9 @@
 			"image": "moloch/logo.svg"
 		},
 		"back": "moloch/back.png",
+		"edition": {
+			"pl": "Wydanie 20-lecia"
+		},
 		"hp_markers": [
 			{
 				"tile_id": "moloch.sztab",

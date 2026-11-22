@@ -61,6 +61,13 @@ describe('clean fixture', () => {
 		if (data.skins[0]) data.skins[0].data.tiles = { 'testowa.sztab': tile };
 		expect(validate(data, DEV)).toEqual([]);
 	});
+	it('accepts an art-only Sztab skin whose reverse is the default Sztab front', () => {
+		const data = source();
+		const front = 'skins/testowa/wariant/sztab_front.png';
+		const tile = { front, front_art_only: true, back: 'testowa/sztab_front.png' };
+		if (data.skins[0]) data.skins[0].data.tiles = { 'testowa.sztab': tile };
+		expect(validate(data, DEV)).toEqual([]);
+	});
 });
 
 /* * One case per code */
@@ -495,6 +502,11 @@ const CASES: Case[] = [
 		code: 'E_SKIN_TILE',
 		name: 'unknown tile',
 		change: (s) => s.skins[0] && (s.skins[0].data.tiles = { 'testowa.nikt': {} }),
+	},
+	{
+		code: 'E_SKIN_FACE',
+		name: 'another tile’s image on the reverse of a one-face tile',
+		change: (s) => s.skins[0] && (s.skins[0].data.tiles = { 'testowa.sztab': { back: 'testowa/back.png' } }),
 	},
 	{
 		code: 'E_SKIN_FACE',

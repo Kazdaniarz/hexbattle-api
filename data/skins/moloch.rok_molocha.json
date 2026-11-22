@@ -5,6 +5,9 @@
 	},
 	"official": true,
 	"army": "moloch",
+	"edition": {
+		"pl": "Edycja Roku Molocha"
+	},
 	"tiles": {
 		"moloch.sztab": {
 			"front": "skins/moloch/rok_molocha/sztab_front.png"

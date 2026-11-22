@@ -539,8 +539,8 @@
 			"height": 771
 		},
 		"moloch/sztab_front.png": {
-			"sha256": "cac5121e883edcc38a630c0ce1f199d4c97004c4ed9afd7a34a1aabc34051ebc",
-			"bytes": 1172462,
+			"sha256": "7846606d403168742496ad7a0a1ff81556dfc201a12eaf0fdfbed8109823db1c",
+			"bytes": 908136,
 			"width": 891,
 			"height": 771
 		},
@@ -671,6 +671,12 @@
 		"posterunek/zwiadowca_front.png": {
 			"sha256": "53be13dc38541059eedcb187b68e3375e389f37581795fc01a027fe893fda04e",
 			"bytes": 737628,
+			"width": 891,
+			"height": 771
+		},
+		"skins/moloch/alternatywna/sztab_front.png": {
+			"sha256": "5634f538ba3192b6e7233a6ac5f20469eea081a9f36aab4a8b304761e6b47c2d",
+			"bytes": 1117340,
 			"width": 891,
 			"height": 771
 		},
