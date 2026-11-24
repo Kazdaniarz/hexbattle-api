@@ -207,10 +207,26 @@ describe('parseQuery', () => {
 		['fields=id,secret', 'fields', ''],
 		['exact=maybe', 'exact', ''],
 		['id=klaun', 'id', ''],
+		[`army=${'x'.repeat(65)}`, 'army', 'each value at most 64 characters'],
+		[`id=${'moloch.a,'.repeat(300)}`, 'id', 'too long'],
 	])('rejects %s', (params, param, message) => {
 		const details = rejected(params) ?? [];
 		expect(details.map((detail) => detail.param)).toContain(param);
 		if (message) expect(details.map((detail) => detail.message)).toContain(message);
+	});
+	it('accepts values up to the limit', () => {
+		const army = 'x'.repeat(64);
+		expect(parseQuery(TileQuery, new URLSearchParams(`army=${army}`))).toEqual({
+			query: { army: [army], limit: 100, offset: 0 },
+		});
+	});
+	it('never echoes a long value or name back', () => {
+		const long = 'x'.repeat(5000);
+		for (const params of [`army=${long}`, `id=moloch.${long}`, `${long}=1`]) {
+			const details = rejected(params) ?? [];
+			expect(details.length).toBeGreaterThan(0);
+			expect(JSON.stringify(details).length).toBeLessThan(300);
+		}
 	});
 });
 

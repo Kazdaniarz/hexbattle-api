@@ -9,6 +9,7 @@ import {
 	Index,
 	MarkersFile,
 	MechanicsFile,
+	QUERY_VALUE_MAX,
 	ReleaseArmy,
 	Skin,
 	SkinsIndex,
@@ -71,6 +72,11 @@ export function parseQuery<S extends z.ZodType>(
 	const raw: Record<string, string> = {};
 	const details: NonNullable<QueryError['details']> = [];
 	for (const [key, value] of params) {
+		if (key.length > QUERY_VALUE_MAX) {
+			// never echo a long name back – no parameter is that long
+			details.push({ param: `${key.slice(0, QUERY_VALUE_MAX)}…`, message: 'unknown parameter' });
+			continue;
+		}
 		if (key in raw) {
 			details.push({ param: key, message: 'given more than once (use a comma-separated list)' });
 		}

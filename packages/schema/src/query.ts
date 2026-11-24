@@ -13,12 +13,21 @@ import { BoardSkin, Skin } from './skins.ts';
 
 /* * Parameter types */
 
+/** The longest single value (one list item) a query accepts – longer ones are refused before they are read. */
+export const QUERY_VALUE_MAX = 64;
+const LIST_MAX = 30;
+
 /** Comma-separated list of allowed values: `moloch,borgo`. */
 function list<T extends z.ZodType<unknown, string>>(item: T) {
+	const part = z
+		.string()
+		.max(QUERY_VALUE_MAX, `each value at most ${String(QUERY_VALUE_MAX)} characters`)
+		.pipe(item);
 	return z
 		.string()
+		.max(LIST_MAX * (QUERY_VALUE_MAX + 1), 'too long')
 		.transform((value) => value.split(',').map((part) => part.trim()))
-		.pipe(z.array(item).min(1).max(30));
+		.pipe(z.array(part).min(1).max(LIST_MAX));
 }
 
 const Count = z.coerce.number().int().min(0).max(1000);
