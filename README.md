@@ -160,7 +160,7 @@ The example below is the tile in the next section's first JSON example – the s
 {
 	"meta": {
 		"dataset_version": "0.2.0",
-		"schema_version": "0.9.0",
+		"schema_version": "0.9.1",
 		"languages": ["pl"],
 		"generated_at": "2026-11-13T14:03:04.864Z",
 		"build": "release"
@@ -582,12 +582,12 @@ Errors have a status code and a JSON body; `400` also says which parameter is wr
 
 <!-- schema: QueryError -->
 
-| Status | Body `error`         | When                                         |
-| ------ | -------------------- | -------------------------------------------- |
-| 400    | `bad_query`          | unknown, repeated or invalid query parameter |
-| 404    | `not_found`          | no such file or query route                  |
-| 405    | `method_not_allowed` | anything but GET, HEAD, OPTIONS              |
-| 503    | `no_data`            | the query service has no built data loaded   |
+| Status | Body `error`         | When                                                   |
+| ------ | -------------------- | ------------------------------------------------------ |
+| 400    | `bad_query`          | unknown, repeated, too long or invalid query parameter |
+| 404    | `not_found`          | no such file or query route                            |
+| 405    | `method_not_allowed` | anything but GET, HEAD, OPTIONS                        |
+| 503    | `no_data`            | the query service has no built data loaded             |
 
 ## Images
 
@@ -635,7 +635,7 @@ curl -s -o klaun.webp "$API/v1/assets/moloch/klaun_front@512.webp"
 
 ### Queries
 
-Every query takes `id` (a comma-separated list of ids), `name` (part of the name in any language, ignoring case and Polish letters – `lowca` finds "Łowca"; with `exact=true` the whole name), `limit` and `offset` (paging, default 100, at most 500). Lists are comma-separated; each parameter may appear once. Put the URL in quotes so the shell does not read `&`.
+Every query takes `id` (a comma-separated list of ids), `name` (part of the name in any language, ignoring case and Polish letters – `lowca` finds "Łowca"; with `exact=true` the whole name), `limit` and `offset` (paging, default 100, at most 500). Lists are comma-separated (at most 30 values, each at most 64 characters); each parameter may appear once. Put the URL in quotes so the shell does not read `&`.
 
 | Route                   | Results                  | More parameters                                                                                                                                                                                                                                                                      |
 | ----------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
